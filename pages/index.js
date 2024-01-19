@@ -69,7 +69,7 @@ export default function Home() {
             alt="Imagen Claudia Pacheco" // Texto alternativo para la imagen
             width={500}                 // Ancho de la imagen en píxeles
             height={300}
-            className=' w-48 md:w-96 lg:w-3/5 mt-5 md:mt-14 lg:mt-20 absolute right-0'              // Altura de la imagen en píxeles
+            className=' w-28 md:w-60 lg:w-96 mt-5 md:mt-14 lg:mt-20 absolute right-0'              // Altura de la imagen en píxeles
           >
 
 
@@ -115,7 +115,7 @@ export default function Home() {
           <h1 className=' text-xs md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>UBICANOS <span className='italic text-amber-500'>AQUI</span></h1>
 
           <iframe
-          className="w-full h-62"
+            className="w-full h-62"
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d694.7432525175395!2d-106.1007561601926!3d28.65113121622741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1705630808222!5m2!1ses!2smx"
             width="600"
             height="450"
@@ -125,10 +125,10 @@ export default function Home() {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
 
-<h1 className=' text-xs md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>Av. Carbonel <span className='italic text-amber-500'>#4107</span></h1>
+          <h1 className=' text-xs md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>Av. Carbonel <span className='italic text-amber-500'>#4107</span></h1>
 
-<h1 className=' text-xs md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>Col. San Felipe</h1>
-<h1 className=' text-xs md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>Chihuahua, Chihuahua</h1>
+          <h1 className=' text-xs md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>Col. San Felipe</h1>
+          <h1 className=' text-xs md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>Chihuahua, Chihuahua</h1>
 
         </div>
 
