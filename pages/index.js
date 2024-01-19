@@ -30,7 +30,7 @@ export default function Home() {
 
         </div>
 
-        <div className=' flex flex-col text-xs md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold mt-2'>
+        <div className=' flex flex-col text-md text-center md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold mt-2'>
 
           <h1>ASEGURATE CON NOSOTROS</h1>
 
@@ -43,7 +43,7 @@ export default function Home() {
 
         <div className=' flex mt-4'>
 
-          <div className='ml-5 md:w-2/3 lg:w-2/3 mt-4 md:mt-12 z-10 flex flex-col text-xs md:text-xl lg:text-4xl items-start md:items-center text-white font-semibold'>
+          <div className='ml-5 md:w-2/3 lg:w-2/3 mt-4 md:mt-12 z-10 flex flex-col text-sm md:text-xl lg:text-4xl items-start md:items-center text-white font-semibold'>
 
             <p>Gastos Médicos Mayores</p>
 
@@ -69,7 +69,7 @@ export default function Home() {
             alt="Imagen Claudia Pacheco" // Texto alternativo para la imagen
             width={500}                 // Ancho de la imagen en píxeles
             height={300}
-            className=' w-28 md:w-60 lg:w-96 mt-5 md:mt-14 lg:mt-20 absolute right-0'              // Altura de la imagen en píxeles
+            className=' w-32 md:w-60 lg:w-96 mt-6 md:mt-14 lg:mt-20 absolute right-0'              // Altura de la imagen en píxeles
           >
 
 
@@ -88,13 +88,13 @@ export default function Home() {
             alt="Whatapp" // Texto alternativo para la imagen
             width={500}                 // Ancho de la imagen en píxeles
             height={300}
-            className=' w-14 md:w-24 lg:w-40 mt-5 md:mt-14 '
+            className=' w-14 md:w-24 lg:w-40 mt-5 md:mt-14'
 
 
           >
 
           </Image>
-          <div className=' flex flex-col text-xs md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>
+          <div className=' flex flex-col text-md md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>
 
             <h1 className='   italic text-amber-500'>CONTÁCTANOS</h1>
 
@@ -125,10 +125,10 @@ export default function Home() {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
 
-          <h1 className=' text-sm md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>Av. Carbonel <span className='italic text-amber-500'>#4107</span></h1>
+          <h1 className=' text-md md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>Av. Carbonel <span className='italic text-amber-500'>#4107</span></h1>
 
-          <h1 className=' text-sm md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>Col. San Felipe</h1>
-          <h1 className=' text-sm md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>Chihuahua, Chihuahua</h1>
+          <h1 className=' text-md md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>Col. San Felipe</h1>
+          <h1 className=' text-md md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>Chihuahua, Chihuahua</h1>
 
         </div>
 
