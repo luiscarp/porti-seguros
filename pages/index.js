@@ -43,7 +43,7 @@ export default function Home() {
 
         <div className=' flex mt-4'>
 
-          <div className=' md:w-2/3 lg:w-2/3 mt-4 md:mt-12 z-10 flex flex-col text-xs md:text-xl lg:text-4xl items-start md:items-center text-white font-semibold'>
+          <div className='ml-5 md:w-2/3 lg:w-2/3 mt-4 md:mt-12 z-10 flex flex-col text-xs md:text-xl lg:text-4xl items-start md:items-center text-white font-semibold'>
 
             <p>Gastos Médicos Mayores</p>
 
