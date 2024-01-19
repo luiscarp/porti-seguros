@@ -112,7 +112,7 @@ export default function Home() {
 
         <div className=' flex flex-col items-center mt-6'>
 
-          <h1 className=' text-xs md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>UBICANOS <span className='italic text-amber-500'>AQUI</span></h1>
+          <h1 className=' text-sm md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>UBICANOS <span className='italic text-amber-500'>AQUI</span></h1>
 
           <iframe
             className="w-full h-62"
@@ -125,10 +125,10 @@ export default function Home() {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
 
-          <h1 className=' text-xs md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>Av. Carbonel <span className='italic text-amber-500'>#4107</span></h1>
+          <h1 className=' text-sm md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>Av. Carbonel <span className='italic text-amber-500'>#4107</span></h1>
 
-          <h1 className=' text-xs md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>Col. San Felipe</h1>
-          <h1 className=' text-xs md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>Chihuahua, Chihuahua</h1>
+          <h1 className=' text-sm md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>Col. San Felipe</h1>
+          <h1 className=' text-sm md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>Chihuahua, Chihuahua</h1>
 
         </div>
 
