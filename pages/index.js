@@ -112,11 +112,11 @@ export default function Home() {
 
         <div className=' flex flex-col items-center mt-6'>
 
-          <h1 className=' text-sm md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>UBICANOS <span className='italic text-amber-500'>AQUI</span></h1>
+          <Link href={"https://maps.app.goo.gl/FD1fKQn4YLMdYWs37"} target="_blank" className=' text-sm md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>UBICANOS <span className='italic text-amber-500'>AQUI</span></Link>
 
           <iframe
-            className="w-full h-62"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d694.7432525175395!2d-106.1007561601926!3d28.65113121622741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1705630808222!5m2!1ses!2smx"
+            className="w-full h-62 my-5"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.2914102616724!2d-106.10341192466376!3d28.65099197565474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea437103ecc5b9%3A0xc7c0c950a9cb4843!2sPon%20Seguros!5e0!3m2!1ses!2smx!4v1705691026361!5m2!1ses!2smx"
             width="600"
             height="450"
             style={{ border: 0 }}
