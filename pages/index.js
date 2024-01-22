@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import Head from 'next/head'
 import Link from 'next/link'
 import Stats from './components/Stats'
+import Logos from './components/Logos'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -277,6 +278,8 @@ export default function Home() {
 
 
       </div>
+
+      <Logos></Logos>
 
       <div className='flex flex-col lg:flex-row lg:justify-evenly'>
 
