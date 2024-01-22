@@ -4,6 +4,10 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Stats from './components/Stats'
 import Logos from './components/Logos'
+import Testimonios from './components/Testimonios'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -16,23 +20,13 @@ export default function Home() {
         <link rel="icon" href="/logopestana.png" />
         {/* Asegúrate de reemplazar "/path-to-your-favicon.ico" con la ruta real de tu favicon */}
       </Head>
-
-      <div className=' flex justify-center'>
-        <Image
-          src="/logo2.png"  // Ruta relativa o URL de la imagen
-          alt="Logotipo Por Ti" // Texto alternativo para la imagen
-          width={500}                 // Ancho de la imagen en píxeles
-          height={300}
-          className='w-24 md:w-60 mt-1 '              // Altura de la imagen en píxeles
+      <Navbar></Navbar>
 
 
 
+      <div className=' mt-8 flex flex-col text-sm text-center md:text-3xl md:text-center items-center text-white font-bold'>
 
-        ></Image>
 
-      </div>
-
-      <div className='flex flex-col text-sm text-center md:text-3xl md:text-center items-center text-white font-bold mt-2'>
         <h1 className=' text-center'>VIVE SIN PREOCUPACIONES</h1>
 
         <h1 className='text-center mt-1 md:mt-4 italic text-amber-500'>OBTÉN TU SEGURO HOY</h1>
@@ -40,7 +34,7 @@ export default function Home() {
 
       </div>
 
-      <div className=' mt-4 flex flex-col items-center'>
+      <div className=' mt-4 mb-20 flex flex-col items-center'>
         <Image
           src="/esloganEquipoCompleto.png"  // Ruta relativa o URL de la imagen
           alt="Imagen equipo" // Texto alternativo para la imagen
@@ -281,7 +275,7 @@ export default function Home() {
 
       <Logos></Logos>
 
-      <div className='flex flex-col lg:flex-row lg:justify-evenly'>
+      <div className='flex flex-col lg:flex-row lg:justify-evenly pb-20'>
 
         <Link
           className=' flex flex-col items-center mt-6'
@@ -299,7 +293,7 @@ export default function Home() {
           >
 
           </Image>
-          <div className=' flex flex-col text-md md:text-3xl lg:text-xl md:text-center items-center text-white font-bold'>
+          <div className=' flex flex-col text-center text-md md:text-3xl lg:text-xl md:text-center items-center text-white font-bold'>
 
             <h1 className='   italic text-amber-500'>HAZ CLICK AQUÍ PARA CHATEAR</h1>
 
@@ -347,7 +341,7 @@ export default function Home() {
 
       <Stats></Stats>
 
-      <div className=' flex flex-col items-center mt-6'>
+      <div className=' flex flex-col items-center mt-6 pb-6'>
 
         <Link href={"https://maps.app.goo.gl/FD1fKQn4YLMdYWs37"} target="_blank" className=' text-sm md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>UBICANOS <span className='italic text-amber-500'>AQUI</span></Link>
 
@@ -370,7 +364,9 @@ export default function Home() {
       </div>
 
 
+      
 
+      <Footer className='mt-6'></Footer>
 
 
     </div>
