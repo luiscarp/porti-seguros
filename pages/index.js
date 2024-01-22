@@ -44,7 +44,7 @@ export default function Home() {
           alt="Imagen equipo" // Texto alternativo para la imagen
           width={500}                 // Ancho de la imagen en píxeles
           height={300}
-          className=' w-44 md:w-96 lg:w-full'              // Altura de la imagen en píxeles
+          className=' w-full md:w-96 lg:w-full'              // Altura de la imagen en píxeles
         >
 
 
@@ -70,7 +70,7 @@ export default function Home() {
                   alt="Imagen equipo" // Texto alternativo para la imagen
                   width={500}                 // Ancho de la imagen en píxeles
                   height={300}
-                  className=' w-20 md:w-60 lg:w-80'              // Altura de la imagen en píxeles
+                  className=' w-36 md:w-60 lg:w-80'              // Altura de la imagen en píxeles
                 >
 
 
@@ -89,7 +89,7 @@ export default function Home() {
                   alt="Imagen equipo" // Texto alternativo para la imagen
                   width={500}                 // Ancho de la imagen en píxeles
                   height={300}
-                  className=' w-20 md:w-60 lg:w-80'              // Altura de la imagen en píxeles
+                  className=' w-36 md:w-60 lg:w-80'              // Altura de la imagen en píxeles
                 >
 
 
@@ -108,7 +108,7 @@ export default function Home() {
                   alt="Imagen equipo" // Texto alternativo para la imagen
                   width={500}                 // Ancho de la imagen en píxeles
                   height={300}
-                  className=' w-20 md:w-60 lg:w-80'              // Altura de la imagen en píxeles
+                  className='  w-24 md:w-60 lg:w-80'              // Altura de la imagen en píxeles
                 >
 
 
@@ -130,7 +130,7 @@ export default function Home() {
                   alt="Imagen equipo" // Texto alternativo para la imagen
                   width={500}                 // Ancho de la imagen en píxeles
                   height={300}
-                  className=' w-20 md:w-60 lg:w-80'              // Altura de la imagen en píxeles
+                  className=' w-36 md:w-60 lg:w-80'              // Altura de la imagen en píxeles
                 >
 
 
@@ -148,7 +148,7 @@ export default function Home() {
                   alt="Imagen equipo" // Texto alternativo para la imagen
                   width={500}                 // Ancho de la imagen en píxeles
                   height={300}
-                  className=' w-20 md:w-60 lg:w-80'              // Altura de la imagen en píxeles
+                  className=' w-36 md:w-60 lg:w-80'              // Altura de la imagen en píxeles
                 >
 
 
@@ -166,7 +166,7 @@ export default function Home() {
                   alt="Imagen equipo" // Texto alternativo para la imagen
                   width={500}                 // Ancho de la imagen en píxeles
                   height={300}
-                  className=' w-20 md:w-60 lg:w-80'              // Altura de la imagen en píxeles
+                  className=' w-36 md:w-60 lg:w-80'              // Altura de la imagen en píxeles
                 >
 
 
@@ -192,7 +192,7 @@ export default function Home() {
                   alt="Imagen equipo" // Texto alternativo para la imagen
                   width={500}                 // Ancho de la imagen en píxeles
                   height={300}
-                  className=' w-20 md:w-60 lg:w-80'              // Altura de la imagen en píxeles
+                  className=' w-36 md:w-60 lg:w-80'              // Altura de la imagen en píxeles
                 >
 
 
@@ -210,7 +210,7 @@ export default function Home() {
                   alt="Imagen equipo" // Texto alternativo para la imagen
                   width={500}                 // Ancho de la imagen en píxeles
                   height={300}
-                  className=' w-20 md:w-60 lg:w-80'              // Altura de la imagen en píxeles
+                  className=' w-36 md:w-60 lg:w-80'              // Altura de la imagen en píxeles
                 >
 
 
@@ -239,7 +239,7 @@ export default function Home() {
                   alt="Imagen equipo" // Texto alternativo para la imagen
                   width={500}                 // Ancho de la imagen en píxeles
                   height={300}
-                  className=' w-20 md:w-60 lg:w-80'              // Altura de la imagen en píxeles
+                  className=' w-36 md:w-60 lg:w-80'              // Altura de la imagen en píxeles
                 >
 
 
