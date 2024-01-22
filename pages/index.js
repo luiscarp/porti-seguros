@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Head from 'next/head'
 import Link from 'next/link'
+import Stats from './components/Stats'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -340,6 +341,8 @@ export default function Home() {
 
         </div>
       </div>
+
+      <Stats></Stats>
 
       <div className=' flex flex-col items-center mt-6'>
 
