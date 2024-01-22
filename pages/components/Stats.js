@@ -1,7 +1,7 @@
 const stats = [
     { id: 1, name: 'de experiencia nos respaldan', value: '+10 Años' },
     { id: 2, name: 'Aseguradoras en nuestro catálogo', value: '+20' },
-    { id: 3, name: 'Y certificaciones respaldan a nuestros agentes', value: 'Premios' },
+    { id: 3, name: 'Y certificaciones respaldan a nuestros agentes', value: '+10 Premios' },
   ]
   
   export default function Stats() {
