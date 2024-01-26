@@ -347,7 +347,7 @@ export default function Home() {
 
         <iframe
           className="w-full h-62 my-5"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.2914102616724!2d-106.10341192466376!3d28.65099197565474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea437103ecc5b9%3A0xc7c0c950a9cb4843!2sPon%20Seguros!5e0!3m2!1ses!2smx!4v1705691026361!5m2!1ses!2smx"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d850.405464122056!2d-106.10082354946199!3d28.650814896327724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea437103ecc5b9%3A0xc7c0c950a9cb4843!2sPorti%20Seguros!5e0!3m2!1ses!2smx!4v1706236223308!5m2!1ses!2smx"
           width="600"
           height="450"
           style={{ border: 0 }}
