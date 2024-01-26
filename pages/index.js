@@ -36,7 +36,7 @@ export default function Home() {
 
       <div className=' mt-4 mb-20 flex flex-col items-center'>
         <Image
-          src="/esloganEquipoCompleto.png"  // Ruta relativa o URL de la imagen
+          src="/esloganEquipoCompleto.jpg"  // Ruta relativa o URL de la imagen
           alt="Imagen equipo" // Texto alternativo para la imagen
           width={500}                 // Ancho de la imagen en píxeles
           height={300}
