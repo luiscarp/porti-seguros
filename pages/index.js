@@ -343,7 +343,7 @@ export default function Home() {
 
       <div className=' flex flex-col items-center mt-6 pb-6'>
 
-        <Link href={"https://maps.app.goo.gl/FD1fKQn4YLMdYWs37"} target="_blank" className=' text-sm md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>UBICANOS <span className='italic text-amber-500'>AQUI</span></Link>
+        <Link href={"https://maps.app.goo.gl/KJdJJAhK91t8cVjd9"} target="_blank" className=' text-sm md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>UBICANOS <span className='italic text-amber-500'>AQUI</span></Link>
 
         <iframe
           className="w-full h-62 my-5"
