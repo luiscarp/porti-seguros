@@ -1,19 +1,26 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useState } from 'react'
 
-const navigation = [
-    { name: 'Home', href: '#', current: true },
-    { name: 'Productos', href: '#', current: false },
-    { name: 'Equipo', href: '#', current: false },
-    { name: 'Cotiza tu seguro', href: '#', current: false },
-]
+
+
+
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Navbar() {
+export default function Navbar({home = false, producto = false, equipos = false, cotiza = false}) {
+ 
+    const navigation = [
+        { name: 'Home', href: '/index', current: home },
+        { name: 'Productos', href: '#', current: producto },
+        { name: 'Equipo', href: '#', current: equipos },
+        { name: 'Cotiza tu seguro', href: '#', current: cotiza },
+    ]
+
+    
     return (
         <Disclosure as="nav" className="bg-gray-800">
             {({ open }) => (

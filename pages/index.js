@@ -20,7 +20,7 @@ export default function Home() {
         <link rel="icon" href="/logopestana.png" />
         {/* Asegúrate de reemplazar "/path-to-your-favicon.ico" con la ruta real de tu favicon */}
       </Head>
-      <Navbar></Navbar>
+      <Navbar home='True'></Navbar>
 
 
 
