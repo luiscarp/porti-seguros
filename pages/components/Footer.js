@@ -44,7 +44,7 @@ function Footer() {
                           <a href="/privacidad" className="hover:underline">Politica de privacidad</a>
                       </li>
                       <li>
-                          <a href="#" className="hover:underline">Terminos &amp; Condiciones</a>
+                          <a href="/terminos" className="hover:underline">Terminos &amp; Condiciones</a>
                       </li>
                   </ul>
               </div>
