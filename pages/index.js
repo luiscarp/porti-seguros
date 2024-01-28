@@ -27,7 +27,7 @@ export default function Home() {
 
 
 
-      <div className='mb-8 mt-8 flex flex-col text-sm text-center md:text-3xl md:text-center items-center text-white font-bold'>
+      <div className='mb-1 md:mb-8 mt-8 flex flex-col text-sm text-center md:text-3xl md:text-center items-center text-white font-bold'>
 
 
         <h1 className=' text-center'>VIVE SIN PREOCUPACIONES</h1>
