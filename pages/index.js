@@ -7,6 +7,7 @@ import Logos from './components/Logos'
 import Testimonios from './components/Testimonios'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import Carrusel from './components/Carrusel'
 
 
 
@@ -22,9 +23,11 @@ export default function Home() {
       </Head>
       <Navbar home='True'></Navbar>
 
+      
 
 
-      <div className=' mt-8 flex flex-col text-sm text-center md:text-3xl md:text-center items-center text-white font-bold'>
+
+      <div className='mb-8 mt-8 flex flex-col text-sm text-center md:text-3xl md:text-center items-center text-white font-bold'>
 
 
         <h1 className=' text-center'>VIVE SIN PREOCUPACIONES</h1>
@@ -34,17 +37,10 @@ export default function Home() {
 
       </div>
 
+      <Carrusel></Carrusel>
+
       <div className=' mt-4 mb-20 flex flex-col items-center'>
-        <Image
-          src="/esloganEquipoCompleto.jpg"  // Ruta relativa o URL de la imagen
-          alt="Imagen equipo" // Texto alternativo para la imagen
-          width={500}                 // Ancho de la imagen en píxeles
-          height={300}
-          className=' w-full md:w-96 lg:w-full'              // Altura de la imagen en píxeles
-        >
 
-
-        </Image>
 
         <div className='w-full flex flex-col mt-2 items-center '>
 
