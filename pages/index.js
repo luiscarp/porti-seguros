@@ -16,7 +16,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div className='bg-sky-800 h-max flex flex-col'>
+    <div className=' h-max flex flex-col'>
       <Head>
         <link rel="icon" href="/logopestana.png" />
       </Head>
