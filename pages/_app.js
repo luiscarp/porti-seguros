@@ -1,6 +1,8 @@
 import '@/styles/globals.css'
 import SEO from '../next-seo.config';
 import { DefaultSeo } from 'next-seo';
+import { Analytics } from '@vercel/analytics/react';
+
 
 
 export default function App({ Component, pageProps }) {
@@ -8,6 +10,8 @@ export default function App({ Component, pageProps }) {
     <>
       <DefaultSeo {...SEO} />
       <Component {...pageProps} />
+      <Analytics />
+
     </>
   )
 }
