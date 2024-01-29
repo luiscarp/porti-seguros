@@ -16,7 +16,7 @@ export default function Navbar({home = false, producto = false, equipos = false,
  
     const navigation = [
         { name: 'Home', href: '/index', current: home },
-        { name: 'Productos', href: '#', current: producto },
+        { name: 'Productos', href: '/productos', current: producto },
         { name: 'Equipo', href: '#', current: equipos },
         { name: 'Cotiza tu seguro', href: '#', current: cotiza },
     ]
