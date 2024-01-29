@@ -12,6 +12,7 @@
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
     "@vercel/analytics": "^1.1.2",
+    "@vercel/speed-insights": "^1.0.8",
     "flowbite": "^2.2.1",
     "flowbite-react": "^0.7.2",
     "headlessui": "^0.0.0",
