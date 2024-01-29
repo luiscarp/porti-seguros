@@ -8,6 +8,7 @@ import Testimonios from './components/Testimonios'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Carrusel from './components/Carrusel'
+import { NextSeo } from 'next-seo'
 
 
 
@@ -17,13 +18,20 @@ export default function Home() {
   return (
     <div className='bg-sky-800 h-max flex flex-col'>
       <Head>
-        <title>Por Ti Seguros</title>
         <link rel="icon" href="/logopestana.png" />
-        {/* Asegúrate de reemplazar "/path-to-your-favicon.ico" con la ruta real de tu favicon */}
       </Head>
+      <NextSeo
+        title="PorTi Seguros"
+        description="Por Ti seguros, ubicados en Chihuahua, somos agentes de seguros dedicados a vender todo tipo de seguros de auto, daños, de vida, gastos médicos mayores, uber, didi, somos asesores profesionales en el area"
+        openGraph={{
+          title: 'PorTi Seguros',
+          description: 'Por Ti seguros, ubicados en Chihuahua, somos agentes de seguros dedicados a vender todo tipo de seguros de auto, daños, de vida, gastos médicos mayores, uber, didi, somos asesores profesionales en el area',
+          // Aquí puedes añadir más configuraciones de Open Graph si lo necesitas
+        }}
+      />
       <Navbar home='True'></Navbar>
 
-      
+
 
 
 
@@ -360,7 +368,7 @@ export default function Home() {
       </div>
 
 
-      
+
 
       <Footer className='mt-6'></Footer>
 
