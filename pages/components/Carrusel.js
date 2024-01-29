@@ -5,7 +5,7 @@ import React from 'react'
 
 function Carrusel() {
     return (
-        <div className="h-56 sm:h-64 md:h-screen">
+        <div className="h-56 sm:h-64 md:w-4/5 md:h-screen md:object-cover md:mx-auto ">
             <Carousel slideInterval={5000}>
                 <img src="https://res.cloudinary.com/dz9dt7nqo/image/upload/v1706405848/claudiapacheco_lrwbdu.jpg" alt="..." />
                 <img src="https://res.cloudinary.com/dz9dt7nqo/image/upload/v1706407833/tioantonio2_id734a.jpg" alt="..." />
