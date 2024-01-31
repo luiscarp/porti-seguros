@@ -34,7 +34,14 @@ function productos() {
 
             </div>
 
-       
+            <div className='flex flex-col justify-center mb-4 items-center'>
+
+                <img src='/portadaproductos.png' className='sm:w-1/3'></img>
+
+                <span className=' ml-8 text-sm text-center md:text-3xl md:text-center items-center text-white font-bold'> En PorTi Seguros estamos a tu servicio con una variedad de productos y <span className='text-amber-500'>servicios a tu medida</span></span>
+            </div>
+
+
 
 
             <Footer></Footer>
