@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Stats from './components/Stats'
 import Logos from './components/Logos'
-import Testimonios from './components/Testimonios'
+
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Carrusel from './components/Carrusel'

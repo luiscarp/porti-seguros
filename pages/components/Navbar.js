@@ -12,13 +12,13 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Navbar({home = false, producto = false, equipos = false, cotiza = false}) {
+export default function Navbar({home = false, producto = false, testimonios = false, cotiza = false}) {
  
     const navigation = [
         { name: 'Home', href: '/index', current: home },
         { name: 'Productos', href: '/productos', current: producto },
-        { name: 'Equipo', href: '#', current: equipos },
-        { name: 'Cotiza tu seguro', href: '#', current: cotiza },
+        { name: 'Opiniones y Testimonios', href: '/testimonios', current: testimonios },
+        { name: 'Cotiza tu seguro', href: '/cotiza', current: cotiza },
     ]
 
     
