@@ -12,16 +12,16 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Navbar({home = false, producto = false, testimonios = false, cotiza = false}) {
- 
+export default function Navbar({ home = false, producto = false, testimonios = false, cotiza = false }) {
+
     const navigation = [
         { name: 'Home', href: '/index', current: home },
-        { name: 'Productos', href: '/productos', current: producto },
-        { name: 'Opiniones y Testimonios', href: '/testimonios', current: testimonios },
-        { name: 'Cotiza tu seguro', href: '/cotiza', current: cotiza },
+        { name: 'Seguros', href: '/productos', current: producto },
+        { name: 'Testimonios', href: '/testimonios', current: testimonios },
+        { name: 'Cotiza', href: '/cotiza', current: cotiza },
     ]
 
-    
+
     return (
         <Disclosure as="nav" className="bg-gray-800">
             {({ open }) => (
@@ -41,18 +41,18 @@ export default function Navbar({home = false, producto = false, testimonios = fa
                                 </Disclosure.Button>
                             </div>
                             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                                <Link 
-                                href={'/index'}
-                                target="_blank"
-                                className="flex flex-shrink-0 items-center">
+                                <Link
+                                    href={'/index'}
+                                    target="_blank"
+                                    className="flex flex-shrink-0 items-center">
                                     <img
-                                        className="h-8 w-auto"
+                                        className="h-5 w-auto"
                                         src="logo2.png"
                                         alt="Your Company"
                                     />
                                 </Link>
-                                <div className="hidden sm:ml-6 sm:block">
-                                    <div className="flex space-x-4">
+                                <div className="hidden sm:ml-2 sm:block">
+                                    <div className="flex">
                                         {navigation.map((item) => (
                                             <a
                                                 key={item.name}
@@ -78,7 +78,12 @@ export default function Navbar({home = false, producto = false, testimonios = fa
                                         <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                                             <span className="absolute -inset-1.5" />
                                             <span className="sr-only">Open user menu</span>
-  
+                                            <img
+                                                className="h-8 w-8 rounded-full"
+                                                src="/user.png"
+                                                alt=""
+                                            />
+
                                         </Menu.Button>
                                     </div>
                                     <Transition
@@ -128,8 +133,8 @@ export default function Navbar({home = false, producto = false, testimonios = fa
                         </div>
                     </div>
 
-                    <Disclosure.Panel className="sm:hidden">
-                        <div className="space-y-1 px-2 pb-3 pt-2">
+                    <Disclosure.Panel className="sm:hidden ">
+                        <div className="space-y-1 px-1 pb-3 pt-2">
                             {navigation.map((item) => (
                                 <Disclosure.Button
                                     key={item.name}
@@ -137,7 +142,7 @@ export default function Navbar({home = false, producto = false, testimonios = fa
                                     href={item.href}
                                     className={classNames(
                                         item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                        'block rounded-md px-3 py-2 text-base font-medium'
+                                        'block rounded-md px-2 py-2 text-base font-medium'
                                     )}
                                     aria-current={item.current ? 'page' : undefined}
                                 >
