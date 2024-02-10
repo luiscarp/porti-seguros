@@ -3,14 +3,20 @@ import SEO from '../next-seo.config';
 import { DefaultSeo } from 'next-seo';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { SessionProvider } from "next-auth/react"
 
 
 
-export default function App({ Component, pageProps }) {
+export default function App({
+  Component,
+  pageProps: { session, ...pageProps },
+}) {
   return (
     <>
       <DefaultSeo {...SEO} />
-      <Component {...pageProps} />
+      <SessionProvider session={session}>
+        <Component {...pageProps} />
+      </SessionProvider>
       <Analytics />
       <SpeedInsights />
 

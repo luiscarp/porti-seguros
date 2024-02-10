@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Stats from './components/Stats'
 import Logos from './components/Logos'
-
+import Authentication from './components/Authentication'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Carrusel from './components/Carrusel'
@@ -30,6 +30,8 @@ export default function Home() {
         }}
       />
       <Navbar home='True'></Navbar>
+
+      <Authentication></Authentication>
 
 
 
