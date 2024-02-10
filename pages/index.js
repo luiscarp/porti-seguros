@@ -31,6 +31,8 @@ export default function Home() {
       />
       <Navbar home='True'></Navbar>
 
+      <Authentication></Authentication>
+
       
 
 
