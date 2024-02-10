@@ -18,8 +18,6 @@
 }
 
 body {
-  background-color: #075985;
-  opacity: 0.9;
-  background: radial-gradient(circle, transparent 20%, #075985 20%, #075985 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #075985 20%, #075985 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#153445 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #153445 2px, #075985 2px) -1px 0;
-  background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+  background-color: #1C588C;
+
 }
