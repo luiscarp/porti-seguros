@@ -1,11 +1,25 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import { NextSeo } from 'next-seo'
 
 
 function testimonios() {
     return (
         <div>
+
+<Head>
+                <link rel="icon" href="/logopestana.png" />
+            </Head>
+            <NextSeo
+                title="PorTi Seguros"
+                description="Por Ti seguros, ubicados en Chihuahua, somos agentes de seguros dedicados a vender todo tipo de seguros de auto, daños, de vida, gastos médicos mayores, uber, didi, somos asesores profesionales en el area"
+                openGraph={{
+                    title: 'PorTi Seguros',
+                    description: 'Por Ti seguros, ubicados en Chihuahua, somos agentes de seguros dedicados a vender todo tipo de seguros de auto, daños, de vida, gastos médicos mayores, uber, didi, somos asesores profesionales en el area',
+                    // Aquí puedes añadir más configuraciones de Open Graph si lo necesitas
+                }}
+            />
 
             <Navbar testimonios="True"></Navbar>
 
