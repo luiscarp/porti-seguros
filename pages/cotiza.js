@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { NextSeo } from "next-seo";
+import Head from "next/head";
 
 import React from 'react'
 
