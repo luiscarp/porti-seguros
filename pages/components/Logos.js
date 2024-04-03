@@ -8,6 +8,22 @@ export default function Logos() {
                 <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
                     <img
                         className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                        src="https://res.cloudinary.com/dz9dt7nqo/image/upload/v1712174082/logo_1_modificado_1_tslgfo.png"
+                        alt="Primero Seguros"
+                        width={158}
+                        height={48}
+                    />
+
+                    <img
+                        className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                        src="https://res.cloudinary.com/dz9dt7nqo/image/upload/v1712173848/WhatsApp_Image_2024-04-02_at_22.54.03_f6defd69_hgicta.jpg"
+                        alt="Primero Seguros"
+                        width={158}
+                        height={48}
+                    />
+
+                    <img
+                        className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
                         src="https://www.moteroseguro.com/wp-content/uploads/2023/02/primeroseguros.svg"
                         alt="Primero Seguros"
                         width={158}
@@ -62,31 +78,39 @@ export default function Logos() {
                         width={158}
                         height={48}
                     />
-                                        <img
+                    <img
                         className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Allianz.svg/888px-Allianz.svg.png?20230111211421"
                         alt="Statamic"
                         width={158}
                         height={48}
                     />
-                                        <img
+                    <img
                         className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Mapfre_logo.svg/600px-Mapfre_logo.svg.png"
                         alt="Statamic"
                         width={158}
                         height={48}
                     />
-                                                            <img
+                    <img
                         className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
                         src="https://seeklogo.com/images/A/aba-seguros-logo-3999AB7FC0-seeklogo.com.png"
                         alt="Statamic"
                         width={158}
                         height={48}
                     />
-                                        <img
+                    <img
                         className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
                         src="https://seeklogo.com/images/L/la-latino-seguros-logo-386C8383DB-seeklogo.com.png"
                         alt="Statamic"
+                        width={158}
+                        height={48}
+                    />
+
+                    <img
+                        className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                        src="https://res.cloudinary.com/dz9dt7nqo/image/upload/v1712174082/logo_1_modificado_1_tslgfo.png"
+                        alt="Primero Seguros"
                         width={158}
                         height={48}
                     />
