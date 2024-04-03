@@ -364,7 +364,7 @@ export default function Home() {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
 
-        <h1 className=' text-md md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>Av. Carbonel <span className='italic text-amber-500'>#4107</span></h1>
+        <h1 className=' text-md md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>Av. Carbonel <span className='italic text-amber-500'>#4107 - Interior #1</span></h1>
 
         <h1 className=' text-md md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>Col. San Felipe</h1>
         <h1 className=' text-md md:text-3xl lg:text-4xl md:text-center items-center text-white font-bold'>Chihuahua, Chihuahua</h1>

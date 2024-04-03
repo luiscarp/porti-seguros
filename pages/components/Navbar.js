@@ -2,7 +2,7 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useState } from 'react'
-import Usuario from './Usuario'
+
 import Link from 'next/link'
 
 
@@ -70,7 +70,7 @@ export default function Navbar({ home = false, producto = false, testimonios = f
                                     </div>
                                 </div>
                             </div>
-                            <Usuario></Usuario>
+                            
                            
                         </div>
                         
