@@ -138,6 +138,10 @@ export default function RamoPage({ ramo, relacionados }) {
                 </li>
               ))}
             </ul>
+            <p className='mt-6 leading-7'>
+              ¿Quieres saber quién te va a asesorar?{' '}
+              <Link href='/claudia-pacheco' className='font-semibold text-brand-700 hover:underline'>Conoce a Claudia Pacheco →</Link>
+            </p>
           </section>
         </div>
 
