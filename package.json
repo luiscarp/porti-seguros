@@ -10,7 +10,8 @@
     "prebuild": "node scripts/generate-sitemap.mjs && node scripts/generate-llms.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
