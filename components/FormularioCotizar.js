@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { whatsappLink } from '@/config/business'
 import { RAMOS } from '@/content/seguros'
+import { track } from '@/lib/analytics'
 
 // Formulario corto sin base de datos: arma el mensaje y abre WhatsApp. No pide CURP, RFC, salud ni tarjetas.
 const OPCIONES = [...RAMOS.map((ramo) => ramo.nombre), 'Otro / no estoy seguro']
@@ -31,6 +32,7 @@ export default function FormularioCotizar({ onEnviar }) {
   const cambiar = (e) => {
     const { name, value, type, checked } = e.target
     setDatos((d) => ({ ...d, [name]: type === 'checkbox' ? checked : value }))
+    setErrores((errs) => ({ ...errs, [name]: undefined }))
   }
 
   const enviar = (e) => {
@@ -38,6 +40,7 @@ export default function FormularioCotizar({ onEnviar }) {
     const encontrados = validar(datos)
     setErrores(encontrados)
     if (Object.keys(encontrados).length) return
+    track('envio_cotizar', { pagina: '/cotizar', tipo: datos.tipo })
     onEnviar?.(datos)
     window.open(whatsappLink(mensajeCotizacion(datos)), '_blank', 'noopener,noreferrer')
   }
