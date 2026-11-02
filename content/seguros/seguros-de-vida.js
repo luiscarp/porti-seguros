@@ -3,7 +3,6 @@
 const ramo = {
   slug: 'seguros-de-vida',
   nombre: 'Seguros de vida',
-  imagen: '/segurovida.png',
   h1: 'Seguros de vida en Chihuahua',
   whatsappText: 'Hola, vi la página de *Seguros de Vida* y quiero asesoría.',
   intro: [

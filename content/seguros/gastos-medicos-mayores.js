@@ -3,7 +3,6 @@
 const ramo = {
   slug: 'gastos-medicos-mayores',
   nombre: 'Gastos médicos mayores',
-  imagen: '/gastosmedicos.webp',
   h1: 'Seguro de gastos médicos mayores en Chihuahua',
   whatsappText: 'Hola, quiero información sobre un seguro de *Gastos Médicos Mayores*.',
   intro: [

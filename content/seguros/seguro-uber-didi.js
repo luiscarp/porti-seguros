@@ -3,7 +3,6 @@
 const ramo = {
   slug: 'seguro-uber-didi',
   nombre: 'Seguro para Uber, DiDi e InDrive',
-  imagen: '/seguroapp.png',
   h1: 'Seguro para conductores de Uber, DiDi e InDrive en Chihuahua',
   whatsappText: 'Hola, manejo para plataforma y quiero cotizar un seguro (página Uber/DiDi).',
   intro: [

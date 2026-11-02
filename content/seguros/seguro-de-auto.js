@@ -3,7 +3,6 @@
 const ramo = {
   slug: 'seguro-de-auto',
   nombre: 'Seguro de auto',
-  imagen: '/seguroauto.png',
   h1: 'Seguro de auto en Chihuahua',
   whatsappText: 'Hola, quiero cotizar un seguro de auto (página Seguro de Auto).',
   intro: [

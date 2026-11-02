@@ -2,34 +2,50 @@ import React from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Seo from '@/components/Seo'
+import PageHero from '@/components/PageHero'
+import CtaBanda from '@/components/CtaBanda'
 
+// Enlace provisional a las reseñas; T10 lo cambia por el enlace oficial "Pedir reseñas" de Google.
+const RESENAS_GOOGLE = 'https://www.google.com/search?q=portiseguros+google+maps#lrd=0x86ea437103ecc5b9:0xc7c0c950a9cb4843,3,,,,'
 
-function testimonios() {
+function opiniones() {
     return (
         <div>
+            <Seo path='/opiniones' />
+            <Navbar />
 
-<Seo path='/opiniones' />
+            <main>
+                <PageHero
+                    titulo='Opiniones de nuestros clientes'
+                    intro={['Lo que dicen las familias y negocios de Chihuahua que confían en nosotros sobre la asesoría y el acompañamiento que reciben.']}
+                    migas={[{ nombre: 'Inicio', href: '/' }, { nombre: 'Opiniones' }]}
+                >
+                    <a
+                        href={RESENAS_GOOGLE}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='mt-8 inline-block rounded-full bg-white px-6 py-3 font-bold text-brand-800 hover:bg-brand-50'
+                    >
+                        Déjanos tu opinión en Google
+                    </a>
+                </PageHero>
 
-            <Navbar testimonios="True"></Navbar>
+                <section className='mx-auto max-w-6xl px-4 py-12'>
+                    <iframe
+                        title='Testimonios de clientes de PorTi Seguros'
+                        id='testimonialto-portiseguros-tag-all-light-animated'
+                        src='https://embed-v2.testimonial.to/w/portiseguros?animated=on&theme=light&shadowColor=000000&speed=1&hideDate=on&hideSource&tag=all&showHeartAnim'
+                        loading='lazy'
+                        className='h-[800px] w-full rounded-2xl'
+                    ></iframe>
+                </section>
 
-            <div className='mb-1 md:mb-8 mt-8 flex flex-col text-sm text-center md:text-3xl md:text-center items-center text-white font-bold'>
+                <CtaBanda />
+            </main>
 
-
-                <h1 className='text-center'>Revisa lo que nuestros clientes <span className='block mt-1 md:mt-4 italic text-amber-500'>opinan sobre nosotros</span></h1>
-
-
-
-
-            </div>
-            <iframe height="800px" id='testimonialto-portiseguros-tag-all-light-animated' src="https://embed-v2.testimonial.to/w/portiseguros?animated=on&theme=light&shadowColor=000000&speed=1&hideDate=on&hideSource&tag=all&showHeartAnim" frameborder="0" scrolling="no" width="100%"></iframe>
-             <div className=' my-14 flex flex-row items-center justify-center'>
-                <a className=' text-white font-bold text-xl text-center p-5 rounded-lg bg-sky-600' href='https://www.google.com/search?q=portiseguros+google+maps&rlz=1C1VDKB_esMX1068MX1068&oq=portiseguros+google+maps&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigAdIBCDQ4ODNqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#lrd=0x86ea437103ecc5b9:0xc7c0c950a9cb4843,3,,,,' target="_blank"> Escribe aqui tu opinion</a>
-            </div>
-            
-            <Footer></Footer>
-
+            <Footer />
         </div>
     )
 }
 
-export default testimonios
+export default opiniones

@@ -3,7 +3,6 @@
 const ramo = {
   slug: 'plan-personal-de-retiro',
   nombre: 'Plan Personal de Retiro (PPR)',
-  imagen: '/planesretiro.png',
   h1: 'Plan Personal de Retiro (PPR) en Chihuahua',
   whatsappText: 'Hola, quiero información sobre un *Plan Personal de Retiro (PPR)*.',
   intro: [

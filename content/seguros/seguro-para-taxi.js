@@ -3,7 +3,6 @@
 const ramo = {
   slug: 'seguro-para-taxi',
   nombre: 'Seguro para taxi',
-  imagen: '/serviciopublico.png',
   h1: 'Seguro para taxi en Chihuahua',
   whatsappText: 'Hola, tengo un taxi y quiero cotizar un seguro (página Taxi).',
   intro: [

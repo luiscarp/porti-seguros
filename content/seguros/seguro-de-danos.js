@@ -3,7 +3,6 @@
 const ramo = {
   slug: 'seguro-de-danos',
   nombre: 'Seguro de casa y negocio',
-  imagen: '/segurodanosdf.png',
   h1: 'Seguro de casa y negocio en Chihuahua',
   whatsappText: 'Hola, quiero cotizar un seguro para mi casa o negocio.',
   intro: [

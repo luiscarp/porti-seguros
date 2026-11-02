@@ -1,27 +1,29 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Seo from "@/components/Seo";
+import PageHero from '@/components/PageHero';
+import CtaButtons from '@/components/CtaButtons';
 
 import React from 'react'
 
-function cotiza() {
+// Provisional: T11 agrega el formulario corto que abre WhatsApp con el mensaje armado.
+function cotizar() {
     return (
         <div>
             <Seo path="/cotizar" />
-            <Navbar cotiza="True"></Navbar>
-            <div className='mb-1 md:mb-8 mt-8 flex flex-col text-sm text-center md:text-3xl md:text-center items-center text-white font-bold'>
-
-
-                <h1 className='text-center'>Ingresa a nuestro <span className='block mt-1 md:mt-4 italic text-amber-500'>cotizador en línea</span></h1>
-
-                <p className='text-center mt-1 md:mt-4 italic text-amber-500'>SITIO EN CONSTRUCCION</p>
-
-
-            </div>
-            <Footer></Footer>
-
+            <Navbar />
+            <main>
+                <PageHero
+                    titulo='Cotiza tu seguro'
+                    intro={['Cuéntanos qué necesitas proteger y te preparamos una cotización sin compromiso. Te respondemos por WhatsApp o por teléfono.']}
+                    migas={[{ nombre: 'Inicio', href: '/' }, { nombre: 'Cotizar' }]}
+                >
+                    <CtaButtons whatsappText='Hola, quiero cotizar un seguro (página Cotizar).' className='mt-8' />
+                </PageHero>
+            </main>
+            <Footer />
         </div>
     )
 }
 
-export default cotiza
+export default cotizar
