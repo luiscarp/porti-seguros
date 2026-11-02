@@ -2,8 +2,20 @@
 const nextConfig = {
   reactStrictMode: true,
   trailingSlash: false,
-  images: {
-    domains: ['res.cloudinary.com'],
+  // Encabezados de seguridad en todas las rutas
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=()' },
+        ],
+      },
+    ]
   },
   // URLs anteriores → nuevas (301). El host www y https ya los fuerza Vercel.
   async redirects() {
