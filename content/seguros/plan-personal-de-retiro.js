@@ -36,12 +36,29 @@ const ramo = {
       titulo: 'Tu retiro y tu seguro de vida',
       parrafos: ['Ahorrar para tu retiro y proteger a tu familia son metas que se complementan. Revisamos contigo ambas para que tu plan esté equilibrado.'],
     },
+    {
+      titulo: '¿PPR o seguro de vida con ahorro?',
+      parrafos: [
+        'Ambos ayudan a ahorrar a largo plazo, pero tienen objetivos y reglas distintas. Un PPR está pensado para tu retiro y tiene reglas específicas sobre cuándo puedes disponer del dinero. Un seguro de vida con ahorro prioriza la protección de tu familia y, además, reúne un monto. En muchos casos conviene combinar ambos; lo revisamos contigo.',
+      ],
+    },
+    {
+      titulo: 'Errores comunes al planear tu retiro',
+      lista: [
+        'Empezar demasiado tarde.',
+        'Comprometer aportaciones que no puedes sostener en el tiempo.',
+        'Retirar antes de tiempo sin conocer las consecuencias.',
+        'No revisar el plan cuando cambian tus ingresos o tus metas.',
+        'Pensar en el ahorro y olvidar la protección de tu familia.',
+      ],
+    },
   ],
   faq: [
     { pregunta: '¿Cuánto debo aportar a un PPR?', respuesta: 'Depende de tus objetivos, tu edad y tu presupuesto. Te ayudamos a definir una aportación que puedas mantener en el tiempo.' },
     { pregunta: '¿Puedo retirar mi dinero antes?', respuesta: 'Por lo general sí, pero los retiros anticipados pueden tener penalizaciones y efectos fiscales. Te explicamos las condiciones del plan antes de contratar.' },
     { pregunta: '¿El PPR sustituye a mi Afore?', respuesta: 'No. La Afore es parte de la seguridad social; un PPR es un ahorro voluntario adicional que puede complementarla.' },
     { pregunta: '¿El PPR es deducible de impuestos?', respuesta: 'Algunos planes pueden serlo, dentro de los límites de la ley. Confírmalo con tu contador para tu caso.' },
+    { pregunta: '¿Desde qué edad conviene empezar un PPR?', respuesta: 'Entre más pronto empieces, más tiempo tienes para reunir tu ahorro y menor es el esfuerzo de cada aportación. Aun así, nunca es tarde para empezar; revisamos tu caso.' },
   ],
   relacionados: ['seguros-de-vida', 'gastos-medicos-mayores', 'seguro-de-danos'],
 }

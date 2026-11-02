@@ -43,12 +43,30 @@ const ramo = {
         'Tener un inventario actualizado con fotos y facturas.',
       ],
     },
+    {
+      titulo: 'Construcción y contenidos: qué es cada cosa',
+      parrafos: [
+        'La construcción es el inmueble en sí: muros, techos, pisos e instalaciones fijas. Los contenidos son lo que hay dentro: muebles, aparatos, ropa, mercancía o equipo. Puedes asegurar uno, otro o ambos, y cada uno lleva su propia suma asegurada. Si rentas, normalmente te interesa asegurar tus contenidos y tu responsabilidad civil.',
+      ],
+    },
+    {
+      titulo: 'Qué hacer si ocurre un siniestro',
+      listaOrdenada: true,
+      lista: [
+        'Pon a salvo a las personas y, si es necesario, llama a los servicios de emergencia.',
+        'Evita que el daño crezca, por ejemplo cerrando la llave del agua.',
+        'Reporta el siniestro a tu aseguradora.',
+        'Toma fotos y conserva facturas; no deseches bienes dañados hasta que el ajustador los revise.',
+        'Avísanos para darte seguimiento.',
+      ],
+    },
   ],
   faq: [
     { pregunta: 'Si rento, ¿puedo asegurar mis cosas?', respuesta: 'Sí. Puedes asegurar tus contenidos y tu responsabilidad civil aunque no seas dueño del inmueble.' },
     { pregunta: '¿Qué pasa si aseguro por menos del valor real?', respuesta: 'Si la suma asegurada es menor que el valor de los bienes, la indemnización puede reducirse de forma proporcional. Por eso revisamos contigo los valores al contratar.' },
     { pregunta: '¿El seguro de negocio cubre mi mercancía?', respuesta: 'Puede cubrirla si se incluye en la póliza. Te ayudamos a definir qué bienes asegurar y por qué monto.' },
     { pregunta: '¿Cubre daños a mis vecinos o clientes?', respuesta: 'La cobertura de responsabilidad civil puede responder por daños a terceros, según los límites contratados. Para negocios, revisa también nuestra página de responsabilidad civil.' },
+    { pregunta: '¿El seguro cubre daños por lluvia o granizo?', respuesta: 'Los fenómenos hidrometeorológicos suelen ser una cobertura específica, con su propio deducible. Revisamos contigo si tu póliza la incluye y en qué condiciones.' },
   ],
   relacionados: ['responsabilidad-civil', 'seguros-de-vida', 'seguro-flotillas'],
 }

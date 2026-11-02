@@ -46,12 +46,29 @@ const ramo = {
         'Avísanos para darte seguimiento.',
       ],
     },
+    {
+      titulo: 'Pérdida total: cómo se calcula lo que te pagan',
+      parrafos: [
+        'Cuando un auto se considera pérdida total por robo o por daños, la aseguradora indemniza según el valor que define la póliza, por ejemplo el valor comercial al momento del siniestro o, en algunos planes, el valor factura durante cierto tiempo. A ese monto se le descuenta el deducible correspondiente. Revisar este punto antes de contratar evita sorpresas.',
+      ],
+    },
+    {
+      titulo: 'Asistencias que conviene revisar',
+      lista: [
+        'Grúa y traslado del vehículo.',
+        'Paso de corriente y cambio de llanta.',
+        'Envío de gasolina.',
+        'Asistencia legal en caso de accidente.',
+        'Auto sustituto, en algunos planes.',
+      ],
+    },
   ],
   faq: [
     { pregunta: '¿Qué cobertura me conviene?', respuesta: 'Depende del valor de tu auto, de cómo lo usas y de cuánto podrías pagar por tu cuenta si ocurre un daño. Te mostramos las diferencias para que elijas con información.' },
     { pregunta: '¿Qué es el deducible?', respuesta: 'Es la parte del costo de un siniestro que te corresponde pagar a ti. Un deducible más alto suele bajar el costo del seguro, pero aumenta lo que pagas si lo usas.' },
     { pregunta: '¿Qué pasa si presto mi auto?', respuesta: 'Muchas pólizas protegen al vehículo aunque lo maneje otra persona con licencia vigente, pero las condiciones varían. Revisamos contigo las de tu póliza.' },
     { pregunta: '¿Me ayudan si tengo un siniestro?', respuesta: 'Sí. Te orientamos desde el reporte y damos seguimiento con la aseguradora hasta que se resuelva.' },
+    { pregunta: '¿Puedo cambiar de aseguradora antes de que venza mi póliza?', respuesta: 'Sí, es posible. Conviene revisar si hay devolución de la prima no utilizada y que la nueva póliza empiece sin dejar días sin protección. Te ayudamos a coordinar el cambio.' },
   ],
   relacionados: ['seguro-uber-didi', 'seguro-flotillas', 'seguro-para-taxi'],
 }

@@ -48,6 +48,14 @@ const ramo = {
         'Cómo funciona la renovación conforme cumples años.',
       ],
     },
+    {
+      titulo: 'Cómo usar tu seguro: pago directo o reembolso',
+      subsecciones: [
+        { titulo: 'Pago directo', texto: 'En hospitales en convenio, la aseguradora paga directamente al hospital y tú cubres la parte que te corresponde de deducible y coaseguro.' },
+        { titulo: 'Reembolso', texto: 'Pagas los gastos y después solicitas el reembolso a la aseguradora con facturas e informes médicos, según lo que cubra tu póliza.' },
+      ],
+      cierre: 'Antes de una cirugía o un tratamiento programado conviene solicitar la autorización de la aseguradora. Te orientamos en el trámite.',
+    },
   ],
   faq: [
     { pregunta: '¿Qué es mejor, un deducible alto o uno bajo?', respuesta: 'Un deducible alto suele bajar el costo del seguro, pero pagas más al usarlo. Uno bajo es más caro, pero te protege desde gastos menores. Te ayudamos a encontrar el equilibrio según tu presupuesto.' },
@@ -55,6 +63,7 @@ const ramo = {
     { pregunta: '¿Puedo asegurar a mi familia en la misma póliza?', respuesta: 'Por lo general puedes incluir a tu pareja y a tus hijos en una póliza familiar. Te mostramos las opciones de cada aseguradora.' },
     { pregunta: '¿Me sirve si ya tengo IMSS o ISSSTE?', respuesta: 'Sí, puedes tener ambos. El seguro de gastos médicos mayores te da acceso a atención privada y complementa la seguridad social.' },
     { pregunta: '¿Cómo uso mi seguro en una emergencia?', respuesta: 'Acude a un hospital de tu red, presenta los datos de tu póliza y avisa a la aseguradora. Nosotros te orientamos durante el proceso.' },
+    { pregunta: '¿Qué pasa con mi seguro cuando cumplo años?', respuesta: 'En cada renovación la prima suele ajustarse por edad y por las condiciones del plan. Revisamos contigo cada renovación para que tu protección siga siendo adecuada a tu presupuesto.' },
   ],
   relacionados: ['seguros-de-vida', 'seguro-de-viaje', 'plan-personal-de-retiro'],
 }

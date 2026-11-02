@@ -40,12 +40,28 @@ const ramo = {
       titulo: 'Cómo te ayudamos',
       parrafos: ['Levantamos la información de tus unidades, comparamos opciones y damos seguimiento a cada siniestro con la aseguradora. También revisamos contigo la siniestralidad para preparar cada renovación con información.'],
     },
+    {
+      titulo: 'Cómo preparar la información para cotizar',
+      lista: [
+        'La relación de unidades: marca, modelo, año y uso de cada una.',
+        'Quién maneja las unidades y en qué zonas circulan.',
+        'Las coberturas que tienes hoy, si ya cuentas con seguro.',
+        'El historial de siniestros, si lo tienes a la mano.',
+      ],
+    },
+    {
+      titulo: 'Por qué importa la siniestralidad',
+      parrafos: [
+        'La siniestralidad es la relación entre los siniestros que ocurren y lo que se paga de prima. Conocerla te ayuda a detectar unidades, rutas o hábitos de manejo que generan más incidentes y a tomar medidas de prevención. También es información clave al momento de renovar.',
+      ],
+    },
   ],
   faq: [
     { pregunta: '¿Desde cuántas unidades se considera flotilla?', respuesta: 'Depende de la aseguradora. [DATO PENDIENTE – confirmar con Claudia]' },
     { pregunta: '¿Puedo agregar unidades durante el año?', respuesta: 'Por lo general puedes dar de alta o de baja unidades durante la vigencia, con el ajuste correspondiente en la prima.' },
     { pregunta: '¿Puedo tener distintas coberturas por vehículo?', respuesta: 'Sí. Puedes definir coberturas diferentes según el tipo y el uso de cada unidad.' },
     { pregunta: '¿La póliza protege a los conductores?', respuesta: 'Las pólizas pueden incluir gastos médicos para ocupantes y responsabilidad civil. Revisamos contigo las condiciones sobre quién puede conducir cada unidad.' },
+    { pregunta: '¿Puedo incluir unidades de distintos tipos en la misma póliza?', respuesta: 'Sí. Una flotilla puede agrupar autos, camionetas y unidades de carga ligera, cada una con las coberturas que necesita según su uso.' },
   ],
   relacionados: ['seguro-de-auto', 'seguro-para-taxi', 'responsabilidad-civil'],
 }

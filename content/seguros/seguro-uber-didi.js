@@ -47,6 +47,15 @@ const ramo = {
       titulo: 'Cómo te ayudamos',
       parrafos: ['Comparamos opciones de varias aseguradoras, te explicamos con palabras sencillas qué cubre cada póliza y te acompañamos cuando necesitas usarla. Si tienes un siniestro, te orientamos en cada paso y damos seguimiento con la aseguradora.'],
     },
+    {
+      titulo: 'Qué información necesitamos para cotizar',
+      lista: [
+        'Marca, modelo y año de tu auto, y los datos de la tarjeta de circulación.',
+        'Las apps con las que trabajas y si también haces entregas.',
+        'Quién o quiénes manejan el auto.',
+        'Si ya tienes una póliza, para revisar qué cubre hoy.',
+      ],
+    },
   ],
   faq: [
     { pregunta: '¿Puedo usar mi seguro de auto normal para manejar por plataforma?', respuesta: 'Depende de las condiciones de tu póliza, pero muchas pólizas particulares excluyen el transporte de pasajeros a cambio de un pago. Revisamos tu póliza actual y te decimos si cubre ese uso o si conviene cambiarla.' },
@@ -54,6 +63,7 @@ const ramo = {
     { pregunta: '¿El seguro cubre a mis pasajeros?', respuesta: 'Las pólizas para plataforma suelen incluir gastos médicos para ocupantes y responsabilidad civil. Te mostramos qué límites tiene cada opción para que elijas con claridad.' },
     { pregunta: '¿Puedo pagar en mensualidades?', respuesta: 'Las formas de pago dependen de cada aseguradora. Al cotizar te mostramos las opciones disponibles para cada póliza.' },
     { pregunta: '¿También cubre entregas de comida o paquetería?', respuesta: 'Las entregas son un uso distinto al transporte de pasajeros. Si también haces entregas, dínoslo al cotizar para buscar una póliza que contemple ambos usos.' },
+    { pregunta: '¿Qué pasa si choco cuando no tengo un viaje activo?', respuesta: 'Depende de cómo defina la póliza el uso del vehículo. Algunas distinguen entre el tiempo con la app encendida, con un viaje asignado y sin conectarte. Te explicamos cómo funciona en cada opción para que no queden huecos en tu protección.' },
   ],
   relacionados: ['seguro-para-taxi', 'seguro-de-auto', 'gastos-medicos-mayores'],
 }
