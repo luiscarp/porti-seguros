@@ -30,7 +30,7 @@ export default function Navbar() {
                 <>
                     <div className='mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:h-20'>
                         <Link href='/' className='flex shrink-0 items-center'>
-                            <Image src='/logo1.png' alt={BUSINESS.name} width={1722} height={582} priority className='h-9 w-auto md:h-12' />
+                            <Image src='/porti-seguros-logo.png' alt={BUSINESS.name} width={1722} height={582} priority className='h-9 w-auto md:h-12' />
                         </Link>
 
                         <div className='hidden items-center gap-1 md:flex'>

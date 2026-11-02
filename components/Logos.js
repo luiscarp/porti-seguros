@@ -1,120 +1,29 @@
+import Image from 'next/image'
+import { ASEGURADORAS } from '@/content/aseguradoras'
+
+// Aseguradoras con las que trabajamos: logo oficial servido desde /public si existe; si no, el nombre.
 export default function Logos() {
     return (
         <section className="border-y border-slate-200 bg-slate-50 py-16">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                <h2 className="text-center text-2xl font-bold md:text-3xl">
-                    Trabajamos con distintas aseguradoras
-                </h2>
-                <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-                    <img
-                        className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                        src="https://res.cloudinary.com/dz9dt7nqo/image/upload/v1712174082/logo_1_modificado_1_tslgfo.png"
-                        alt="Primero Seguros"
-                        width={158}
-                        height={48}
-                    />
-
-                    <img
-                        className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                        src="https://res.cloudinary.com/dz9dt7nqo/image/upload/v1712173848/WhatsApp_Image_2024-04-02_at_22.54.03_f6defd69_hgicta.jpg"
-                        alt="Primero Seguros"
-                        width={158}
-                        height={48}
-                    />
-
-                    <img
-                        className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                        src="https://www.moteroseguro.com/wp-content/uploads/2023/02/primeroseguros.svg"
-                        alt="Primero Seguros"
-                        width={158}
-                        height={48}
-                    />
-                    <img
-                        className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                        src="https://www.moteroseguro.com/wp-content/uploads/2023/01/qualitas-logo.svg"
-                        alt="Reform"
-                        width={158}
-                        height={48}
-                    />
-                    <img
-                        className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                        src="https://www.moteroseguro.com/wp-content/uploads/2023/02/chubb_logo_black_cmyk.svg"
-                        alt="Tuple"
-                        width={158}
-                        height={48}
-                    />
-                    <img
-                        className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
-                        src="https://www.moteroseguro.com/wp-content/uploads/2023/02/HDI-Logo-1.svg"
-                        alt="SavvyCal"
-                        width={158}
-                        height={48}
-                    />
-                    <img
-                        className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
-                        src="https://upload.wikimedia.org/wikipedia/commons/9/94/AXA_Logo.svg"
-                        alt="Statamic"
-                        width={158}
-                        height={48}
-                    />
-                    <img
-                        className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Afirme_logo.svg/1200px-Afirme_logo.svg.png?20210912053111"
-                        alt="SavvyCal"
-                        width={158}
-                        height={48}
-                    />
-                    <img
-                        className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
-                        src="https://www.moteroseguro.com/wp-content/uploads/2023/01/ana-logo.svg"
-                        alt="Statamic"
-                        width={158}
-                        height={48}
-                    />
-                    <img
-                        className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
-                        src="https://upload.wikimedia.org/wikipedia/commons/c/c6/MetLife_logo.svg"
-                        alt="Statamic"
-                        width={158}
-                        height={48}
-                    />
-                    <img
-                        className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Allianz.svg/888px-Allianz.svg.png?20230111211421"
-                        alt="Statamic"
-                        width={158}
-                        height={48}
-                    />
-                    <img
-                        className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Mapfre_logo.svg/600px-Mapfre_logo.svg.png"
-                        alt="Statamic"
-                        width={158}
-                        height={48}
-                    />
-                    <img
-                        className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
-                        src="https://seeklogo.com/images/A/aba-seguros-logo-3999AB7FC0-seeklogo.com.png"
-                        alt="Statamic"
-                        width={158}
-                        height={48}
-                    />
-                    <img
-                        className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
-                        src="https://seeklogo.com/images/L/la-latino-seguros-logo-386C8383DB-seeklogo.com.png"
-                        alt="Statamic"
-                        width={158}
-                        height={48}
-                    />
-
-                    <img
-                        className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                        src="https://res.cloudinary.com/dz9dt7nqo/image/upload/v1712174082/logo_1_modificado_1_tslgfo.png"
-                        alt="Primero Seguros"
-                        width={158}
-                        height={48}
-                    />
-                </div>
+            <div className="mx-auto max-w-6xl px-4">
+                <h2 className="text-center text-2xl font-bold md:text-3xl">Trabajamos con distintas aseguradoras</h2>
+                <p className="mx-auto mt-3 max-w-2xl text-center leading-7 text-slate-600">
+                    Comparamos sus opciones para recomendarte la que mejor se adapta a ti.
+                </p>
+                <ul className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+                    {ASEGURADORAS.map((aseguradora) => (
+                        <li
+                            key={aseguradora.nombre}
+                            className="flex h-16 items-center justify-center rounded-xl border border-slate-200 bg-white px-4 text-center font-display text-sm font-semibold text-slate-600"
+                        >
+                            {aseguradora.logo ? (
+                                <Image src={aseguradora.logo} alt={aseguradora.nombre} width={140} height={40} className="max-h-10 w-auto object-contain" />
+                            ) : (
+                                aseguradora.nombre
+                            )}
+                        </li>
+                    ))}
+                </ul>
             </div>
         </section>
     )
