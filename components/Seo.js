@@ -13,7 +13,7 @@ export default function Seo({ path, image = ogImage(path), noindex = false }) {
     <NextSeo
       title={title}
       description={description}
-      canonical={url}
+      canonical={noindex ? undefined : url}
       noindex={noindex}
       openGraph={{
         url,

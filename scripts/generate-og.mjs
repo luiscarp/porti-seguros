@@ -22,7 +22,7 @@ const escapar = (texto) => texto.replace(/&/g, '&amp;').replace(/</g, '&lt;')
 
 export const ogFile = (ruta) => (ruta === '/' ? 'portada' : ruta.slice(1))
 
-for (const [ruta, { title }] of Object.entries(PAGE_META)) {
+for (const [ruta, { title }] of Object.entries(PAGE_META).filter(([ruta]) => ruta !== '/404')) {
   const titulo = title.split(' | ')[0]
   const html = `<!doctype html><html><head><meta charset="utf-8"><style>
     * { margin: 0; box-sizing: border-box; }
