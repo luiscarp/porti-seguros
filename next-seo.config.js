@@ -10,5 +10,11 @@ export default {
   twitter: {
     cardType: 'summary_large_image',
   },
-  additionalLinkTags: [{ rel: 'icon', href: '/logopestana.png' }],
+  additionalMetaTags: [{ name: 'theme-color', content: '#025596' }],
+  additionalLinkTags: [
+    { rel: 'icon', href: '/favicon.ico', sizes: '48x48' },
+    { rel: 'icon', href: '/icon-192.png', type: 'image/png', sizes: '192x192' },
+    { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+    { rel: 'manifest', href: '/site.webmanifest' },
+  ],
 }
