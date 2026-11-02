@@ -4,9 +4,10 @@ import Footer from '@/components/Footer'
 import Seo from '@/components/Seo'
 import PageHero from '@/components/PageHero'
 import CtaBanda from '@/components/CtaBanda'
+import { BUSINESS, isPending } from '@/config/business'
 
-// Enlace provisional a las reseñas; T10 lo cambia por el enlace oficial "Pedir reseñas" de Google.
-const RESENAS_GOOGLE = 'https://www.google.com/search?q=portiseguros+google+maps#lrd=0x86ea437103ecc5b9:0xc7c0c950a9cb4843,3,,,,'
+// Enlace oficial "Pedir reseñas"; mientras esté pendiente se usa la ficha de Google Maps.
+const RESENAS_GOOGLE = isPending(BUSINESS.social.googleReviews) ? BUSINESS.social.googleMaps : BUSINESS.social.googleReviews
 
 function opiniones() {
     return (

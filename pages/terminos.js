@@ -17,7 +17,7 @@ function terminos() {
 
                 <p className='text-sm text-slate-500'>Fecha de Última Actualización: 27/01/2024 </p>
 
-                <p className='mt-4 leading-7'>Bienvenido a "Por Ti Seguros". Los siguientes términos y condiciones (los "Términos") rigen su acceso y uso de nuestros servicios, incluyendo cualquier contenido, funcionalidad y servicios ofrecidos en o a través de www.portiseguros.com.mx</p>
+                <p className='mt-4 leading-7'>Bienvenido a "PorTi Seguros". Los siguientes términos y condiciones (los "Términos") rigen su acceso y uso de nuestros servicios, incluyendo cualquier contenido, funcionalidad y servicios ofrecidos en o a través de www.portiseguros.com.mx</p>
 
                 <h2 className='mt-10 text-xl font-bold'> 1. Aceptación de los Términos:</h2>
 
@@ -29,7 +29,7 @@ function terminos() {
 
                 <h2 className='mt-10 text-xl font-bold'> 3. Servicios de Seguros:</h2>
 
-                <p className='mt-4 leading-7'>"Por Ti Seguros" ofrece una variedad de productos de seguros. Cada producto de seguro está sujeto a sus propias condiciones, limitaciones y exclusiones, que se describen en la póliza correspondiente.</p>
+                <p className='mt-4 leading-7'>"PorTi Seguros" ofrece una variedad de productos de seguros. Cada producto de seguro está sujeto a sus propias condiciones, limitaciones y exclusiones, que se describen en la póliza correspondiente.</p>
 
                 <h2 className='mt-10 text-xl font-bold'> 4. Elegibilidad:</h2>
 
@@ -45,7 +45,7 @@ function terminos() {
 
                 <h2 className='mt-10 text-xl font-bold'> 7. Propiedad Intelectual:</h2>
 
-                <p className='mt-4 leading-7'> El contenido, diseño, gráficos, logotipos, imágenes, software y otros materiales proporcionados en nuestros servicios son propiedad de "Por Ti Seguros" o sus licenciantes y están protegidos por leyes de propiedad intelectual.</p>
+                <p className='mt-4 leading-7'> El contenido, diseño, gráficos, logotipos, imágenes, software y otros materiales proporcionados en nuestros servicios son propiedad de "PorTi Seguros" o sus licenciantes y están protegidos por leyes de propiedad intelectual.</p>
 
                 <h2 className='mt-10 text-xl font-bold'> 8. Uso Prohibido:</h2>
 
@@ -57,18 +57,18 @@ function terminos() {
 
                 <h2 className='mt-10 text-xl font-bold'> 9. Limitación de Responsabilidad:</h2>
 
-                <p className='mt-4 leading-7'>"Por Ti Seguros" no será responsable por daños indirectos, incidentales, especiales, consecuentes o punitivos, incluyendo pérdida de beneficios, datos o uso, relacionados con su acceso o uso de nuestros servicios.</p>
+                <p className='mt-4 leading-7'>"PorTi Seguros" no será responsable por daños indirectos, incidentales, especiales, consecuentes o punitivos, incluyendo pérdida de beneficios, datos o uso, relacionados con su acceso o uso de nuestros servicios.</p>
 
                 <h2 className='mt-10 text-xl font-bold'> 10. Indemnización:</h2>
 
-                <p className='mt-4 leading-7'>Usted acuerda indemnizar y eximir de responsabilidad a "Por Ti Seguros", sus afiliados, oficiales, empleados y agentes, de cualquier reclamo, demanda, pérdida, responsabilidad y gastos (incluidos los honorarios de abogados) que surjan de su uso de nuestros servicios..
+                <p className='mt-4 leading-7'>Usted acuerda indemnizar y eximir de responsabilidad a "PorTi Seguros", sus afiliados, oficiales, empleados y agentes, de cualquier reclamo, demanda, pérdida, responsabilidad y gastos (incluidos los honorarios de abogados) que surjan de su uso de nuestros servicios..
 
 
                 </p>
 
                 <h2 className='mt-10 text-xl font-bold'> 11. Ley Aplicable y Jurisdicción:</h2>
 
-                <p className='mt-4 leading-7'>"Por Ti Seguros" puede modificar este Aviso de Privacidad ocasionalmente. Cualquier cambio será publicado en esta página con la fecha de la última actualización.</p>
+                <p className='mt-4 leading-7'>"PorTi Seguros" puede modificar este Aviso de Privacidad ocasionalmente. Cualquier cambio será publicado en esta página con la fecha de la última actualización.</p>
 
                 <h2 className='mt-10 text-xl font-bold'> 12. Contacto:</h2>
 

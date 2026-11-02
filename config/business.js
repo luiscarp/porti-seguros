@@ -31,6 +31,7 @@ export const BUSINESS = {
     facebook: 'https://www.facebook.com/ChihuahuaSeguros',
     instagram: '[PENDIENTE: URL real del perfil]',
     googleMaps: 'https://maps.app.goo.gl/KJdJJAhK91t8cVjd9',
+    googleReviews: '[PENDIENTE: enlace "Pedir reseñas" del Perfil de Negocio, https://g.page/r/…/review]',
   },
   siteUrl: 'https://www.portiseguros.com.mx',
 }

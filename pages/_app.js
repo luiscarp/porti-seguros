@@ -3,7 +3,6 @@ import SEO from '../next-seo.config';
 import { DefaultSeo } from 'next-seo';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
-import { SessionProvider } from "next-auth/react"
 import { Inter, Montserrat } from 'next/font/google'
 import Head from 'next/head'
 
@@ -12,7 +11,7 @@ const montserrat = Montserrat({ subsets: ['latin'], weight: ['600', '700', '800'
 
 export default function App({
   Component,
-  pageProps: { session, ...pageProps },
+  pageProps,
 }) {
   return (
     <div className={`${inter.variable} ${montserrat.variable} font-sans`}>
@@ -20,9 +19,7 @@ export default function App({
         <meta name="viewport" content="width=device-width, initial-scale=1" key="viewport" />
       </Head>
       <DefaultSeo {...SEO} />
-      <SessionProvider session={session}>
-        <Component {...pageProps} />
-      </SessionProvider>
+      <Component {...pageProps} />
       <Analytics />
       <SpeedInsights />
 

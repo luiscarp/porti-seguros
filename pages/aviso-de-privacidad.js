@@ -20,7 +20,7 @@ function privacidad() {
 
                     <p className='text-sm text-slate-500'>Fecha de Última Actualización: 27/01/2024 </p>
 
-                    <p className='mt-4 leading-7'>En "Por Ti Seguros", respetamos su privacidad y nos comprometemos a proteger la información personal que usted nos proporciona. Este Aviso de Privacidad describe cómo recopilamos, usamos, compartimos y protegemos su información personal, en conformidad con las leyes aplicables en materia de protección de datos personales.</p>
+                    <p className='mt-4 leading-7'>En "PorTi Seguros", respetamos su privacidad y nos comprometemos a proteger la información personal que usted nos proporciona. Este Aviso de Privacidad describe cómo recopilamos, usamos, compartimos y protegemos su información personal, en conformidad con las leyes aplicables en materia de protección de datos personales.</p>
 
                     <h2 className='mt-10 text-xl font-bold'> 1. Información que Recopilamos:</h2>
 
@@ -45,7 +45,7 @@ function privacidad() {
 
                         Socios y proveedores de servicios que necesitan acceso a dicha información para llevar a cabo trabajos en nuestro nombre.
                         En respuesta a un proceso legal (por ejemplo, una orden judicial).
-                        Si creemos que la divulgación es necesaria o apropiada para proteger los derechos, la propiedad o la seguridad de "Por Ti Seguros", nuestros clientes u otros.</p>
+                        Si creemos que la divulgación es necesaria o apropiada para proteger los derechos, la propiedad o la seguridad de "PorTi Seguros", nuestros clientes u otros.</p>
 
                     <h2 className='mt-10 text-xl font-bold'> 4. Seguridad de la Información:</h2>
 
@@ -57,7 +57,7 @@ function privacidad() {
 
                     <h2 className='mt-10 text-xl font-bold'> 6. Cambios a Nuestro Aviso de Privacidad:</h2>
 
-                    <p className='mt-4 leading-7'>"Por Ti Seguros" puede modificar este Aviso de Privacidad ocasionalmente. Cualquier cambio será publicado en esta página con la fecha de la última actualización.</p>
+                    <p className='mt-4 leading-7'>"PorTi Seguros" puede modificar este Aviso de Privacidad ocasionalmente. Cualquier cambio será publicado en esta página con la fecha de la última actualización.</p>
 
                     <h2 className='mt-10 text-xl font-bold'> 7. Contacto:</h2>
 
@@ -66,7 +66,7 @@ function privacidad() {
 
                     </p>
 
-                    <p className='mt-4 leading-7'>Gracias por confiar en "Por Ti Seguros".</p>
+                    <p className='mt-4 leading-7'>Gracias por confiar en "PorTi Seguros".</p>
 
 
 
