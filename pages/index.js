@@ -7,7 +7,10 @@ import TarjetasRamos from '@/components/TarjetasRamos'
 import CtaButtons from '@/components/CtaButtons'
 import CtaBanda from '@/components/CtaBanda'
 import Pasos from '@/components/Pasos'
+import { JsonLd, preguntasFrecuentes } from '@/components/JsonLd'
+import Link from 'next/link'
 import { BUSINESS, yearsOfExperience } from '@/config/business'
+import { FAQ_GENERALES } from '@/content/faq'
 
 export default function Home() {
   const { address } = BUSINESS
@@ -20,6 +23,7 @@ export default function Home() {
   return (
     <div className='flex flex-col'>
       <Seo path='/' />
+      <JsonLd id='preguntas' data={preguntasFrecuentes('/', FAQ_GENERALES)} />
       <Navbar />
 
       <main>
@@ -84,7 +88,44 @@ export default function Home() {
           </div>
         </section>
 
+        <section aria-labelledby='conoce-claudia' className='pb-16'>
+          <div className='mx-auto grid max-w-6xl items-center gap-10 rounded-3xl bg-brand-50 px-6 py-10 md:grid-cols-3 md:px-10'>
+            <Image
+              src='/claudia-pacheco-agente-de-seguros-chihuahua.webp'
+              alt=''
+              width={899}
+              height={900}
+              sizes='(min-width: 768px) 320px, 60vw'
+              className='mx-auto w-48 rounded-full shadow-lg ring-4 ring-white md:w-full md:max-w-[260px]'
+            />
+            <div className='md:col-span-2'>
+              <h2 id='conoce-claudia' className='text-3xl font-bold'>Conoce a {BUSINESS.agentName}</h2>
+              <p className='mt-4 text-lg leading-8'>
+                Agente de seguros desde {BUSINESS.agentSince} y fundadora de {BUSINESS.name}. Su especialidad son los seguros de vida y la protección familiar: ayudarte a definir cuánta protección necesitas, para quién y por cuánto tiempo.
+              </p>
+              <Link href='/claudia-pacheco' className='mt-6 inline-block rounded-full bg-brand-700 px-6 py-3 font-bold text-white hover:bg-brand-800'>
+                Conoce su trayectoria
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <Logos />
+
+        <section aria-labelledby='opiniones' className='py-16'>
+          <div className='mx-auto max-w-3xl px-4 text-center'>
+            <h2 id='opiniones' className='text-3xl font-bold md:text-4xl'>Lo que dicen nuestros clientes</h2>
+            <p className='mt-4 text-lg leading-8'>
+              La mejor referencia es la experiencia de quienes ya confían en nosotros. Lee sus opiniones o comparte la tuya en Google.
+            </p>
+            <div className='mt-8 flex flex-col justify-center gap-3 sm:flex-row'>
+              <Link href='/opiniones' className='rounded-full bg-brand-700 px-6 py-3 font-bold text-white hover:bg-brand-800'>Leer opiniones</Link>
+              <a href={BUSINESS.social.googleMaps} target='_blank' rel='noopener noreferrer' className='rounded-full border border-slate-300 px-6 py-3 font-bold text-slate-800 hover:bg-slate-50'>
+                Ver reseñas en Google
+              </a>
+            </div>
+          </div>
+        </section>
 
         <section aria-labelledby='visitanos' className='py-16'>
           <div className='mx-auto grid max-w-6xl items-center gap-10 px-4 md:grid-cols-2'>
@@ -112,6 +153,23 @@ export default function Home() {
               loading='lazy'
               referrerPolicy='no-referrer-when-downgrade'
             ></iframe>
+          </div>
+        </section>
+
+        <section aria-labelledby='preguntas' className='bg-slate-50 py-16'>
+          <div className='mx-auto max-w-4xl px-4'>
+            <h2 id='preguntas' className='text-3xl font-bold md:text-4xl'>Preguntas frecuentes</h2>
+            <div className='mt-8 divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white'>
+              {FAQ_GENERALES.map((item) => (
+                <div key={item.pregunta} className='p-6'>
+                  <h3 className='text-lg font-bold'>{item.pregunta}</h3>
+                  <p className='mt-2 leading-7'>{item.respuesta}</p>
+                </div>
+              ))}
+            </div>
+            <Link href='/preguntas-frecuentes' className='mt-6 inline-block font-semibold text-brand-700 hover:underline'>
+              Ver todas las preguntas frecuentes →
+            </Link>
           </div>
         </section>
 
