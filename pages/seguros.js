@@ -110,9 +110,8 @@ function productos() {
 
             <div className='md:hidden flex flex-col'>
                 <Link
-                    href={"/seguroauto"}
-                    target='_blank'
-
+                    href={"/seguro-de-auto"}
+                    
                 >
                     <Card
                         className="max-w-sm mx-4 mb-6"
@@ -132,9 +131,8 @@ function productos() {
                 </Link>
 
                 <Link
-                    href={"/serviciopublico"}
-                    target='_blank'
-
+                    href={"/seguro-para-taxi"}
+                    
                 >
                     <Card
                         className="max-w-sm mx-4 mb-6"
@@ -155,9 +153,8 @@ function productos() {
             </div>
             <div className='hidden md:flex md:flex-row md:justify-around'>
                 <Link
-                    href={"/seguroauto"}
-                    target='_blank'
-
+                    href={"/seguro-de-auto"}
+                    
                 >
                     <Card
                         className="max-w-sm mx-4"
@@ -177,9 +174,8 @@ function productos() {
                 </Link>
 
                 <Link
-                    href={"/serviciopublico"}
-                    target='_blank'
-
+                    href={"/seguro-para-taxi"}
+                    
                 >
                     <Card
                         className="max-w-sm mx-4"
@@ -201,9 +197,8 @@ function productos() {
 
             <div className='md:hidden flex flex-col mt-4'>
                 <Link
-                    href={"/gastosmedicos"}
-                    target='_blank'
-
+                    href={"/gastos-medicos-mayores"}
+                    
                 >
                     <Card
                         className="max-w-sm mx-4 mb-6"
@@ -223,9 +218,8 @@ function productos() {
                 </Link>
 
                 <Link
-                    href={"/segurosvida"}
-                    target='_blank'
-
+                    href={"/seguros-de-vida"}
+                    
                 >
                     <Card
                         className="max-w-sm mx-4 mb-6"
@@ -246,9 +240,8 @@ function productos() {
             </div>
             <div className='hidden md:flex md:flex-row md:justify-around mt-8'>
                 <Link
-                    href={"/gastosmedicos"}
-                    target='_blank'
-
+                    href={"/gastos-medicos-mayores"}
+                    
                 >
                     <Card
                         className="max-w-sm mx-4"
@@ -269,9 +262,8 @@ function productos() {
                 </Link>
 
                 <Link
-                    href={"/segurosvida"}
-                    target='_blank'
-
+                    href={"/seguros-de-vida"}
+                    
                 >
                     <Card
                         className="max-w-sm mx-4"
@@ -293,9 +285,8 @@ function productos() {
 
             <div className='md:hidden flex flex-col mt-4 mb-6'>
                 <Link
-                    href={"/danos"}
-                    target='_blank'
-
+                    href={"/seguro-de-danos"}
+                    
                 >
                     <Card
                         className="max-w-sm mx-4 mb-6"
@@ -315,9 +306,8 @@ function productos() {
                 </Link>
 
                 <Link
-                    href={"/planesretiro"}
-                    target='_blank'
-
+                    href={"/plan-personal-de-retiro"}
+                    
                 >
                     <Card
                         className="max-w-sm mx-4 mb-6"
@@ -338,9 +328,8 @@ function productos() {
             </div>
             <div className='hidden md:flex md:flex-row md:justify-around mt-8'>
                 <Link
-                    href={"/danos"}
-                    target='_blank'
-
+                    href={"/seguro-de-danos"}
+                    
                 >
                     <Card
                         className="max-w-sm mx-4 mb-6"
@@ -361,9 +350,8 @@ function productos() {
                 </Link>
 
                 <Link
-                    href={"/planesretiro"}
-                    target='_blank'
-
+                    href={"/plan-personal-de-retiro"}
+                    
                 >
                     <Card
                         className="max-w-sm mx-4 mb-6"

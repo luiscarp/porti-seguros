@@ -16,10 +16,10 @@ function classNames(...classes) {
 export default function Navbar({ home = false, producto = false, testimonios = false, cotiza = false }) {
 
     const navigation = [
-        { name: 'Home', href: '/index', current: home },
-        { name: 'Seguros', href: '/productos', current: producto },
-        { name: 'Testimonios', href: '/testimonios', current: testimonios },
-        { name: 'Cotiza', href: '/cotiza', current: cotiza },
+        { name: 'Inicio', href: '/', current: home },
+        { name: 'Seguros', href: '/seguros', current: producto },
+        { name: 'Opiniones', href: '/opiniones', current: testimonios },
+        { name: 'Cotiza', href: '/cotizar', current: cotiza },
     ]
 
 
@@ -43,12 +43,11 @@ export default function Navbar({ home = false, producto = false, testimonios = f
                             </div>
                             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                                 <Link
-                                    href={'/index'}
-                                    target="_blank"
+                                    href={'/'}
                                     className="flex flex-shrink-0 items-center">
                                     <img
                                         className="h-5 w-auto"
-                                        src="logo2.png"
+                                        src="/logo2.png"
                                         alt="Your Company"
                                     />
                                 </Link>
