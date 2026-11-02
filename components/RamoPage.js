@@ -47,6 +47,29 @@ function Seccion({ seccion }) {
           ))}
         </ul>
       )}
+      {seccion.tabla && (
+        <div className='mt-6 overflow-x-auto rounded-2xl border border-slate-200'>
+          <table className='w-full min-w-[560px] text-left text-sm md:text-base'>
+            <thead className='bg-brand-50 text-slate-900'>
+              <tr>
+                {seccion.tabla.columnas.map((columna, i) => (
+                  <th key={i} scope='col' className='px-4 py-3 font-display font-bold'>{columna}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody className='divide-y divide-slate-200'>
+              {seccion.tabla.filas.map(([encabezado, ...celdas]) => (
+                <tr key={encabezado}>
+                  <th scope='row' className='px-4 py-3 font-semibold text-slate-900'>{encabezado}</th>
+                  {celdas.map((celda, i) => (
+                    <td key={i} className='px-4 py-3 leading-6'>{celda}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
       {seccion.cierre && <p className='mt-5 text-lg leading-8'>{seccion.cierre}</p>}
     </section>
   )
@@ -71,7 +94,7 @@ export default function RamoPage({ ramo, relacionados }) {
         </PageHero>
 
         <div className='mx-auto max-w-4xl px-4 pb-4'>
-          {ramo.secciones.map((seccion) => (
+          {ramo.secciones.filter((seccion) => !seccion.despuesDePasos).map((seccion) => (
             <Seccion key={seccion.titulo} seccion={seccion} />
           ))}
         </div>
@@ -84,6 +107,11 @@ export default function RamoPage({ ramo, relacionados }) {
         </section>
 
         <div className='mx-auto max-w-4xl px-4'>
+          {/* Secciones que la ficha pone después de la metodología (p. ej. errores comunes en Vida) */}
+          {ramo.secciones.filter((seccion) => seccion.despuesDePasos).map((seccion) => (
+            <Seccion key={seccion.titulo} seccion={seccion} />
+          ))}
+
           <section className='mt-16'>
             <h2 className='text-2xl font-bold md:text-3xl'>Preguntas frecuentes</h2>
             <div className='mt-6 divide-y divide-slate-200 rounded-2xl border border-slate-200'>
