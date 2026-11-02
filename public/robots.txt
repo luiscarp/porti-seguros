@@ -1,0 +1,30 @@
+# PorTi Seguros — robots.txt
+# Cada rastreador sigue solo el grupo más específico que lo nombra,
+# por eso Disallow: /api/ se repite en cada grupo.
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Buscadores
+User-agent: Googlebot
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+
+# Asistentes de IA (búsqueda y citas)
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: PerplexityBot
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Google-Extended
+Allow: /
+Disallow: /api/
+
+# Entrenamiento de modelos (decisión de negocio pendiente de Claudia; por defecto permitido)
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+
+Sitemap: https://www.portiseguros.com.mx/sitemap.xml

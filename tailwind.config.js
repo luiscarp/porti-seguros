@@ -9,10 +9,23 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      // Paleta tomada del logotipo de PorTi Seguros
+      colors: {
+        brand: {
+          50: '#EEF6FC',
+          100: '#D6EAF8',
+          200: '#AED5F1',
+          400: '#2E9BDB',
+          500: '#0E86C9',
+          600: '#0569AE',
+          700: '#025596',
+          800: '#0A4373',
+          900: '#0B2E4F',
+        },
+      },
+      fontFamily: {
+        sans: ['var(--font-inter)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['var(--font-montserrat)', 'var(--font-inter)', 'ui-sans-serif', 'sans-serif'],
       },
     },
   },
