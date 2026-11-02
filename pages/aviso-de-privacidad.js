@@ -1,17 +1,13 @@
 import React from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import Head from 'next/head'
+import Seo from '@/components/Seo'
 
 function privacidad() {
     return (
         <div className='bg-sky-800 flex flex-col'>
 
-            <Head>
-                <title>Por Ti Seguros | Aviso de privacidad</title>
-                <link rel="icon" href="/logopestana.png" />
-                {/* Asegúrate de reemplazar "/path-to-your-favicon.ico" con la ruta real de tu favicon */}
-            </Head>
+            <Seo path='/aviso-de-privacidad' />
 
             <div className=' mb-6'>
                 <Navbar></Navbar>

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import Seo from '@/components/Seo'
 import { BUSINESS, whatsappLink } from '@/config/business'
 
 const PASOS = [
@@ -60,6 +61,7 @@ function Seccion({ seccion }) {
 export default function RamoPage({ ramo, relacionados }) {
   return (
     <div>
+      <Seo path={`/${ramo.slug}`} />
       <Navbar producto='True'></Navbar>
 
       <main className='mx-auto max-w-3xl px-4 py-10 text-white'>

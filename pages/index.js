@@ -1,14 +1,13 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import Head from 'next/head'
 import Link from 'next/link'
 import Stats from '@/components/Stats'
 import Logos from '@/components/Logos'
 import Authentication from '@/components/Authentication'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import Seo from '@/components/Seo'
 import Carrusel from '@/components/Carrusel'
-import { NextSeo } from 'next-seo'
 
 
 
@@ -17,18 +16,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <div className=' h-max flex flex-col'>
-      <Head>
-        <link rel="icon" href="/logopestana.png" />
-      </Head>
-      <NextSeo
-        title="PorTi Seguros"
-        description="  En Por Ti Seguros, situados en el corazón de Chihuahua, Chihuahua, en la vibrante Colonia San Felipe, Av. Carbonel, nos destacamos como líderes en el mercado de seguros. Especializados en una amplia gama de servicios, ofrecemos seguros de auto, incluyendo cobertura amplia y seguros específicos para conductores de Uber y Didi. Nuestra oferta se extiende a seguros de daños a terceros, asegurando una protección integral para todas las partes involucradas. Además, en Por Ti Seguros, somos expertos en seguros de daños, con opciones diseñadas para proteger tu patrimonio contra una variedad de riesgos. Con un enfoque particular en la seguridad y el bienestar de nuestra comunidad, proporcionamos seguros de vida y seguros de gastos médicos mayores, diseñados para ofrecer tranquilidad y seguridad financiera. Nuestro equipo de asesores de seguros altamente cualificados está disponible para guiarte a través de nuestras opciones de inversiones, asegurando que tus decisiones financieras estén alineadas con tus objetivos personales y profesionales. En Por Ti Seguros, nuestro compromiso es ofrecer soluciones de seguros personalizadas y de alta calidad para satisfacer todas tus necesidades. Ya sea que busques un seguro para tu auto, tu salud, tu vida o tu patrimonio, somos tu aliado confiable en seguros en Chihuahua. "
-        openGraph={{
-          title: 'PorTi Seguros',
-          description: 'En Por Ti Seguros, situados en el corazón de Chihuahua, Chihuahua, en la vibrante Colonia San Felipe, Av. Carbonel, nos destacamos como líderes en el mercado de seguros. Especializados en una amplia gama de servicios, ofrecemos seguros de auto, incluyendo cobertura amplia y seguros específicos para conductores de Uber y Didi. Nuestra oferta se extiende a seguros de daños a terceros, asegurando una protección integral para todas las partes involucradas. Además, en Por Ti Seguros, somos expertos en seguros de daños, con opciones diseñadas para proteger tu patrimonio contra una variedad de riesgos. Con un enfoque particular en la seguridad y el bienestar de nuestra comunidad, proporcionamos seguros de vida y seguros de gastos médicos mayores, diseñados para ofrecer tranquilidad y seguridad financiera. Nuestro equipo de asesores de seguros altamente cualificados está disponible para guiarte a través de nuestras opciones de inversiones, asegurando que tus decisiones financieras estén alineadas con tus objetivos personales y profesionales. En Por Ti Seguros, nuestro compromiso es ofrecer soluciones de seguros personalizadas y de alta calidad para satisfacer todas tus necesidades. Ya sea que busques un seguro para tu auto, tu salud, tu vida o tu patrimonio, somos tu aliado confiable en seguros en Chihuahua. ',
-          // Aquí puedes añadir más configuraciones de Open Graph si lo necesitas
-        }}
-      />
+      <Seo path='/' />
       <Navbar home='True'></Navbar>
 
       

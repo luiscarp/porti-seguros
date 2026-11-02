@@ -1,16 +1,12 @@
 import React from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import Head from 'next/head'
+import Seo from '@/components/Seo'
 
 function terminos() {
     return (
         <div className='bg-sky-800 flex flex-col'>
-            <Head>
-                <title>Por Ti Seguros | Terminos y Condiciones</title>
-                <link rel="icon" href="/logopestana.png" />
-                {/* Asegúrate de reemplazar "/path-to-your-favicon.ico" con la ruta real de tu favicon */}
-            </Head>
+            <Seo path='/terminos' />
             <Navbar></Navbar>
 
             <div className=' mt-8 flex flex-col text-sm text-center md:text-3xl md:text-center items-center text-white font-bold'>
