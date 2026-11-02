@@ -47,8 +47,8 @@ export default function Home() {
                 alt={`${BUSINESS.agentName}, agente de seguros en ${address.city}`}
                 width={899}
                 height={900}
-                priority
-                sizes='(min-width: 1024px) 448px, 100vw'
+                loading='eager'
+                sizes='(min-width: 1024px) 448px, 90vw'
                 className='rounded-3xl shadow-2xl ring-1 ring-white/20'
               />
             </div>
