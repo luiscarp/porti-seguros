@@ -5,11 +5,13 @@ import Seo from '@/components/Seo'
 import PageHero from '@/components/PageHero'
 import TarjetasRamos from '@/components/TarjetasRamos'
 import CtaBanda from '@/components/CtaBanda'
+import { JsonLd, migasDePan } from '@/components/JsonLd'
 
 function seguros() {
     return (
         <div>
             <Seo path='/seguros' />
+            <JsonLd id='migas' data={migasDePan([{ nombre: 'Inicio', path: '/' }, { nombre: 'Seguros', path: '/seguros' }])} />
             <Navbar />
 
             <main>

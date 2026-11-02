@@ -8,6 +8,7 @@ import CtaButtons from '@/components/CtaButtons'
 import CtaBanda from '@/components/CtaBanda'
 import Pasos from '@/components/Pasos'
 import IconoRamo from '@/components/IconoRamo'
+import { JsonLd, grafoRamo, migasDePan } from '@/components/JsonLd'
 
 function Seccion({ seccion }) {
   return (
@@ -55,6 +56,8 @@ export default function RamoPage({ ramo, relacionados }) {
   return (
     <div>
       <Seo path={`/${ramo.slug}`} />
+      <JsonLd id='ramo' data={grafoRamo(ramo)} />
+      <JsonLd id='migas' data={migasDePan([{ nombre: 'Inicio', path: '/' }, { nombre: 'Seguros', path: '/seguros' }, { nombre: ramo.nombre, path: `/${ramo.slug}` }])} />
       <Navbar />
 
       <main>
