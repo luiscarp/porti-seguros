@@ -37,3 +37,6 @@ next-env.d.ts
 
 # Contentlayer
 .contentlayer
+
+# sitemap generado en el build (scripts/generate-sitemap.mjs)
+/public/sitemap.xml
