@@ -4,7 +4,6 @@ const ramo = {
   slug: 'responsabilidad-civil',
   nombre: 'Seguro de responsabilidad civil',
   h1: 'Seguro de responsabilidad civil en Chihuahua',
-  whatsappText: 'Hola, necesito un seguro de *Responsabilidad Civil*.',
   intro: [
     'Cuando tienes un negocio o ejerces una profesión, un error o un accidente puede causar daños a otras personas y generar reclamaciones costosas. Un seguro de responsabilidad civil te ayuda a responder por esos daños. En PorTi Seguros te asesoramos en Chihuahua para elegir la protección adecuada a tu actividad.',
   ],

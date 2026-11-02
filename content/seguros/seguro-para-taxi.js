@@ -4,7 +4,6 @@ const ramo = {
   slug: 'seguro-para-taxi',
   nombre: 'Seguro para taxi',
   h1: 'Seguro para taxi en Chihuahua',
-  whatsappText: 'Hola, tengo un taxi y quiero cotizar un seguro (página Taxi).',
   intro: [
     'Tu taxi es tu herramienta de trabajo. Un accidente, un robo o un problema con un pasajero puede dejarte sin ingresos durante días o semanas. En PorTi Seguros te asesoramos en Chihuahua para contratar un seguro de servicio público que te proteja a ti, a tus pasajeros y a terceros.',
   ],

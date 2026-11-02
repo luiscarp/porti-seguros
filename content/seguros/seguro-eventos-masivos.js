@@ -4,7 +4,6 @@ const ramo = {
   slug: 'seguro-eventos-masivos',
   nombre: 'Seguro RC para eventos',
   h1: 'Seguro de responsabilidad civil para eventos en Chihuahua',
-  whatsappText: 'Hola, necesito un seguro de responsabilidad civil para un *evento*.',
   intro: [
     'Organizar un evento implica recibir a muchas personas en un mismo lugar. Si alguien sufre un accidente o se dañan bienes de terceros, el organizador puede tener que responder. En PorTi Seguros te ayudamos en Chihuahua a contratar una póliza de responsabilidad civil para tu evento y a reunir la información que te piden.',
   ],

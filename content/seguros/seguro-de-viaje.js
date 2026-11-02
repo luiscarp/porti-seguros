@@ -4,7 +4,6 @@ const ramo = {
   slug: 'seguro-de-viaje',
   nombre: 'Seguro de viaje',
   h1: 'Seguro de viaje desde Chihuahua',
-  whatsappText: 'Hola, quiero cotizar un seguro de *viaje*.',
   intro: [
     'Una emergencia médica, la pérdida de tu equipaje o la cancelación de un vuelo pueden arruinar un viaje y salir caros, sobre todo en el extranjero. Un seguro de viaje te da respaldo y asistencia cuando estás lejos de casa. En PorTi Seguros te ayudamos a elegir el seguro adecuado si sales desde Chihuahua, ya sea a otro estado o a otro país.',
   ],

@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import { BUSINESS, isPending } from '@/config/business'
+import { BUSINESS, isPending, whatsappLink } from '@/config/business'
+import { useMensajeWhatsapp } from '@/content/whatsapp'
 import { RAMOS } from '@/content/seguros'
 
 const DIAS = { Mo: 'lunes', Tu: 'martes', We: 'miércoles', Th: 'jueves', Fr: 'viernes', Sa: 'sábado', Su: 'domingo' }
@@ -12,6 +13,7 @@ function horario({ days, opens, closes }) {
 
 function Footer() {
     const { address } = BUSINESS
+    const mensaje = useMensajeWhatsapp()
     return (
         <footer className='bg-brand-900 text-brand-100'>
             <div className='mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:grid-cols-2 lg:grid-cols-4'>
@@ -46,7 +48,7 @@ function Footer() {
                     <h2 className='text-sm font-bold uppercase tracking-wider text-white'>Contacto</h2>
                     <ul className='mt-4 space-y-2 text-sm'>
                         <li><a href={`tel:${BUSINESS.phoneE164}`} className='hover:text-white hover:underline'>Teléfono: {BUSINESS.phoneDisplay}</a></li>
-                        <li><a href={`https://wa.me/${BUSINESS.whatsapp}`} target='_blank' rel='noopener noreferrer' className='hover:text-white hover:underline'>WhatsApp: {BUSINESS.phoneDisplay}</a></li>
+                        <li><a href={whatsappLink(mensaje)} target='_blank' rel='noopener noreferrer' className='hover:text-white hover:underline'>WhatsApp: {BUSINESS.phoneDisplay}</a></li>
                         <li><a href={BUSINESS.social.googleMaps} target='_blank' rel='noopener noreferrer' className='hover:text-white hover:underline'>Cómo llegar</a></li>
                         <li><a href={BUSINESS.social.facebook} target='_blank' rel='noopener noreferrer' className='hover:text-white hover:underline'>Facebook</a></li>
                         {!isPending(BUSINESS.social.instagram) && (

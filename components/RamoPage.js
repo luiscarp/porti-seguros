@@ -67,7 +67,7 @@ export default function RamoPage({ ramo, relacionados }) {
           icono={<IconoRamo slug={ramo.slug} className='h-7 w-7' />}
           migas={[{ nombre: 'Inicio', href: '/' }, { nombre: 'Seguros', href: '/seguros' }, { nombre: ramo.nombre }]}
         >
-          <CtaButtons whatsappText={ramo.whatsappText} className='mt-8' />
+          <CtaButtons className='mt-8' />
         </PageHero>
 
         <div className='mx-auto max-w-4xl px-4 pb-4'>
@@ -113,7 +113,7 @@ export default function RamoPage({ ramo, relacionados }) {
           </section>
         </div>
 
-        <CtaBanda whatsappText={ramo.whatsappText} />
+        <CtaBanda />
 
         <p className='mx-auto max-w-4xl px-4 pb-12 text-sm leading-6 text-slate-500'>
           Las coberturas, sumas aseguradas, deducibles y primas dependen de la aseguradora y de la póliza contratada. Te entregamos las condiciones generales antes de contratar.

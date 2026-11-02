@@ -4,7 +4,6 @@ const ramo = {
   slug: 'seguro-uber-didi',
   nombre: 'Seguro para Uber, DiDi e InDrive',
   h1: 'Seguro para conductores de Uber, DiDi e InDrive en Chihuahua',
-  whatsappText: 'Hola, manejo para plataforma y quiero cotizar un seguro (página Uber/DiDi).',
   intro: [
     'Si manejas para una plataforma de transporte, tu auto trabaja todos los días y llevas contigo a personas que no conoces. En PorTi Seguros te ayudamos en Chihuahua a contratar un seguro pensado para ese uso, para que un accidente no ponga en riesgo tu ingreso ni tu patrimonio.',
     'Te explicamos qué cubre cada opción, qué conviene revisar antes de contratar y qué hacer si tienes un siniestro con pasajeros a bordo.',

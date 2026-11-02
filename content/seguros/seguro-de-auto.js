@@ -4,7 +4,6 @@ const ramo = {
   slug: 'seguro-de-auto',
   nombre: 'Seguro de auto',
   h1: 'Seguro de auto en Chihuahua',
-  whatsappText: 'Hola, quiero cotizar un seguro de auto (página Seguro de Auto).',
   intro: [
     'Un seguro de auto te protege frente a los imprevistos del camino: un choque, un robo o un daño a otra persona. En PorTi Seguros te ayudamos en Chihuahua a entender cada cobertura antes de contratar, para que pagues por la protección que realmente necesitas.',
   ],

@@ -4,7 +4,6 @@ const ramo = {
   slug: 'seguros-de-vida',
   nombre: 'Seguros de vida',
   h1: 'Seguros de vida en Chihuahua',
-  whatsappText: 'Hola, vi la página de *Seguros de Vida* y quiero asesoría.',
   intro: [
     'Un seguro de vida es una decisión de protección familiar, no de precio. Su propósito es que, si algo te pasa, las personas que dependen de ti puedan seguir adelante: pagar la casa, terminar sus estudios y cubrir los gastos del día a día sin endeudarse. En PorTi Seguros te asesoramos en Chihuahua para elegir el seguro de vida que corresponde a tu situación.',
     'Claudia Pacheco es agente de seguros desde 2007 y su especialidad son los seguros de vida y la protección familiar. Antes de recomendarte una póliza, te escuchamos, revisamos contigo qué necesitas proteger y comparamos alternativas de distintas aseguradoras para que decidas con información clara.',

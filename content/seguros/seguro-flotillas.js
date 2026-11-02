@@ -4,7 +4,6 @@ const ramo = {
   slug: 'seguro-flotillas',
   nombre: 'Seguro para flotillas',
   h1: 'Seguro para flotillas en Chihuahua',
-  whatsappText: 'Hola, quiero cotizar un seguro para la *flotilla* de mi empresa.',
   intro: [
     'Si tu empresa tiene varios vehículos, administrar una póliza por cada uno consume tiempo y complica el control. Un seguro para flotillas reúne tus unidades en una sola administración. En PorTi Seguros ayudamos a empresas de Chihuahua a diseñar una póliza a la medida de su operación.',
   ],

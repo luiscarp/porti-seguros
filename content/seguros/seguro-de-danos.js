@@ -4,7 +4,6 @@ const ramo = {
   slug: 'seguro-de-danos',
   nombre: 'Seguro de casa y negocio',
   h1: 'Seguro de casa y negocio en Chihuahua',
-  whatsappText: 'Hola, quiero cotizar un seguro para mi casa o negocio.',
   intro: [
     'Tu casa y tu negocio son parte importante de tu patrimonio. Un incendio, un robo o un daño por agua pueden costar años de esfuerzo. En PorTi Seguros te ayudamos en Chihuahua a analizar tus riesgos reales antes de recomendarte una póliza de daños.',
   ],

@@ -4,7 +4,6 @@ const ramo = {
   slug: 'plan-personal-de-retiro',
   nombre: 'Plan Personal de Retiro (PPR)',
   h1: 'Plan Personal de Retiro (PPR) en Chihuahua',
-  whatsappText: 'Hola, quiero información sobre un *Plan Personal de Retiro (PPR)*.',
   intro: [
     'Planear tu retiro con tiempo te da más opciones. Un Plan Personal de Retiro (PPR) es una forma de ahorrar a largo plazo para la etapa en la que dejes de trabajar. En PorTi Seguros te explicamos en Chihuahua cómo funciona, qué considerar y cómo se combina con tu protección familiar.',
   ],

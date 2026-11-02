@@ -4,7 +4,6 @@ const ramo = {
   slug: 'gastos-medicos-mayores',
   nombre: 'Gastos médicos mayores',
   h1: 'Seguro de gastos médicos mayores en Chihuahua',
-  whatsappText: 'Hola, quiero información sobre un seguro de *Gastos Médicos Mayores*.',
   intro: [
     'Una enfermedad o un accidente pueden generar gastos hospitalarios difíciles de cubrir con tus ahorros. Un seguro de gastos médicos mayores te ayuda a enfrentar esos costos y a atenderte en hospitales privados. En PorTi Seguros te asesoramos en Chihuahua para que entiendas cómo funciona tu póliza antes de necesitarla.',
   ],

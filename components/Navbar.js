@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { BUSINESS, whatsappLink } from '@/config/business'
+import { useMensajeWhatsapp } from '@/content/whatsapp'
 
 const NAVIGATION = [
     { name: 'Inicio', href: '/' },
@@ -23,6 +24,7 @@ function isCurrent(pathname, href) {
 
 export default function Navbar() {
     const { pathname } = useRouter()
+    const mensaje = useMensajeWhatsapp()
 
     return (
         <Disclosure as='nav' aria-label='Principal' className='sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur'>
@@ -55,7 +57,7 @@ export default function Navbar() {
                                 {BUSINESS.phoneDisplay}
                             </a>
                             <a
-                                href={whatsappLink('Hola, me puedes ayudar para cotizar un seguro')}
+                                href={whatsappLink(mensaje)}
                                 target='_blank'
                                 rel='noopener noreferrer'
                                 className='rounded-full bg-green-700 px-4 py-2 text-sm font-bold text-white hover:bg-green-800'
@@ -91,7 +93,7 @@ export default function Navbar() {
                                     Llamar
                                 </a>
                                 <a
-                                    href={whatsappLink('Hola, me puedes ayudar para cotizar un seguro')}
+                                    href={whatsappLink(mensaje)}
                                     target='_blank'
                                     rel='noopener noreferrer'
                                     className='flex-1 rounded-full bg-green-700 px-4 py-2 text-center text-sm font-bold text-white'
