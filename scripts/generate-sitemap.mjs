@@ -7,8 +7,8 @@ import { fileURLToPath } from 'node:url'
 const SITE_URL = 'https://www.portiseguros.com.mx'
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 
-// Páginas fijas; agregar aquí cada página nueva (claudia-pacheco, contacto, preguntas-frecuentes…).
-const PAGINAS = ['/', '/seguros', '/opiniones', '/cotizar', '/aviso-de-privacidad']
+// Páginas fijas; agregar aquí cada página nueva.
+const PAGINAS = ['/', '/seguros', '/claudia-pacheco', '/preguntas-frecuentes', '/contacto', '/opiniones', '/cotizar', '/aviso-de-privacidad']
 
 // Un ramo por archivo en content/seguros (el nombre del archivo es el slug).
 const RAMOS = readdirSync(join(root, 'content/seguros'))

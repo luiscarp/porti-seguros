@@ -20,6 +20,9 @@ export const MENSAJES_WHATSAPP = {
   '/seguro-de-viaje': 'Hola, quiero cotizar un seguro de *viaje*.',
   '/opiniones': 'Hola, vi las opiniones de sus clientes y quiero asesoría (página Opiniones).',
   '/cotizar': 'Hola, quiero cotizar un seguro (página Cotizar).',
+  '/claudia-pacheco': 'Hola, Claudia, vi tu página y quiero asesoría.',
+  '/preguntas-frecuentes': 'Hola, tengo una duda sobre seguros (página Preguntas frecuentes).',
+  '/contacto': 'Hola, quiero agendar una asesoría (página Contacto).',
 }
 
 export const mensajeWhatsapp = (path) => MENSAJES_WHATSAPP[path] ?? MENSAJE_GENERAL

@@ -54,7 +54,10 @@ function Footer() {
                         {!isPending(BUSINESS.social.instagram) && (
                             <li><a href={BUSINESS.social.instagram} target='_blank' rel='noopener noreferrer' className='hover:text-white hover:underline'>Instagram</a></li>
                         )}
+                        <li><Link href='/claudia-pacheco' className='hover:text-white hover:underline'>Claudia Pacheco</Link></li>
                         <li><Link href='/opiniones' className='hover:text-white hover:underline'>Opiniones</Link></li>
+                        <li><Link href='/preguntas-frecuentes' className='hover:text-white hover:underline'>Preguntas frecuentes</Link></li>
+                        <li><Link href='/contacto' className='hover:text-white hover:underline'>Contacto</Link></li>
                         <li><Link href='/cotizar' className='hover:text-white hover:underline'>Cotizar</Link></li>
                     </ul>
                 </div>
