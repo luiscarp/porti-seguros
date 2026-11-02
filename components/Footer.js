@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { BUSINESS, isPending, whatsappLink } from '@/config/business'
+import { BUSINESS, isPending, mostrable, whatsappLink } from '@/config/business'
 import { useMensajeWhatsapp } from '@/content/whatsapp'
 import { RAMOS } from '@/content/seguros'
 
@@ -20,7 +20,7 @@ function Footer() {
                 <div>
                     <p className='font-display text-2xl font-bold text-white'>{BUSINESS.name}</p>
                     <p className='mt-1 text-sm'>{BUSINESS.agentName}, agente de seguros desde {BUSINESS.agentSince}</p>
-                    <p className='mt-1 text-sm'>Cédula CNSF: {BUSINESS.cnsfLicense}</p>
+                    {mostrable(BUSINESS.cnsfLicense) && <p className='mt-1 text-sm'>Cédula CNSF: {BUSINESS.cnsfLicense}</p>}
                     <address className='mt-4 text-sm not-italic leading-6'>
                         {address.street}<br />
                         Col. {address.neighborhood}, C.P. {address.postalCode}<br />

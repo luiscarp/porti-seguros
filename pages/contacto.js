@@ -5,7 +5,7 @@ import Seo from '@/components/Seo'
 import PageHero from '@/components/PageHero'
 import CtaButtons from '@/components/CtaButtons'
 import { JsonLd, migasDePan } from '@/components/JsonLd'
-import { BUSINESS, isPending, whatsappLink } from '@/config/business'
+import { BUSINESS, MOSTRAR_PENDIENTES, isPending, whatsappLink } from '@/config/business'
 import { mensajeWhatsapp } from '@/content/whatsapp'
 
 const DIAS = { Mo: 'Lunes', Tu: 'Martes', We: 'Miércoles', Th: 'Jueves', Fr: 'Viernes', Sa: 'Sábado', Su: 'Domingo' }
@@ -51,7 +51,7 @@ export default function Contacto() {
                 Col. {address.neighborhood}, C.P. {address.postalCode}<br />
                 {address.city}, {address.region}
               </address>
-              <p className='mt-2 text-slate-600'>[PENDIENTE: referencias para llegar, por ejemplo calles cercanas o un punto conocido.]</p>
+              {MOSTRAR_PENDIENTES && <p className='mt-2 text-slate-600'>[PENDIENTE: referencias para llegar, por ejemplo calles cercanas o un punto conocido.]</p>}
               <a href={BUSINESS.social.googleMaps} target='_blank' rel='noopener noreferrer' className='mt-2 inline-block font-semibold text-brand-700 hover:underline'>
                 Cómo llegar en Google Maps →
               </a>

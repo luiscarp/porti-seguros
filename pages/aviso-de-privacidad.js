@@ -4,11 +4,13 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Seo from '@/components/Seo'
 import PageHero from '@/components/PageHero'
-import { BUSINESS } from '@/config/business'
+import AvisoPrivacidadAnterior from '@/components/AvisoPrivacidadAnterior'
+import { BUSINESS, MOSTRAR_PENDIENTES } from '@/config/business'
 
 // BORRADOR (C7) — REVISIÓN LEGAL OBLIGATORIA antes de publicar.
 // Validar contra la Ley Federal de Protección de Datos Personales en Posesión de los Particulares vigente
 // y su reglamento. Al aprobarse, cambiar BORRADOR a false y actualizar ULTIMA_ACTUALIZACION.
+// Mientras sea borrador, producción sigue mostrando el aviso anterior (components/AvisoPrivacidadAnterior.js).
 const BORRADOR = true
 const ULTIMA_ACTUALIZACION = '[PENDIENTE: fecha de aprobación]'
 
@@ -41,6 +43,10 @@ function privacidad() {
             <PageHero titulo='Aviso de privacidad' migas={[{ nombre: 'Inicio', href: '/' }, { nombre: 'Aviso de privacidad' }]} />
 
             <main className='mx-auto max-w-3xl px-4 py-12'>
+                {BORRADOR && !MOSTRAR_PENDIENTES ? (
+                    <AvisoPrivacidadAnterior />
+                ) : (
+                <>
                 {BORRADOR && (
                     <p role='note' className='rounded-xl border border-amber-300 bg-amber-50 p-4 font-semibold text-amber-900'>
                         Borrador pendiente de revisión legal. No publicar hasta su aprobación.
@@ -117,6 +123,8 @@ function privacidad() {
                 <p className='mt-12 text-sm text-slate-500'>
                     Consulta también nuestros <Link href='/terminos' className='font-semibold text-brand-700 underline'>términos y condiciones</Link>.
                 </p>
+                </>
+                )}
             </main>
 
             <Footer />

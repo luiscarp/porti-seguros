@@ -99,6 +99,8 @@ for (const ruta of [...rutas, '/terminos']) {
   }
 
   const contenido = texto(html)
+  // En producción no debe verse ningún dato pendiente (en previews sí se muestran a propósito)
+  if (/PENDIENTE/.test(contenido)) error(ruta, 'texto [PENDIENTE] visible')
   for (const palabra of PALABRAS_PROHIBIDAS) {
     if (contenido.toLowerCase().includes(palabra.toLowerCase())) error(ruta, `palabra prohibida: "${palabra}"`)
   }

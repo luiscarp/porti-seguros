@@ -9,7 +9,7 @@ import CtaBanda from '@/components/CtaBanda'
 import Logos from '@/components/Logos'
 import Pasos from '@/components/Pasos'
 import { JsonLd, migasDePan, persona } from '@/components/JsonLd'
-import { BUSINESS, yearsOfExperience } from '@/config/business'
+import { BUSINESS, MOSTRAR_PENDIENTES, mostrable, yearsOfExperience } from '@/config/business'
 
 // BORRADOR (C4) — pendiente de revisión de Claudia. Lo marcado [PENDIENTE] lo completa ella.
 
@@ -74,7 +74,7 @@ export default function ClaudiaPacheco() {
             <p className='mt-4 text-lg leading-8'>
               Desde {BUSINESS.agentSince}, es decir, desde hace más de {yearsOfExperience()} años, Claudia asesora a familias, profesionistas y negocios de {address.city} para elegir y usar sus seguros. A lo largo de ese tiempo ha acompañado a sus clientes no solo al contratar, sino también en renovaciones y en los momentos en que han tenido que usar su póliza.
             </p>
-            <p className='mt-4 text-lg leading-8'>[PENDIENTE: Claudia cuenta en sus palabras cómo empezó y por qué fundó {BUSINESS.name}.]</p>
+            {MOSTRAR_PENDIENTES && <p className='mt-4 text-lg leading-8'>[PENDIENTE: Claudia cuenta en sus palabras cómo empezó y por qué fundó {BUSINESS.name}.]</p>}
           </Seccion>
 
           <Seccion titulo='Especialidad'>
@@ -110,17 +110,19 @@ export default function ClaudiaPacheco() {
             <p className='mt-4 text-lg leading-8'>
               Claudia cuenta con cédula de agente de seguros otorgada por la Comisión Nacional de Seguros y Fianzas (CNSF).
             </p>
-            <p className='mt-2 text-lg leading-8'>Cédula CNSF: {BUSINESS.cnsfLicense}</p>
+            {mostrable(BUSINESS.cnsfLicense) && <p className='mt-2 text-lg leading-8'>Cédula CNSF: {BUSINESS.cnsfLicense}</p>}
             <p className='mt-2 leading-7'>
               Puedes verificar a cualquier agente de seguros en el sitio de la{' '}
               <a href='https://www.gob.mx/cnsf' target='_blank' rel='noopener noreferrer' className='font-semibold text-brand-700 underline'>CNSF</a>.
-              {' '}[PENDIENTE: enlace directo al buscador de agentes de la CNSF]
+              {MOSTRAR_PENDIENTES && ' [PENDIENTE: enlace directo al buscador de agentes de la CNSF]'}
             </p>
           </Seccion>
 
-          <Seccion titulo='Certificaciones y capacitación'>
-            <p className='mt-4 text-lg leading-8'>[PENDIENTE: certificaciones o capacitaciones relevantes de Claudia.]</p>
-          </Seccion>
+          {MOSTRAR_PENDIENTES && (
+            <Seccion titulo='Certificaciones y capacitación'>
+              <p className='mt-4 text-lg leading-8'>[PENDIENTE: certificaciones o capacitaciones relevantes de Claudia.]</p>
+            </Seccion>
+          )}
 
           <Seccion titulo='Zona de servicio'>
             <p className='mt-4 text-lg leading-8'>
