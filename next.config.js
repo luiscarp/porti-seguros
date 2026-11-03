@@ -1,3 +1,12 @@
+const { readdirSync, readFileSync } = require('node:fs')
+const { join } = require('node:path')
+
+// ¿Hay entradas del blog visibles? (status: publicado; en next dev también las de revisión).
+// Controla el enlace "Blog" del menú y del footer.
+const blogVisible = readdirSync(join(__dirname, 'content/blog'))
+  .filter((archivo) => archivo.endsWith('.md'))
+  .some((archivo) => process.env.NODE_ENV === 'development' || /^status:\s*publicado\s*$/m.test(readFileSync(join(__dirname, 'content/blog', archivo), 'utf8')))
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -6,6 +15,7 @@ const nextConfig = {
   // para que promover un preview a producción nunca publique datos pendientes.
   env: {
     NEXT_PUBLIC_MOSTRAR_PENDIENTES: process.env.NODE_ENV === 'development' ? '1' : '',
+    NEXT_PUBLIC_BLOG_VISIBLE: blogVisible ? '1' : '',
   },
   // Encabezados de seguridad en todas las rutas
   async headers() {

@@ -1,6 +1,8 @@
 import RamoPage from '@/components/RamoPage'
 import { sinPendientes } from '@/config/business'
 import { RAMOS, getRamo } from '@/content/seguros'
+import { entradasDeCluster } from '@/lib/blog.mjs'
+import { tarjeta } from '@/lib/blog-props.mjs'
 
 // Aplica sinPendientes a todos los textos del ramo (en producción quita las marcas [DATO PENDIENTE]).
 const limpiar = (valor) =>
@@ -23,7 +25,9 @@ export async function getStaticProps({ params }) {
     const { nombre } = getRamo(slug)
     return { slug, nombre }
   })
-  return { props: { ramo: limpiar(ramo), relacionados } }
+  // Hasta 3 artículos del blog de este ramo (solo publicados en build)
+  const articulos = entradasDeCluster(`/${ramo.slug}`).map(tarjeta)
+  return { props: { ramo: limpiar(ramo), relacionados, articulos } }
 }
 
 export default RamoPage

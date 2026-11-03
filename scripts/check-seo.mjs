@@ -75,7 +75,8 @@ for (const ruta of [...rutas, '/terminos']) {
 
   if (!/<html lang="es-MX"/.test(html)) error(ruta, 'falta lang="es-MX"')
 
-  if (!NO_RAMOS.includes(ruta)) {
+  // Mínimo de palabras en ramos y entradas del blog (no en el índice ni en las categorías del blog)
+  if (!NO_RAMOS.includes(ruta) && ruta !== '/blog' && !ruta.startsWith('/blog/categoria/')) {
     const minimo = ruta === '/seguros-de-vida' ? MIN_PALABRAS_VIDA : MIN_PALABRAS_RAMO
     const palabras = contarPalabras(html)
     if (palabras < minimo) error(ruta, `${palabras} palabras visibles sin JavaScript (mín. ${minimo})`)
@@ -99,8 +100,16 @@ for (const ruta of [...rutas, '/terminos']) {
   }
 
   const contenido = texto(html)
-  // En producción no debe verse ningún dato pendiente (en previews sí se muestran a propósito)
-  if (/PENDIENTE/.test(contenido)) error(ruta, 'texto [PENDIENTE] visible')
+  // En ningún build debe verse un dato pendiente (solo con next dev)
+  if (/PENDIENTE|\[DATO|\bTODO\b|\bXXX\b|notasRevision/.test(contenido)) error(ruta, 'texto pendiente visible ([PENDIENTE], [DATO, TODO, XXX o notasRevision)')
+
+  // Entradas del blog (plan 6.5 y 6.7): artículo con respuesta corta, fecha y datos de BlogPosting
+  if (/^\/blog\/(?!categoria\/)[^/]+$/.test(ruta)) {
+    if (!/aria-label="Respuesta corta"/.test(html)) error(ruta, 'entrada sin caja de respuesta corta')
+    if (!/<meta property="og:type" content="article"/.test(html)) error(ruta, 'entrada sin og:type=article')
+    if (!/<meta property="article:published_time"/.test(html)) error(ruta, 'entrada sin article:published_time')
+    if (!/"@type":"BlogPosting"/.test(html)) error(ruta, 'entrada sin JSON-LD BlogPosting')
+  }
   for (const palabra of PALABRAS_PROHIBIDAS) {
     if (contenido.toLowerCase().includes(palabra.toLowerCase())) error(ruta, `palabra prohibida: "${palabra}"`)
   }
