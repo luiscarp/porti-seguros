@@ -3,8 +3,8 @@ title: "Seguro MAPS en Chihuahua para Uber, DiDi e InDrive"
 h1: "Seguro multiplataforma MAPS Seguros en Chihuahua para conductores de Uber, DiDi e InDrive"
 slug: "seguro-multiplataforma-maps-seguros-chihuahua"
 description: "Seguro MAPS para conductores de Uber, DiDi e InDrive en Chihuahua: qué cubre, cómo funcionan sus deducibles en UMA y cómo cotizarlo con Claudia Pacheco."
-fecha: 2026-11-05
-actualizado: 2026-11-05
+fecha: 2026-11-03
+actualizado: 2026-11-03
 autor: claudia-pacheco
 categoria: plataformas
 cluster_url: "/seguro-uber-didi"
@@ -59,7 +59,7 @@ notaClaudia: |
 
   No estoy asegurando solamente un carro. Estoy ayudando a cuidar el patrimonio, el trabajo y el futuro de una familia. Y después de tantos años, sigo convencida de que esa es la parte más valiosa de mi profesión.
 imagen: "/blog/og/seguro-multiplataforma-maps-seguros-chihuahua.jpg"
-status: revision
+status: publicado
 notasRevision: >
   IMPORTANTE ANTES DE PUBLICAR.
   1) Autorización: las condiciones generales de MAPS definen como "la Compañía" a MAPS VENTAS,

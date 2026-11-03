@@ -107,6 +107,8 @@ Si usas varias plataformas, necesitas una póliza que:
 
 Para **InDrive** no encontramos una página oficial con requisitos de seguro para Chihuahua. Revisa en la app qué te piden y compártenoslo al cotizar.
 
+Si quieres conocer una opción para varias apps con la que trabajamos en Chihuahua, lee [Seguro multiplataforma MAPS Seguros en Chihuahua](/blog/seguro-multiplataforma-maps-seguros-chihuahua).
+
 ## Qué es una póliza ERT y en qué se diferencia de una comercial
 
 **ERT** significa **Empresa de Redes de Transporte**. Es un seguro pensado para autos que trabajan en plataformas de transporte. Una **póliza de uso comercial** está pensada para autos que generan ingresos de forma más amplia. Uber las trata como opciones distintas, así que pregunta siempre:
