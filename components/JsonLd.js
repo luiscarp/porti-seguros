@@ -117,16 +117,45 @@ export function grafoRamo(ramo) {
         provider: { '@id': AGENCIA_ID },
         areaServed: { '@type': 'City', name: BUSINESS.address.city },
       },
-      {
-        '@type': 'FAQPage',
-        '@id': `${url}#preguntas`,
-        // Las respuestas con [DATO PENDIENTE] se omiten del marcado hasta que Claudia confirme el dato.
-        mainEntity: ramo.faq.filter((item) => !item.respuesta.includes('PENDIENTE')).map((item) => ({
-          '@type': 'Question',
-          name: item.pregunta,
-          acceptedAnswer: { '@type': 'Answer', text: item.respuesta },
-        })),
-      },
+      nodoPreguntas(`/${ramo.slug}`, ramo.faq),
     ],
   }
+}
+
+// FAQPage con preguntas visibles en la página. Las respuestas con [DATO PENDIENTE] se omiten
+// del marcado hasta que Claudia confirme el dato.
+function nodoPreguntas(path, preguntas) {
+  return {
+    '@type': 'FAQPage',
+    '@id': `${absoluteUrl(path)}#preguntas`,
+    mainEntity: preguntas.filter((item) => !item.respuesta.includes('PENDIENTE')).map((item) => ({
+      '@type': 'Question',
+      name: item.pregunta,
+      acceptedAnswer: { '@type': 'Answer', text: item.respuesta },
+    })),
+  }
+}
+
+export function preguntasFrecuentes(path, preguntas) {
+  return { '@context': 'https://schema.org', ...nodoPreguntas(path, preguntas) }
+}
+
+// Ficha completa de la persona en /claudia-pacheco (mismo @id que el nodo del grafo global).
+export function persona() {
+  const nodo = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': PERSONA_ID,
+    name: BUSINESS.agentName,
+    jobTitle: 'Agente de seguros',
+    url: absoluteUrl('/claudia-pacheco'),
+    image: absoluteUrl('/claudia-pacheco-agente-de-seguros-chihuahua.webp'),
+    worksFor: { '@id': AGENCIA_ID },
+    description: `Agente de seguros desde ${BUSINESS.agentSince}, especialista en seguros de vida, protección familiar y planeación de retiro en ${BUSINESS.address.city}.`,
+    knowsAbout: ['Seguros de vida', 'Planeación patrimonial', 'Plan Personal de Retiro', 'Gastos médicos mayores', 'Seguros de auto'],
+  }
+  if (!isPending(BUSINESS.cnsfLicense)) {
+    nodo.hasCredential = { '@type': 'EducationalOccupationalCredential', name: `Cédula de agente de seguros CNSF ${BUSINESS.cnsfLicense}` }
+  }
+  return nodo
 }

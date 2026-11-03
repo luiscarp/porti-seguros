@@ -78,6 +78,10 @@ export const PAGE_META = {
     title: 'Aviso de Privacidad | PorTi Seguros',
     description: 'Conoce cómo PorTi Seguros trata y protege tus datos personales cuando nos contactas por el sitio web, WhatsApp o teléfono, y cómo ejercer tus derechos.',
   },
+  '/404': {
+    title: 'Página no encontrada | PorTi Seguros',
+    description: 'La página que buscas no existe o cambió de dirección. Conoce nuestros seguros en Chihuahua o escríbenos por WhatsApp y con gusto te ayudamos.',
+  },
   '/terminos': {
     title: 'Términos y Condiciones | PorTi Seguros',
     description: 'Consulta los términos y condiciones de uso del sitio web de PorTi Seguros, agencia de seguros en Chihuahua con asesoría personalizada.',

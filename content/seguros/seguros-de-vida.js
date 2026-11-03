@@ -1,26 +1,28 @@
-// BORRADOR — pendiente de revisión de Claudia. La versión pilar completa se redacta en C2.
+// BORRADOR (C2, página pilar) — pendiente de revisión de Claudia.
+// Sin cifras, primas ni rendimientos; las coberturas se describen en general porque varían por aseguradora.
 
 const ramo = {
   slug: 'seguros-de-vida',
   nombre: 'Seguros de vida',
   h1: 'Seguros de vida en Chihuahua',
-  whatsappText: 'Hola, vi la página de *Seguros de Vida* y quiero asesoría.',
   intro: [
     'Un seguro de vida es una decisión de protección familiar, no de precio. Su propósito es que, si algo te pasa, las personas que dependen de ti puedan seguir adelante: pagar la casa, terminar sus estudios y cubrir los gastos del día a día sin endeudarse. En PorTi Seguros te asesoramos en Chihuahua para elegir el seguro de vida que corresponde a tu situación.',
-    'Claudia Pacheco es agente de seguros desde 2007 y su especialidad son los seguros de vida y la protección familiar. Antes de recomendarte una póliza, te escuchamos, revisamos contigo qué necesitas proteger y comparamos alternativas de distintas aseguradoras para que decidas con información clara.',
+    'Claudia Pacheco es agente de seguros desde 2007 y su especialidad son los seguros de vida y la protección familiar. Antes de recomendarte una póliza, te escuchamos, revisamos contigo qué necesitas proteger y comparamos alternativas de distintas aseguradoras para que decidas con información clara y sin presión.',
   ],
   secciones: [
     {
       titulo: '¿Para quién es un seguro de vida?',
+      parrafos: ['Si alguien depende de tu ingreso o de tu presencia, un seguro de vida merece una conversación. Estos son los casos más comunes:'],
       subsecciones: [
-        { titulo: 'Padres y madres de familia', texto: 'Si tus hijos o tu pareja dependen de tu ingreso, un seguro de vida les da un respaldo económico para mantener su nivel de vida y continuar con sus planes.' },
-        { titulo: 'Personas con créditos o hipoteca', texto: 'Una suma asegurada adecuada ayuda a que tu familia no herede deudas y conserve su patrimonio, como la casa en la que vive.' },
-        { titulo: 'Dueños de negocio', texto: 'Si tu empresa depende de ti o de un socio clave, un seguro de vida ayuda a dar continuidad al negocio y a proteger a los socios y colaboradores.' },
-        { titulo: 'Personas que quieren ahorrar', texto: 'Algunos planes combinan protección con ahorro a largo plazo, por ejemplo para el retiro o para la educación de tus hijos.' },
+        { titulo: 'Padres y madres de familia', texto: 'Si tus hijos o tu pareja dependen de tu ingreso, un seguro de vida les da un respaldo económico para mantener su nivel de vida, continuar con sus estudios y tomar decisiones con calma en un momento difícil.' },
+        { titulo: 'Personas con créditos o hipoteca', texto: 'Una suma asegurada adecuada ayuda a que tu familia no herede deudas y conserve su patrimonio, como la casa en la que vive o el auto que necesita para trabajar.' },
+        { titulo: 'Dueños de negocio', texto: 'Si tu empresa depende de ti o de un socio clave, un seguro de vida ayuda a dar continuidad al negocio, a proteger a los socios y a cuidar a los colaboradores mientras se reorganiza la operación.' },
+        { titulo: 'Personas que quieren ahorrar', texto: 'Algunos planes combinan protección con ahorro a largo plazo, por ejemplo para el retiro o para la educación de tus hijos, de modo que un mismo plan cubre dos objetivos.' },
       ],
     },
     {
       titulo: 'Tipos de seguro de vida',
+      parrafos: ['Cada aseguradora le da nombres distintos a sus planes, pero casi todos se agrupan en estos tipos:'],
       subsecciones: [
         { titulo: 'Temporal', texto: 'Te protege durante un periodo definido, por ejemplo mientras tus hijos son pequeños o mientras pagas un crédito. Suele ser la forma más directa de obtener protección.' },
         { titulo: 'Vitalicio u ordinario de vida', texto: 'La protección dura toda la vida mientras la póliza se mantenga vigente. Es útil cuando quieres dejar un patrimonio o cubrir gastos finales sin importar cuándo ocurra el fallecimiento.' },
@@ -30,31 +32,63 @@ const ramo = {
       ],
     },
     {
+      titulo: 'Temporal o con ahorro: diferencias principales',
+      parrafos: ['Es la duda más frecuente. Esta comparación es general; las condiciones exactas dependen de cada plan.'],
+      tabla: {
+        columnas: ['', 'Temporal', 'Con ahorro (dotal)'],
+        filas: [
+          ['Objetivo principal', 'Proteger a tu familia durante una etapa', 'Proteger y, a la vez, reunir un monto'],
+          ['Duración', 'Un plazo definido', 'Un plazo definido, con un monto al final'],
+          ['Si llegas al final del plazo', 'En la mayoría de los planes no recibes un monto', 'Recibes el ahorro acumulado según el plan'],
+          ['Costo', 'Suele ser menor para la misma protección', 'Suele ser mayor, porque incluye el ahorro'],
+          ['Ideal para', 'Créditos, hijos pequeños, máxima protección', 'Metas de largo plazo, como retiro o educación'],
+        ],
+      },
+    },
+    {
       titulo: 'Coberturas adicionales comunes',
-      parrafos: ['Además de la cobertura por fallecimiento, muchas pólizas permiten agregar beneficios adicionales. Su disponibilidad y sus condiciones varían según la aseguradora y el plan:'],
-      lista: ['Muerte accidental.', 'Invalidez total y permanente.', 'Enfermedades graves.', 'Gastos funerarios.'],
+      parrafos: ['Además de la cobertura por fallecimiento, muchas pólizas permiten agregar beneficios adicionales. Su disponibilidad, sus condiciones y sus límites varían según la aseguradora y el plan:'],
+      subsecciones: [
+        { titulo: 'Muerte accidental', texto: 'Paga un monto adicional a tus beneficiarios si el fallecimiento ocurre por un accidente cubierto.' },
+        { titulo: 'Invalidez total y permanente', texto: 'Puede liberarte del pago de primas o adelantar un pago si un accidente o enfermedad te impide trabajar de forma permanente.' },
+        { titulo: 'Enfermedades graves', texto: 'Adelanta un monto al diagnosticarse ciertas enfermedades definidas en la póliza, para que puedas atenderte con tranquilidad.' },
+        { titulo: 'Gastos funerarios', texto: 'Entrega un monto rápido a tu familia para cubrir los gastos inmediatos, sin esperar el pago completo de la suma asegurada.' },
+      ],
     },
     {
       titulo: '¿Cómo saber cuánta suma asegurada necesitas?',
-      parrafos: ['No existe una cifra única que sirva para todos. Para definir la suma asegurada revisamos contigo factores como:'],
+      parrafos: ['No existe una cifra única que sirva para todos, y desconfía de las fórmulas rápidas. Para definir la suma asegurada revisamos contigo factores como:'],
       lista: [
-        'Los gastos mensuales de tu familia.',
+        'Los gastos mensuales de tu familia y cuánto tiempo necesitarían cubrirlos.',
         'Las deudas pendientes, como hipoteca, auto o créditos personales.',
-        'Los años durante los que tu familia necesitaría apoyo.',
-        'La educación de tus hijos.',
-        'Otros seguros o ahorros que ya tengas.',
+        'La educación de tus hijos, desde la escuela hasta la universidad.',
+        'Los gastos finales y los trámites que tendría que enfrentar tu familia.',
+        'Otros seguros, prestaciones o ahorros que ya tengas.',
       ],
-      cierre: 'Con esa información te mostramos alternativas y tú decides con calma. La asesoría es sin compromiso.',
+      cierre: 'Con esa información te mostramos alternativas con distintas sumas aseguradas y tú decides con calma. La asesoría es sin compromiso.',
+    },
+    {
+      titulo: 'Tus beneficiarios: la decisión más importante',
+      parrafos: [
+        'Los beneficiarios son las personas que recibirán la suma asegurada. Puedes nombrar a una o varias y definir qué porcentaje recibe cada una. Mantenerlos al día es tan importante como elegir el plan correcto.',
+        'Si piensas nombrar a menores de edad, conviene revisar con calma cómo hacerlo, porque un menor no puede recibir el dinero directamente. Te explicamos las opciones para que el apoyo llegue a quien tú quieres y cuando lo necesite.',
+      ],
     },
     {
       titulo: 'Errores comunes al contratar un seguro de vida',
-      lista: [
-        'Elegir solo por precio sin revisar qué cubre la póliza.',
-        'No designar beneficiarios o no actualizarlos después de un cambio importante, como un matrimonio, un divorcio o un nacimiento.',
-        'No leer las exclusiones y los periodos de espera.',
-        'No revisar la póliza cuando cambia tu etapa de vida o tus ingresos.',
-        'Dejar de pagar sin conocer las opciones que ofrece la póliza.',
+      despuesDePasos: true,
+      subsecciones: [
+        { titulo: 'Elegir solo por precio', texto: 'La prima más baja puede venir con menos protección, más exclusiones o un plazo que no corresponde a tu necesidad. Compara qué cubre cada opción, no solo cuánto cuesta.' },
+        { titulo: 'No designar o no actualizar beneficiarios', texto: 'Un matrimonio, un divorcio o el nacimiento de un hijo cambian a quién quieres proteger. Revisa tus beneficiarios cada vez que cambie tu familia.' },
+        { titulo: 'No leer las exclusiones', texto: 'Toda póliza tiene situaciones que no cubre y, en algunos casos, periodos de espera. Te las explicamos antes de firmar para que no haya sorpresas.' },
+        { titulo: 'No revisar la póliza al cambiar de etapa', texto: 'Tus necesidades cambian cuando compras casa, crece tu familia o se acerca tu retiro. Una revisión periódica mantiene tu protección al día.' },
+        { titulo: 'Dejar de pagar sin consultar', texto: 'Antes de cancelar, pregunta por tus opciones: algunos planes permiten ajustar la protección en lugar de perderla por completo.' },
       ],
+    },
+    {
+      titulo: 'Te acompañamos cuando tu familia lo necesita',
+      despuesDePasos: true,
+      parrafos: ['El momento más importante de un seguro de vida es cuando tu familia tiene que usarlo. Por eso no solo te ayudamos a contratar: orientamos a tus beneficiarios, les decimos qué documentos reunir y damos seguimiento con la aseguradora hasta que el trámite concluya.'],
     },
   ],
   faq: [

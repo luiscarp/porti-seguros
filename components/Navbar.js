@@ -4,11 +4,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { BUSINESS, whatsappLink } from '@/config/business'
+import { useMensajeWhatsapp } from '@/content/whatsapp'
 
 const NAVIGATION = [
     { name: 'Inicio', href: '/' },
     { name: 'Seguros', href: '/seguros' },
+    { name: 'Claudia Pacheco', href: '/claudia-pacheco' },
     { name: 'Opiniones', href: '/opiniones' },
+    { name: 'Contacto', href: '/contacto' },
     { name: 'Cotizar', href: '/cotizar' },
 ]
 
@@ -23,6 +26,7 @@ function isCurrent(pathname, href) {
 
 export default function Navbar() {
     const { pathname } = useRouter()
+    const mensaje = useMensajeWhatsapp()
 
     return (
         <Disclosure as='nav' aria-label='Principal' className='sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur'>
@@ -30,10 +34,10 @@ export default function Navbar() {
                 <>
                     <div className='mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:h-20'>
                         <Link href='/' className='flex shrink-0 items-center'>
-                            <Image src='/porti-seguros-logo.png' alt={BUSINESS.name} width={1722} height={582} priority className='h-9 w-auto md:h-12' />
+                            <Image src='/porti-seguros-logo.png' alt={BUSINESS.name} width={1722} height={582} priority sizes='(min-width: 768px) 142px, 107px' className='h-9 w-auto md:h-12' />
                         </Link>
 
-                        <div className='hidden items-center gap-1 md:flex'>
+                        <div className='hidden items-center gap-1 lg:flex'>
                             {NAVIGATION.map((item) => (
                                 <Link
                                     key={item.name}
@@ -41,7 +45,7 @@ export default function Navbar() {
                                     aria-current={isCurrent(pathname, item.href) ? 'page' : undefined}
                                     className={classNames(
                                         isCurrent(pathname, item.href) ? 'bg-brand-50 text-brand-700' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900',
-                                        'rounded-full px-4 py-2 text-sm font-semibold'
+                                        'rounded-full px-3 py-2 text-sm font-semibold xl:px-4'
                                     )}
                                 >
                                     {item.name}
@@ -49,13 +53,13 @@ export default function Navbar() {
                             ))}
                         </div>
 
-                        <div className='hidden items-center gap-3 md:flex'>
-                            <a href={`tel:${BUSINESS.phoneE164}`} className='flex items-center gap-2 text-sm font-semibold text-slate-700 hover:text-brand-700'>
+                        <div className='hidden items-center gap-3 lg:flex'>
+                            <a href={`tel:${BUSINESS.phoneE164}`} className='hidden items-center gap-2 text-sm font-semibold text-slate-700 hover:text-brand-700 xl:flex'>
                                 <PhoneIcon className='h-4 w-4' aria-hidden='true' />
                                 {BUSINESS.phoneDisplay}
                             </a>
                             <a
-                                href={whatsappLink('Hola, me puedes ayudar para cotizar un seguro')}
+                                href={whatsappLink(mensaje)}
                                 target='_blank'
                                 rel='noopener noreferrer'
                                 className='rounded-full bg-green-700 px-4 py-2 text-sm font-bold text-white hover:bg-green-800'
@@ -64,13 +68,13 @@ export default function Navbar() {
                             </a>
                         </div>
 
-                        <Disclosure.Button className='inline-flex items-center justify-center rounded-md p-2 text-slate-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500 md:hidden'>
+                        <Disclosure.Button className='inline-flex items-center justify-center rounded-md p-2 text-slate-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500 lg:hidden'>
                             <span className='sr-only'>{open ? 'Cerrar menú' : 'Abrir menú'}</span>
                             {open ? <XMarkIcon className='h-6 w-6' aria-hidden='true' /> : <Bars3Icon className='h-6 w-6' aria-hidden='true' />}
                         </Disclosure.Button>
                     </div>
 
-                    <Disclosure.Panel className='border-t border-slate-200 md:hidden'>
+                    <Disclosure.Panel className='border-t border-slate-200 lg:hidden'>
                         <div className='space-y-1 px-4 pb-4 pt-2'>
                             {NAVIGATION.map((item) => (
                                 <Disclosure.Button
@@ -91,7 +95,7 @@ export default function Navbar() {
                                     Llamar
                                 </a>
                                 <a
-                                    href={whatsappLink('Hola, me puedes ayudar para cotizar un seguro')}
+                                    href={whatsappLink(mensaje)}
                                     target='_blank'
                                     rel='noopener noreferrer'
                                     className='flex-1 rounded-full bg-green-700 px-4 py-2 text-center text-sm font-bold text-white'

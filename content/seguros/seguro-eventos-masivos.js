@@ -4,7 +4,6 @@ const ramo = {
   slug: 'seguro-eventos-masivos',
   nombre: 'Seguro RC para eventos',
   h1: 'Seguro de responsabilidad civil para eventos en Chihuahua',
-  whatsappText: 'Hola, necesito un seguro de responsabilidad civil para un *evento*.',
   intro: [
     'Organizar un evento implica recibir a muchas personas en un mismo lugar. Si alguien sufre un accidente o se dañan bienes de terceros, el organizador puede tener que responder. En PorTi Seguros te ayudamos en Chihuahua a contratar una póliza de responsabilidad civil para tu evento y a reunir la información que te piden.',
   ],
@@ -47,12 +46,23 @@ const ramo = {
         'Si necesitas incluir a terceros como asegurados adicionales, por ejemplo al recinto.',
       ],
     },
+    {
+      titulo: 'Errores comunes al asegurar un evento',
+      lista: [
+        'Solicitar la póliza a última hora.',
+        'No declarar actividades de mayor riesgo, como pirotecnia o juegos mecánicos.',
+        'Contratar una vigencia que no incluye el montaje o el desmontaje.',
+        'Elegir un límite de responsabilidad menor al que pide el recinto o la autoridad.',
+        'Olvidar incluir al recinto como asegurado adicional cuando lo solicitan.',
+      ],
+    },
   ],
   faq: [
     { pregunta: '¿Con cuánto tiempo debo solicitar el seguro para mi evento?', respuesta: 'Entre más pronto, mejor, porque la aseguradora necesita revisar la información del evento antes de emitir la póliza. [DATO PENDIENTE – confirmar con Claudia]' },
     { pregunta: '¿La póliza cubre a los asistentes?', respuesta: 'La póliza de responsabilidad civil responde por daños a asistentes y terceros cuando el organizador es responsable. Si quieres cubrir accidentes de los asistentes sin importar la responsabilidad, existen coberturas de accidentes personales que podemos revisar contigo.' },
     { pregunta: '¿Puedo asegurar un evento privado, como una boda?', respuesta: 'Sí, también se pueden asegurar eventos sociales. Cuéntanos los detalles para cotizar.' },
     { pregunta: '¿Qué pasa si el evento cambia de fecha?', respuesta: 'Avísanos lo antes posible para solicitar el cambio a la aseguradora. Las condiciones dependen de cada póliza.' },
+    { pregunta: '¿Qué documento me entregan para presentar ante el recinto o la autoridad?', respuesta: 'Recibes la póliza emitida por la aseguradora y, cuando se necesita, un documento que acredita la cobertura del evento. Te ayudamos a revisar que contenga lo que te piden.' },
   ],
   relacionados: ['responsabilidad-civil', 'seguro-de-danos', 'seguro-flotillas'],
 }

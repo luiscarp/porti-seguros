@@ -4,7 +4,6 @@ const ramo = {
   slug: 'seguro-para-taxi',
   nombre: 'Seguro para taxi',
   h1: 'Seguro para taxi en Chihuahua',
-  whatsappText: 'Hola, tengo un taxi y quiero cotizar un seguro (página Taxi).',
   intro: [
     'Tu taxi es tu herramienta de trabajo. Un accidente, un robo o un problema con un pasajero puede dejarte sin ingresos durante días o semanas. En PorTi Seguros te asesoramos en Chihuahua para contratar un seguro de servicio público que te proteja a ti, a tus pasajeros y a terceros.',
   ],
@@ -51,12 +50,20 @@ const ramo = {
         'Avísanos para darte seguimiento.',
       ],
     },
+    {
+      titulo: 'La responsabilidad civil: la cobertura más importante',
+      parrafos: [
+        'En un taxi, la responsabilidad civil es la cobertura que responde por los daños que causes a tus pasajeros y a terceros. Un límite bajo puede quedarse corto si en un accidente hay personas lesionadas, y la diferencia tendrías que cubrirla tú.',
+        'Por eso revisamos contigo el límite de responsabilidad civil de cada opción, además de los requisitos que te pidan para operar, antes de fijarnos en el precio.',
+      ],
+    },
   ],
   faq: [
     { pregunta: '¿Puedo asegurar un taxi con un seguro de auto particular?', respuesta: 'No es lo recomendable. Las pólizas particulares no están pensadas para el transporte de pasajeros a cambio de un pago y podrían negar el pago de un siniestro. Lo adecuado es una póliza de servicio público.' },
     { pregunta: '¿El seguro cubre a mis pasajeros?', respuesta: 'Las pólizas de servicio público suelen incluir responsabilidad civil a pasajeros y gastos médicos para ocupantes. Te mostramos los límites de cada opción.' },
     { pregunta: '¿Qué pasa si otra persona maneja mi taxi?', respuesta: 'Es importante informarlo al contratar. Algunas pólizas tienen condiciones sobre quién puede conducir la unidad; revisamos contigo que la póliza contemple a quienes la manejan.' },
     { pregunta: '¿Puedo pagar en parcialidades?', respuesta: 'Depende de la aseguradora. Al cotizar te mostramos las formas de pago disponibles para cada opción.' },
+    { pregunta: '¿El seguro me ayuda si el taxi se descompone en servicio?', respuesta: 'Muchas pólizas incluyen asistencia vial, como grúa, paso de corriente o cambio de llanta. Revisamos contigo qué asistencias incluye cada opción y cómo solicitarlas.' },
   ],
   relacionados: ['seguro-uber-didi', 'seguro-flotillas', 'seguro-de-auto'],
 }

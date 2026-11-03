@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import { BUSINESS, isPending } from '@/config/business'
+import { BUSINESS, isPending, mostrable, whatsappLink } from '@/config/business'
+import { useMensajeWhatsapp } from '@/content/whatsapp'
 import { RAMOS } from '@/content/seguros'
 
 const DIAS = { Mo: 'lunes', Tu: 'martes', We: 'miércoles', Th: 'jueves', Fr: 'viernes', Sa: 'sábado', Su: 'domingo' }
@@ -12,13 +13,14 @@ function horario({ days, opens, closes }) {
 
 function Footer() {
     const { address } = BUSINESS
+    const mensaje = useMensajeWhatsapp()
     return (
         <footer className='bg-brand-900 text-brand-100'>
             <div className='mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:grid-cols-2 lg:grid-cols-4'>
                 <div>
                     <p className='font-display text-2xl font-bold text-white'>{BUSINESS.name}</p>
                     <p className='mt-1 text-sm'>{BUSINESS.agentName}, agente de seguros desde {BUSINESS.agentSince}</p>
-                    <p className='mt-1 text-sm'>Cédula CNSF: {BUSINESS.cnsfLicense}</p>
+                    {mostrable(BUSINESS.cnsfLicense) && <p className='mt-1 text-sm'>Cédula CNSF: {BUSINESS.cnsfLicense}</p>}
                     <address className='mt-4 text-sm not-italic leading-6'>
                         {address.street}<br />
                         Col. {address.neighborhood}, C.P. {address.postalCode}<br />
@@ -46,13 +48,16 @@ function Footer() {
                     <h2 className='text-sm font-bold uppercase tracking-wider text-white'>Contacto</h2>
                     <ul className='mt-4 space-y-2 text-sm'>
                         <li><a href={`tel:${BUSINESS.phoneE164}`} className='hover:text-white hover:underline'>Teléfono: {BUSINESS.phoneDisplay}</a></li>
-                        <li><a href={`https://wa.me/${BUSINESS.whatsapp}`} target='_blank' rel='noopener noreferrer' className='hover:text-white hover:underline'>WhatsApp: {BUSINESS.phoneDisplay}</a></li>
+                        <li><a href={whatsappLink(mensaje)} target='_blank' rel='noopener noreferrer' className='hover:text-white hover:underline'>WhatsApp: {BUSINESS.phoneDisplay}</a></li>
                         <li><a href={BUSINESS.social.googleMaps} target='_blank' rel='noopener noreferrer' className='hover:text-white hover:underline'>Cómo llegar</a></li>
                         <li><a href={BUSINESS.social.facebook} target='_blank' rel='noopener noreferrer' className='hover:text-white hover:underline'>Facebook</a></li>
                         {!isPending(BUSINESS.social.instagram) && (
                             <li><a href={BUSINESS.social.instagram} target='_blank' rel='noopener noreferrer' className='hover:text-white hover:underline'>Instagram</a></li>
                         )}
+                        <li><Link href='/claudia-pacheco' className='hover:text-white hover:underline'>Claudia Pacheco</Link></li>
                         <li><Link href='/opiniones' className='hover:text-white hover:underline'>Opiniones</Link></li>
+                        <li><Link href='/preguntas-frecuentes' className='hover:text-white hover:underline'>Preguntas frecuentes</Link></li>
+                        <li><Link href='/contacto' className='hover:text-white hover:underline'>Contacto</Link></li>
                         <li><Link href='/cotizar' className='hover:text-white hover:underline'>Cotizar</Link></li>
                     </ul>
                 </div>

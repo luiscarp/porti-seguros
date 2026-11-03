@@ -4,7 +4,6 @@ const ramo = {
   slug: 'seguro-de-viaje',
   nombre: 'Seguro de viaje',
   h1: 'Seguro de viaje desde Chihuahua',
-  whatsappText: 'Hola, quiero cotizar un seguro de *viaje*.',
   intro: [
     'Una emergencia médica, la pérdida de tu equipaje o la cancelación de un vuelo pueden arruinar un viaje y salir caros, sobre todo en el extranjero. Un seguro de viaje te da respaldo y asistencia cuando estás lejos de casa. En PorTi Seguros te ayudamos a elegir el seguro adecuado si sales desde Chihuahua, ya sea a otro estado o a otro país.',
   ],
@@ -39,12 +38,29 @@ const ramo = {
         'Si el país que visitas pide un seguro como requisito de entrada; confírmalo con su consulado.',
       ],
     },
+    {
+      titulo: 'Qué hacer si tienes una emergencia durante el viaje',
+      listaOrdenada: true,
+      lista: [
+        'Cuando sea posible, llama al número de asistencia de tu póliza antes de acudir al médico.',
+        'Guarda recibos, reportes e informes médicos.',
+        'Si se pierde tu equipaje, repórtalo a la aerolínea antes de salir del aeropuerto.',
+        'Avísanos para orientarte con el trámite.',
+      ],
+    },
+    {
+      titulo: 'Viajes largos de estudio o de trabajo',
+      parrafos: [
+        'Si vas a pasar varios meses fuera, por estudios o por trabajo, existen planes pensados para estancias largas. Algunas escuelas o países piden coberturas mínimas; revisa sus requisitos y te ayudamos a encontrar una opción que los cumpla.',
+      ],
+    },
   ],
   faq: [
     { pregunta: '¿Mi seguro de gastos médicos me cubre en el extranjero?', respuesta: 'Algunas pólizas incluyen cobertura en el extranjero solo para emergencias o como cobertura adicional. Revisamos tu póliza actual para saber si necesitas un seguro de viaje.' },
     { pregunta: '¿Cuándo debo contratar el seguro de viaje?', respuesta: 'Antes de salir. Algunas coberturas, como la de cancelación, conviene contratarlas desde que compras tus boletos.' },
     { pregunta: '¿Sirve para viajes nacionales?', respuesta: 'Sí, hay planes para viajes dentro de México y para el extranjero.' },
     { pregunta: '¿Cubre deportes extremos?', respuesta: 'Muchas pólizas los excluyen o los cubren con un costo adicional. Dinos qué actividades harás para elegir bien.' },
+    { pregunta: '¿Puedo contratar el seguro si ya estoy de viaje?', respuesta: 'Algunas aseguradoras lo permiten con condiciones o periodos de espera. Lo ideal es contratarlo antes de salir para estar protegido desde el primer día.' },
   ],
   relacionados: ['gastos-medicos-mayores', 'seguros-de-vida', 'seguro-de-auto'],
 }

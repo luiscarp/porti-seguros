@@ -38,5 +38,6 @@ next-env.d.ts
 # Contentlayer
 .contentlayer
 
-# sitemap generado en el build (scripts/generate-sitemap.mjs)
+# Archivos generados en cada build (scripts/generate-sitemap.mjs y generate-llms.mjs)
 /public/sitemap.xml
+/public/llms.txt

@@ -4,7 +4,6 @@ const ramo = {
   slug: 'responsabilidad-civil',
   nombre: 'Seguro de responsabilidad civil',
   h1: 'Seguro de responsabilidad civil en Chihuahua',
-  whatsappText: 'Hola, necesito un seguro de *Responsabilidad Civil*.',
   intro: [
     'Cuando tienes un negocio o ejerces una profesión, un error o un accidente puede causar daños a otras personas y generar reclamaciones costosas. Un seguro de responsabilidad civil te ayuda a responder por esos daños. En PorTi Seguros te asesoramos en Chihuahua para elegir la protección adecuada a tu actividad.',
   ],
@@ -42,12 +41,34 @@ const ramo = {
         'Los requisitos que piden tus clientes o tus contratos.',
       ],
     },
+    {
+      titulo: 'Ejemplos de situaciones que puede cubrir',
+      parrafos: [
+        'Siempre de acuerdo con las condiciones de la póliza, la responsabilidad civil puede responder en casos como:',
+      ],
+      lista: [
+        'Un cliente se resbala y se lesiona dentro de tu local.',
+        'Durante un trabajo dañas por accidente la propiedad de un cliente.',
+        'Un producto que vendes causa un daño a quien lo usa.',
+        'Causas daños al inmueble que rentas.',
+      ],
+    },
+    {
+      titulo: 'Lo que normalmente no cubre',
+      lista: [
+        'Daños causados de forma intencional.',
+        'Multas y sanciones.',
+        'Obligaciones que asumes por contrato más allá de lo que marca la ley.',
+        'Daños a tus propios bienes, que se protegen con un seguro de daños.',
+      ],
+    },
   ],
   faq: [
     { pregunta: '¿Mi seguro de daños ya incluye responsabilidad civil?', respuesta: 'Algunas pólizas de casa o negocio incluyen una cobertura básica de responsabilidad civil, pero puede no ser suficiente para tu actividad. Lo revisamos contigo.' },
     { pregunta: 'Un cliente me pide una póliza de responsabilidad civil para un contrato, ¿me ayudan?', respuesta: 'Sí. Revisamos los requisitos del contrato y te ayudamos a obtener una póliza que los cumpla.' },
     { pregunta: '¿Cubre multas o sanciones?', respuesta: 'Por lo general, las multas y sanciones no se cubren. Te explicamos las exclusiones de cada póliza antes de contratar.' },
     { pregunta: '¿Cuánto cuesta un seguro de responsabilidad civil?', respuesta: 'Depende de tu actividad, del límite de responsabilidad, de tu historial y de la aseguradora. Te preparamos una cotización con tus datos.' },
+    { pregunta: '¿La póliza cubre los gastos de abogado?', respuesta: 'Muchas pólizas de responsabilidad civil incluyen gastos de defensa, con sus propios límites y condiciones. Te explicamos cómo funciona en cada opción.' },
   ],
   relacionados: ['seguro-eventos-masivos', 'seguro-de-danos', 'seguro-flotillas'],
 }
