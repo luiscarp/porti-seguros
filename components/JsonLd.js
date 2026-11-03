@@ -159,3 +159,63 @@ export function persona() {
   }
   return nodo
 }
+
+// Entrada del blog: BlogPosting + FAQPage (preguntas visibles) + BreadcrumbList.
+export function grafoEntrada(post, nombreCategoria) {
+  const path = `/blog/${post.slug}`
+  const url = absoluteUrl(path)
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BlogPosting',
+        '@id': `${url}#articulo`,
+        headline: post.h1,
+        description: post.description,
+        datePublished: post.fecha,
+        dateModified: post.actualizado,
+        inLanguage: 'es-MX',
+        author: { '@id': PERSONA_ID },
+        publisher: { '@id': AGENCIA_ID },
+        mainEntityOfPage: url,
+        image: absoluteUrl(post.imagen),
+        about: post.palabra_clave,
+        keywords: [post.palabra_clave, ...post.palabras_secundarias].join(', '),
+        citation: post.fuentes.map((fuente) => fuente.url),
+      },
+      nodoPreguntas(path, post.faq),
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          ['Inicio', '/'],
+          ['Blog', '/blog'],
+          [nombreCategoria, `/blog/categoria/${post.categoria}`],
+          [post.h1, path],
+        ].map(([name, ruta], i) => ({ '@type': 'ListItem', position: i + 1, name, item: absoluteUrl(ruta) })),
+      },
+    ],
+  }
+}
+
+// Índice del blog (o de una categoría): Blog + ItemList de entradas.
+export function grafoBlog(posts, path = '/blog') {
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Blog',
+        '@id': `${absoluteUrl('/blog')}#blog`,
+        name: `Blog de ${BUSINESS.name}`,
+        url: absoluteUrl('/blog'),
+        inLanguage: 'es-MX',
+        publisher: { '@id': AGENCIA_ID },
+        author: { '@id': PERSONA_ID },
+      },
+      {
+        '@type': 'ItemList',
+        '@id': `${absoluteUrl(path)}#entradas`,
+        itemListElement: posts.map((post, i) => ({ '@type': 'ListItem', position: i + 1, url: absoluteUrl(`/blog/${post.slug}`), name: post.h1 })),
+      },
+    ],
+  }
+}

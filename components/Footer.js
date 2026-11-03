@@ -57,6 +57,7 @@ function Footer() {
                         <li><Link href='/claudia-pacheco' className='hover:text-white hover:underline'>Claudia Pacheco</Link></li>
                         <li><Link href='/opiniones' className='hover:text-white hover:underline'>Opiniones</Link></li>
                         <li><Link href='/preguntas-frecuentes' className='hover:text-white hover:underline'>Preguntas frecuentes</Link></li>
+                        {process.env.NEXT_PUBLIC_BLOG_VISIBLE && <li><Link href='/blog' className='hover:text-white hover:underline'>Blog</Link></li>}
                         <li><Link href='/contacto' className='hover:text-white hover:underline'>Contacto</Link></li>
                         <li><Link href='/cotizar' className='hover:text-white hover:underline'>Cotizar</Link></li>
                     </ul>

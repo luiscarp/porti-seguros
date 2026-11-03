@@ -6,8 +6,10 @@ import { PAGE_META } from '@/content/seo'
 const ogImage = (path) => `/og/${path === '/' ? 'portada' : path.slice(1)}.jpg`
 
 // Metadatos por página: título, descripción, canonical y og:url propios de cada ruta.
-export default function Seo({ path, image = ogImage(path), noindex = false }) {
-  const { title, description } = PAGE_META[path]
+// Las páginas fijas toman título y descripción de content/seo.js; el blog los pasa con `meta`.
+// `articulo` ({ publicado, modificado }) marca la página como og:type=article.
+export default function Seo({ path, meta = PAGE_META[path], image = ogImage(path), noindex = false, articulo }) {
+  const { title, description } = meta
   const url = absoluteUrl(path)
   return (
     <NextSeo
@@ -21,7 +23,14 @@ export default function Seo({ path, image = ogImage(path), noindex = false }) {
         description,
         siteName: BUSINESS.name,
         locale: 'es_MX',
-        type: 'website',
+        type: articulo ? 'article' : 'website',
+        ...(articulo && {
+          article: {
+            publishedTime: articulo.publicado,
+            modifiedTime: articulo.modificado,
+            authors: [absoluteUrl('/claudia-pacheco')],
+          },
+        }),
         images: [{ url: absoluteUrl(image), width: 1200, height: 630, alt: title }],
       }}
       twitter={{ cardType: 'summary_large_image' }}

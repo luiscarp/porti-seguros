@@ -1,5 +1,6 @@
 // Mensaje prellenado de WhatsApp por página, para saber desde dónde llegó cada prospecto.
 // BORRADORES — Claudia puede ajustar el texto; conviene conservar la referencia a la página.
+import { createContext, useContext } from 'react'
 import { useRouter } from 'next/router'
 
 const MENSAJE_GENERAL = 'Hola, me puedes ayudar para cotizar un seguro.'
@@ -23,6 +24,7 @@ export const MENSAJES_WHATSAPP = {
   '/claudia-pacheco': 'Hola, Claudia, vi tu página y quiero asesoría.',
   '/preguntas-frecuentes': 'Hola, tengo una duda sobre seguros (página Preguntas frecuentes).',
   '/contacto': 'Hola, quiero agendar una asesoría (página Contacto).',
+  '/blog': 'Hola, leí su blog y quiero asesoría.',
 }
 
 export const mensajeWhatsapp = (path) => MENSAJES_WHATSAPP[path] ?? MENSAJE_GENERAL
@@ -33,6 +35,12 @@ export function usePaginaActual() {
   return asPath.split(/[?#]/)[0]
 }
 
+// Una página puede fijar su propio mensaje (p. ej. cada entrada del blog con su campo `whatsapp`):
+// _app.js lo toma de pageProps.mensajeWhatsapp y lo pasa por este contexto.
+export const MensajeWhatsappContext = createContext(null)
+
 export function useMensajeWhatsapp() {
-  return mensajeWhatsapp(usePaginaActual())
+  const propio = useContext(MensajeWhatsappContext)
+  const pagina = usePaginaActual()
+  return propio ?? mensajeWhatsapp(pagina)
 }

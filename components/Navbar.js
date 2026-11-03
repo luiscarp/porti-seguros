@@ -11,6 +11,8 @@ const NAVIGATION = [
     { name: 'Seguros', href: '/seguros' },
     { name: 'Claudia Pacheco', href: '/claudia-pacheco' },
     { name: 'Opiniones', href: '/opiniones' },
+    // El blog aparece solo cuando hay entradas publicadas (next.config.js)
+    ...(process.env.NEXT_PUBLIC_BLOG_VISIBLE ? [{ name: 'Blog', href: '/blog' }] : []),
     { name: 'Contacto', href: '/contacto' },
     { name: 'Cotizar', href: '/cotizar' },
 ]
@@ -19,9 +21,9 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-// Las páginas de ramo (/[ramo]) cuentan como parte de "Seguros".
+// Las páginas de ramo (/[ramo]) cuentan como parte de "Seguros" y las entradas como parte de "Blog".
 function isCurrent(pathname, href) {
-    return pathname === href || (href === '/seguros' && pathname === '/[ramo]')
+    return pathname === href || (href === '/seguros' && pathname === '/[ramo]') || (href === '/blog' && pathname.startsWith('/blog/'))
 }
 
 export default function Navbar() {

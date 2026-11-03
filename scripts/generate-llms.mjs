@@ -6,8 +6,10 @@ import { fileURLToPath, pathToFileURL } from 'node:url'
 import { BUSINESS, isPending } from '../config/business.js'
 import { PAGE_META } from '../content/seo.js'
 import { TESTIMONIOS } from '../content/testimonios.js'
+import { entradas } from '../lib/blog.mjs'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
+const posts = entradas()
 const url = (ruta) => BUSINESS.siteUrl + (ruta === '/' ? '/' : ruta)
 
 const archivos = readdirSync(join(root, 'content/seguros')).filter((a) => a.endsWith('.js') && a !== 'index.js')
@@ -48,6 +50,8 @@ const lineas = [
   enlace('/contacto', 'Contacto'),
   enlace('/cotizar', 'Cotizar un seguro'),
   '',
+  // Blog: título, URL y respuesta corta de cada entrada publicada
+  ...(posts.length ? ['## Blog', '', ...posts.map((post) => `- [${post.h1}](${url(`/blog/${post.slug}`)}): ${post.respuesta_corta}`), ''] : []),
   '## Notas',
   '',
   '- Las coberturas, sumas aseguradas, deducibles y primas dependen de la aseguradora y de la póliza contratada; el sitio no publica precios.',

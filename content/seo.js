@@ -78,6 +78,10 @@ export const PAGE_META = {
     title: 'Aviso de Privacidad | PorTi Seguros',
     description: 'Conoce cómo PorTi Seguros trata y protege tus datos personales cuando nos contactas por el sitio web, WhatsApp o teléfono, y cómo ejercer tus derechos.',
   },
+  '/blog': {
+    title: 'Blog de Seguros en Chihuahua | PorTi Seguros',
+    description: 'Guías claras sobre seguros de vida, retiro, plataformas y gastos médicos en Chihuahua, con fuentes oficiales, escritas por Claudia Pacheco desde 2007.',
+  },
   '/404': {
     title: 'Página no encontrada | PorTi Seguros',
     description: 'La página que buscas no existe o cambió de dirección. Conoce nuestros seguros en Chihuahua o escríbenos por WhatsApp y con gusto te ayudamos.',

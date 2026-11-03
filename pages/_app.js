@@ -7,6 +7,7 @@ import { Inter, Montserrat } from 'next/font/google'
 import Head from 'next/head'
 import { JsonLd, grafoGlobal } from '@/components/JsonLd'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
+import { MensajeWhatsappContext } from '@/content/whatsapp'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
 const montserrat = Montserrat({ subsets: ['latin'], weight: ['600', '700', '800'], variable: '--font-montserrat', display: 'swap' })
@@ -22,7 +23,9 @@ export default function App({
       </Head>
       <DefaultSeo {...SEO} />
       <JsonLd id='global' data={grafoGlobal()} />
-      <Component {...pageProps} />
+      <MensajeWhatsappContext.Provider value={pageProps.mensajeWhatsapp ?? null}>
+        <Component {...pageProps} />
+      </MensajeWhatsappContext.Provider>
       <GoogleAnalytics />
       <Analytics />
       <SpeedInsights />

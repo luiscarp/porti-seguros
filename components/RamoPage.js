@@ -8,6 +8,7 @@ import CtaButtons from '@/components/CtaButtons'
 import CtaBanda from '@/components/CtaBanda'
 import Pasos from '@/components/Pasos'
 import IconoRamo from '@/components/IconoRamo'
+import TarjetaEntrada from '@/components/blog/TarjetaEntrada'
 import { JsonLd, grafoRamo, migasDePan } from '@/components/JsonLd'
 
 function Seccion({ seccion }) {
@@ -75,7 +76,7 @@ function Seccion({ seccion }) {
   )
 }
 
-export default function RamoPage({ ramo, relacionados }) {
+export default function RamoPage({ ramo, relacionados, articulos = [] }) {
   return (
     <div>
       <Seo path={`/${ramo.slug}`} />
@@ -123,6 +124,17 @@ export default function RamoPage({ ramo, relacionados }) {
               ))}
             </div>
           </section>
+
+          {articulos.length > 0 && (
+            <section className='mt-16'>
+              <h2 className='text-2xl font-bold md:text-3xl'>Artículos relacionados</h2>
+              <ul className='mt-6 grid gap-4 sm:grid-cols-2'>
+                {articulos.map((post) => (
+                  <li key={post.slug}><TarjetaEntrada post={post} Titulo='h3' /></li>
+                ))}
+              </ul>
+            </section>
+          )}
 
           <section className='mt-16'>
             <h2 className='text-2xl font-bold md:text-3xl'>Seguros relacionados</h2>
