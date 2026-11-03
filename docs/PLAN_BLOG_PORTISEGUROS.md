@@ -65,6 +65,7 @@ Cada cluster tiene una **página de servicio** (ya existe en el sitio) y varias 
 | Nov 2026 | B02 | ¿Cuánto seguro de vida necesito? | Búsqueda permanente; pilar de Vida | ✅ Redactada |
 | Nov 2026 | B03 | Cómo cobrar un seguro de vida | Búsqueda permanente; muy citada por IA | ✅ Redactada |
 | Nov 2026 | B04 | Seguro para Uber y DiDi en Chihuahua 2026 | Requisito local verificado (DiDi Chihuahua) | ✅ Redactada |
+| Nov 2026 | B17 | Seguro MAPS en Chihuahua para Uber, DiDi e InDrive | Prioridad comercial: posicionar MAPS + Claudia | ✅ Redactada (falta dato de registro) |
 | Dic 2026 | B05 | Aguinaldo: 3 formas de usarlo para proteger a tu familia | Pago de aguinaldo | Por redactar |
 | Dic 2026 | B08 | Seguro de viaje para cruzar a EE. UU. desde Chihuahua | Vacaciones de invierno | Por redactar |
 | Ene 2027 | B07 | Renovación del seguro de auto: qué revisar antes de pagar | Renovaciones de inicio de año | Por redactar |
@@ -440,3 +441,18 @@ Redacta la entrada BXX siguiendo su ficha en la sección 9 y las reglas de la se
 Investiga y verifica cada dato en las fuentes indicadas; si no puedes verificar un dato,
 no lo uses y anótalo en notasRevision. Deja status: revision y notaClaudia vacío.
 ```
+
+---
+
+### B17 · ✅ Redactada — `blog/posts/seguro-multiplataforma-maps-seguros-chihuahua.md`
+- **Title:** Seguro MAPS en Chihuahua para Uber, DiDi e InDrive
+- **H1:** Seguro multiplataforma MAPS Seguros en Chihuahua para conductores de Uber, DiDi e InDrive
+- **Slug:** `seguro-multiplataforma-maps-seguros-chihuahua`
+- **Principal:** MAPS Seguros Chihuahua
+- **Secundarias:** seguro multiplataforma Chihuahua, seguro para Uber económico Chihuahua, seguro para DiDi/InDrive Chihuahua, agente MAPS Seguros Chihuahua, Claudia Pacheco MAPS Seguros
+- **Diferencia con B04:** B04 responde "qué piden las apps"; B17 responde "con quién y con qué aseguradora contratarlo". Se enlazan entre sí y ambos apuntan a `/seguro-uber-didi` (evita competir por la misma búsqueda).
+- **Servicio:** `/seguro-uber-didi`
+- **Fuentes:** sitio y condiciones generales de MAPS (consultados 3 nov 2026), DiDi Chihuahua, INEGI UMA 2026.
+- **Bloqueante para publicar:** nombre de la institución autorizada y número de registro CNSF/CONDUSEF del producto (ver `notasRevision`). Logo oficial de MAPS en `/public` (no enlazar imágenes de Google).
+- **Reglas específicas:** no usar "el más económico", "garantizado" ni "aprobación oficial" sin el dato de registro. Las opiniones sobre MAPS van atribuidas a Claudia.
+- **Página de servicio:** cuando se confirme el registro, agregar en `/seguro-uber-didi` un bloque "Trabajamos con MAPS Seguros" con logo oficial y enlace a B17.
