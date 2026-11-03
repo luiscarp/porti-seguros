@@ -5,6 +5,7 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { BUSINESS, isPending } from '../config/business.js'
 import { PAGE_META } from '../content/seo.js'
+import { TESTIMONIOS } from '../content/testimonios.js'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const url = (ruta) => BUSINESS.siteUrl + (ruta === '/' ? '/' : ruta)
@@ -43,7 +44,7 @@ const lineas = [
   '',
   enlace('/claudia-pacheco', BUSINESS.agentName),
   enlace('/preguntas-frecuentes', 'Preguntas frecuentes'),
-  enlace('/opiniones', 'Opiniones de clientes'),
+  ...(TESTIMONIOS.length ? [enlace('/opiniones', 'Opiniones de clientes')] : []),
   enlace('/contacto', 'Contacto'),
   enlace('/cotizar', 'Cotizar un seguro'),
   '',

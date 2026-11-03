@@ -26,7 +26,7 @@ export const BUSINESS = {
     { days: ['Mo', 'Tu', 'We', 'Th', 'Fr'], opens: '09:00', closes: '18:00' },
     { days: ['Sa'], opens: '10:00', closes: '14:00' },
   ],
-  insurersCount: '[PENDIENTE: confirmar si son +20]',
+  insurersCount: '[PENDIENTE: confirmar número, p. ej. "+20"]', // se muestra tal cual: "+20"
   social: {
     facebook: 'https://www.facebook.com/ChihuahuaSeguros',
     instagram: '[PENDIENTE: URL real del perfil]',
@@ -38,15 +38,15 @@ export const BUSINESS = {
 
 export const isPending = (value) => typeof value === 'string' && value.startsWith('[PENDIENTE')
 
-// Los textos [PENDIENTE] solo se muestran en previews y en desarrollo, para revisión;
-// en producción se ocultan. Se define en el build desde next.config.js (VERCEL_ENV / NODE_ENV).
+// Los textos [PENDIENTE] solo se muestran con next dev, para revisión; en cualquier build
+// (producción o preview) se ocultan. Se define en next.config.js.
 export const MOSTRAR_PENDIENTES = process.env.NEXT_PUBLIC_MOSTRAR_PENDIENTES === '1'
 
 // Quita marcas "[PENDIENTE…]" / "[DATO PENDIENTE…]" de un texto cuando no deben mostrarse.
 export const sinPendientes = (texto) =>
   MOSTRAR_PENDIENTES ? texto : texto.replace(/\s*\[(DATO )?PENDIENTE[^\]]*\]/g, '').trim()
 
-// Muestra un dato del negocio o, si está pendiente y estamos en producción, nada.
+// Muestra un dato del negocio o, si está pendiente y no es next dev, nada.
 export const mostrable = (valor) => !isPending(valor) || MOSTRAR_PENDIENTES
 
 export const yearsOfExperience = () => new Date().getFullYear() - BUSINESS.agentSince

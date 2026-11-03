@@ -9,15 +9,18 @@ import CtaBanda from '@/components/CtaBanda'
 import Pasos from '@/components/Pasos'
 import { JsonLd, preguntasFrecuentes } from '@/components/JsonLd'
 import Link from 'next/link'
-import { BUSINESS, yearsOfExperience } from '@/config/business'
+import { BUSINESS, isPending, yearsOfExperience } from '@/config/business'
 import { FAQ_GENERALES } from '@/content/faq'
 
 export default function Home() {
   const { address } = BUSINESS
   const confianza = [
     { valor: `Más de ${yearsOfExperience()} años`, texto: `asesorando familias y negocios desde ${BUSINESS.agentSince}` },
-    { valor: '+20', texto: 'aseguradoras para comparar opciones' },
-    { valor: 'Cédula CNSF', texto: 'agente autorizada por la Comisión Nacional de Seguros y Fianzas' },
+    // Número de aseguradoras y cédula solo cuando Claudia los confirme (config/business.js)
+    isPending(BUSINESS.insurersCount)
+      ? { valor: 'Varias aseguradoras', texto: 'para comparar opciones y elegir la adecuada' }
+      : { valor: BUSINESS.insurersCount, texto: 'aseguradoras para comparar opciones' },
+    { valor: 'Cédula CNSF', texto: isPending(BUSINESS.cnsfLicense) ? 'agente autorizada por la Comisión Nacional de Seguros y Fianzas' : `${BUSINESS.cnsfLicense}, Comisión Nacional de Seguros y Fianzas` },
   ]
 
   return (

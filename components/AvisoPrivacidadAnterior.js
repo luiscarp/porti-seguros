@@ -1,5 +1,5 @@
 // Aviso de privacidad publicado hasta ahora (texto sin cambios, versión del 27/01/2024).
-// Se muestra en producción mientras el nuevo aviso (pages/aviso-de-privacidad.js) siga en BORRADOR.
+// Se muestra en todo build mientras el nuevo aviso (pages/aviso-de-privacidad.js) siga en BORRADOR.
 // Eliminar este archivo cuando el nuevo aviso tenga aprobación legal.
 
 function Lista({ items }) {

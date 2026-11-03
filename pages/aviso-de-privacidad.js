@@ -10,7 +10,7 @@ import { BUSINESS, MOSTRAR_PENDIENTES } from '@/config/business'
 // BORRADOR (C7) — REVISIÓN LEGAL OBLIGATORIA antes de publicar.
 // Validar contra la Ley Federal de Protección de Datos Personales en Posesión de los Particulares vigente
 // y su reglamento. Al aprobarse, cambiar BORRADOR a false y actualizar ULTIMA_ACTUALIZACION.
-// Mientras sea borrador, producción sigue mostrando el aviso anterior (components/AvisoPrivacidadAnterior.js).
+// Mientras sea borrador, todo build (producción y previews) muestra el aviso anterior (components/AvisoPrivacidadAnterior.js).
 const BORRADOR = true
 const ULTIMA_ACTUALIZACION = '[PENDIENTE: fecha de aprobación]'
 

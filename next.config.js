@@ -2,9 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   trailingSlash: false,
-  // [PENDIENTE] visibles solo en previews de Vercel y en next dev; ocultos en producción y en builds locales
+  // [PENDIENTE] y el borrador del aviso visibles solo con next dev. Ocultos en todo build (producción y previews),
+  // para que promover un preview a producción nunca publique datos pendientes.
   env: {
-    NEXT_PUBLIC_MOSTRAR_PENDIENTES: process.env.VERCEL_ENV === 'preview' || process.env.NODE_ENV === 'development' ? '1' : '',
+    NEXT_PUBLIC_MOSTRAR_PENDIENTES: process.env.NODE_ENV === 'development' ? '1' : '',
   },
   // Encabezados de seguridad en todas las rutas
   async headers() {

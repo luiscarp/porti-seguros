@@ -90,6 +90,17 @@ export default function Contacto() {
             referrerPolicy='no-referrer-when-downgrade'
           ></iframe>
         </div>
+
+        <div className='mx-auto grid max-w-6xl gap-8 px-4 pb-16 md:grid-cols-2'>
+          <section className='rounded-2xl bg-slate-50 p-6'>
+            <h2 className='text-xl font-bold'>Antes de tu visita</h2>
+            <p className='mt-2 leading-7'>Te recomendamos escribirnos por WhatsApp para agendar, así te atendemos sin esperas. Si ya tienes un seguro, trae tu póliza o una foto de ella; si vas a asegurar un vehículo, los datos de la tarjeta de circulación nos ayudan a cotizar más rápido.</p>
+          </section>
+          <section className='rounded-2xl bg-slate-50 p-6'>
+            <h2 className='text-xl font-bold'>Atención a distancia</h2>
+            <p className='mt-2 leading-7'>No necesitas venir a la oficina para recibir asesoría. Podemos revisar tu caso por WhatsApp o por teléfono, enviarte las opciones por escrito y resolver tus dudas antes de que decidas.</p>
+          </section>
+        </div>
       </main>
 
       <Footer />

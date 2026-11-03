@@ -3,12 +3,14 @@
 import { readdirSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { TESTIMONIOS } from '../content/testimonios.js'
 
 const SITE_URL = 'https://www.portiseguros.com.mx'
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 
 // Páginas fijas; agregar aquí cada página nueva.
-const PAGINAS = ['/', '/seguros', '/claudia-pacheco', '/preguntas-frecuentes', '/contacto', '/opiniones', '/cotizar', '/aviso-de-privacidad']
+// /opiniones entra solo cuando hay testimonios publicados (mientras tanto es noindex)
+const PAGINAS = ['/', '/seguros', '/claudia-pacheco', '/preguntas-frecuentes', '/contacto', ...(TESTIMONIOS.length ? ['/opiniones'] : []), '/cotizar', '/aviso-de-privacidad']
 
 // Un ramo por archivo en content/seguros (el nombre del archivo es el slug).
 const RAMOS = readdirSync(join(root, 'content/seguros'))

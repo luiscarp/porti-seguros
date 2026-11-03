@@ -1,7 +1,8 @@
 // Aseguradoras que se muestran en el sitio. [PENDIENTE: Claudia confirma cuáles tienen relación vigente.]
 // Lista tomada del sitio anterior. Para mostrar el logo oficial (kit de agentes), guardarlo en
 // public/aseguradoras/<archivo>.svg y agregar `logo: '/aseguradoras/<archivo>.svg'`.
-// Notas para revisar: ABA Seguros hoy opera como parte de Chubb; MAPS Seguros podría ser una promotoría.
+// Fuera de la lista hasta que Claudia confirme: ABA Seguros (hoy opera como parte de Chubb) y
+// MAPS Seguros (podría ser una promotoría, no una aseguradora).
 
 export const ASEGURADORAS = [
   { nombre: 'Quálitas' },
@@ -15,6 +16,4 @@ export const ASEGURADORAS = [
   { nombre: 'ANA Seguros' },
   { nombre: 'Primero Seguros' },
   { nombre: 'La Latino Seguros' },
-  { nombre: 'ABA Seguros' },
-  { nombre: 'MAPS Seguros' },
 ]
