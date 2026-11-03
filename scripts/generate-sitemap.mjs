@@ -4,7 +4,7 @@ import { readdirSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { TESTIMONIOS } from '../content/testimonios.js'
-import { MIN_ENTRADAS_CATEGORIA, entradas } from '../lib/blog.mjs'
+import { MIN_ENTRADAS_CATEGORIA, entradasPublicadas } from '../lib/blog.mjs'
 
 const SITE_URL = 'https://www.portiseguros.com.mx'
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
@@ -20,7 +20,7 @@ const RAMOS = readdirSync(join(root, 'content/seguros'))
   .sort()
 
 // Blog: solo entradas publicadas (lastmod = actualizado) y categorías indexables (3 o más entradas)
-const posts = entradas()
+const posts = entradasPublicadas()
 const porCategoria = Object.groupBy(posts, (post) => post.categoria)
 const BLOG = posts.length
   ? [

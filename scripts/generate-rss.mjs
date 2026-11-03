@@ -4,14 +4,14 @@ import { mkdirSync, rmSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { BUSINESS } from '../config/business.js'
-import { entradas } from '../lib/blog.mjs'
+import { entradasPublicadas } from '../lib/blog.mjs'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const destino = join(root, 'public/blog/rss.xml')
 const escapar = (texto) => texto.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 const fechaRss = (iso) => new Date(`${iso}T12:00:00-06:00`).toUTCString()
 
-const posts = entradas().slice(0, 20)
+const posts = entradasPublicadas().slice(0, 20)
 if (posts.length === 0) {
   rmSync(destino, { force: true })
   console.log('rss.xml: sin entradas publicadas, no se genera')

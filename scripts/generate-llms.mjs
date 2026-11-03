@@ -6,10 +6,10 @@ import { fileURLToPath, pathToFileURL } from 'node:url'
 import { BUSINESS, isPending } from '../config/business.js'
 import { PAGE_META } from '../content/seo.js'
 import { TESTIMONIOS } from '../content/testimonios.js'
-import { entradas } from '../lib/blog.mjs'
+import { entradasPublicadas } from '../lib/blog.mjs'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
-const posts = entradas()
+const posts = entradasPublicadas()
 const url = (ruta) => BUSINESS.siteUrl + (ruta === '/' ? '/' : ruta)
 
 const archivos = readdirSync(join(root, 'content/seguros')).filter((a) => a.endsWith('.js') && a !== 'index.js')

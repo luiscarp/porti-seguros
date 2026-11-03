@@ -1,11 +1,11 @@
 const { readdirSync, readFileSync } = require('node:fs')
 const { join } = require('node:path')
 
-// ¿Hay entradas del blog visibles? (status: publicado; en next dev también las de revisión).
+// ¿Hay entradas del blog visibles? (status: publicado; en next dev y previews de Vercel también las de revisión).
 // Controla el enlace "Blog" del menú y del footer.
 const blogVisible = readdirSync(join(__dirname, 'content/blog'))
   .filter((archivo) => archivo.endsWith('.md'))
-  .some((archivo) => process.env.NODE_ENV === 'development' || /^status:\s*publicado\s*$/m.test(readFileSync(join(__dirname, 'content/blog', archivo), 'utf8')))
+  .some((archivo) => process.env.NODE_ENV === 'development' || process.env.VERCEL_ENV === 'preview' || /^status:\s*publicado\s*$/m.test(readFileSync(join(__dirname, 'content/blog', archivo), 'utf8')))
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
