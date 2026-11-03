@@ -3,8 +3,8 @@ title: "Seguro para Uber y DiDi en Chihuahua 2026: qué piden"
 h1: "Seguro para Uber y DiDi en Chihuahua 2026: qué póliza piden y qué debe cubrir"
 slug: "seguro-uber-didi-chihuahua"
 description: "Qué seguro piden Uber y DiDi en Chihuahua en 2026: requisitos de DiDi, cómo funciona el seguro de Uber con AXA y qué póliza conviene si usas varias apps."
-fecha: 2026-11-04
-actualizado: 2026-11-04
+fecha: 2026-11-03
+actualizado: 2026-11-03
 autor: claudia-pacheco
 categoria: plataformas
 cluster_url: "/seguro-uber-didi"
@@ -48,7 +48,7 @@ notaClaudia: |
 
   Mi objetivo no es entregarles la cotización más rápida, sino ayudarlos a elegir una protección adecuada para que puedan continuar trabajando con mayor tranquilidad.
 imagen: "/blog/og/seguro-uber-didi-chihuahua.jpg"
-status: revision
+status: publicado
 notasRevision: >
   1) Requisitos de DiDi verificados en su página oficial el 3 nov 2026; revisar de nuevo antes de
   publicar y cada 6 meses. 2) Coberturas de Uber tomadas de su blog oficial (18 ago 2026); revisar

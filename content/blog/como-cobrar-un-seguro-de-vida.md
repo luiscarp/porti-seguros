@@ -3,8 +3,8 @@ title: "Cómo cobrar un seguro de vida: pasos, papeles y plazos"
 h1: "Cómo cobrar un seguro de vida en México: pasos, documentos y plazos para los beneficiarios"
 slug: "como-cobrar-un-seguro-de-vida"
 description: "Cómo cobrar un seguro de vida: cómo saber si eres beneficiario con el SIAB-Vida de CONDUSEF, qué documentos piden y cuánto tarda el pago por ley."
-fecha: 2026-11-04
-actualizado: 2026-11-04
+fecha: 2026-11-03
+actualizado: 2026-11-03
 autor: claudia-pacheco
 categoria: vida
 cluster_url: "/seguros-de-vida"
@@ -58,7 +58,7 @@ notaClaudia: |
 
   Mi compromiso como agente de seguros es que mis clientes se sientan acompañados y sepan que pueden acudir a nosotros cuando necesiten orientación. Para mí, la confianza no termina cuando se entrega una póliza.
 imagen: "/blog/og/como-cobrar-un-seguro-de-vida.jpg"
-status: revision
+status: publicado
 notasRevision: >
   1) notaClaudia ya entregada por Claudia (3 nov 2026); confirma que el despacho orienta a las
   familias en la reclamación. El texto no promete que sea sin costo; agregarlo solo si Claudia lo confirma.

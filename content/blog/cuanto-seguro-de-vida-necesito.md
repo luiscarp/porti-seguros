@@ -3,8 +3,8 @@ title: "¿Cuánto seguro de vida necesito? Cálculo paso a paso"
 h1: "¿Cuánto seguro de vida necesito? Cómo calcular tu suma asegurada paso a paso"
 slug: "cuanto-seguro-de-vida-necesito"
 description: "Calcula cuánto seguro de vida necesitas: gastos de tu familia, deudas, educación y lo que ya tienes. Método paso a paso con un ejemplo y qué revisar."
-fecha: 2026-11-04
-actualizado: 2026-11-04
+fecha: 2026-11-03
+actualizado: 2026-11-03
 autor: claudia-pacheco
 categoria: vida
 cluster_url: "/seguros-de-vida"
@@ -50,7 +50,7 @@ notaClaudia: |
 
   Para mí, asesorar en seguros de vida es una responsabilidad que va mucho más allá de una contratación. Es ayudar a las personas a tomar decisiones que pueden marcar una diferencia importante en el futuro de quienes más aman.
 imagen: "/blog/og/cuanto-seguro-de-vida-necesito.jpg"
-status: revision
+status: publicado
 notasRevision: >
   1) El ejemplo usa cifras hipotéticas redondas; Claudia puede ajustarlas a un caso típico de
   Chihuahua, sin datos de clientes reales. 2) notaClaudia ya entregada por Claudia (3 nov 2026). 3) Verificar si conviene enlazar una fuente oficial de CONDUSEF sobre

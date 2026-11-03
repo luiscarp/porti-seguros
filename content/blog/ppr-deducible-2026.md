@@ -3,8 +3,8 @@ title: "PPR deducible 2026: cuánto puedes deducir y cuándo"
 h1: "PPR deducible en 2026: cuánto puedes deducir y por qué aportar antes del 31 de diciembre"
 slug: "ppr-deducible-2026"
 description: "En 2026 puedes deducir tu PPR hasta el 10% de tus ingresos, con tope de 5 UMA anuales. Te explicamos cómo funciona y qué revisar antes de fin de año."
-fecha: 2026-11-04
-actualizado: 2026-11-04
+fecha: 2026-11-03
+actualizado: 2026-11-03
 autor: claudia-pacheco
 categoria: retiro
 cluster_url: "/plan-personal-de-retiro"
@@ -55,7 +55,7 @@ notaClaudia: |
 
   Mi mayor satisfacción es ayudar a las personas a tomar decisiones que les permitan construir un futuro con mayor tranquilidad. No se trata solamente de ahorrar dinero, sino de prepararse para disfrutar la etapa de la vida por la que tanto han trabajado.
 imagen: "/blog/og/ppr-deducible-2026.jpg"
-status: revision
+status: publicado
 notasRevision: >
   1) Que el contador del despacho confirme todo el texto fiscal, en especial: el valor de 5 UMA
   que aplica al ejercicio 2026 en la declaración de abril de 2027, la exclusión del tope global
