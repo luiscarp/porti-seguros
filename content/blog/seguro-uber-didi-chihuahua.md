@@ -37,7 +37,7 @@ fuentes:
   - titulo: "Uber México — Aliados en el camino: conoce todo lo que debes saber de seguros (18 ago 2026)"
     url: "https://www.uber.com/mx/es/blog/seguro-uber/"
     consultado: 2026-11-03
-relacionados: ["ppr-deducible-2026"]
+relacionados: ["seguro-multiplataforma-maps-seguros-chihuahua", "ppr-deducible-2026"]
 notaClaudiaTitulo: "Conocer el trabajo de mis clientes"
 notaClaudia: |
   En PorTi Seguros tenemos una relación muy cercana con conductores de taxi y plataformas como Uber y DiDi en Chihuahua. Esto me ha permitido conocer mejor sus preocupaciones y entender lo importante que es su vehículo para el sustento de sus familias.

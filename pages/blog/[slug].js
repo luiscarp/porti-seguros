@@ -114,7 +114,7 @@ export default function EntradaBlog({ post, html, indice, relacionadas, cluster 
           )}
 
           <div
-            className='prose prose-slate mt-10 md:prose-lg max-w-none prose-headings:font-display prose-headings:scroll-mt-28 prose-a:text-brand-700 prose-strong:text-slate-900 prose-th:bg-brand-50 [&_table]:block [&_table]:overflow-x-auto'
+            className='prose prose-slate mt-10 md:prose-lg max-w-none prose-img:mx-auto prose-img:max-h-80 prose-img:w-auto prose-img:rounded-2xl prose-headings:font-display prose-headings:scroll-mt-28 prose-a:text-brand-700 prose-strong:text-slate-900 prose-th:bg-brand-50 [&_table]:block [&_table]:overflow-x-auto'
             dangerouslySetInnerHTML={{ __html: html }}
           />
 
