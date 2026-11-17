@@ -30,6 +30,14 @@ const nextConfig = {
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=()' },
         ],
       },
+      // Bloques del decodificador de VIN: caché de un día (cambian al sincronizar la base) y fuera del índice
+      {
+        source: '/vin/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' },
+          { key: 'X-Robots-Tag', value: 'noindex' },
+        ],
+      },
     ]
   },
   // URLs anteriores → nuevas (301). El host www y https ya los fuerza Vercel.
