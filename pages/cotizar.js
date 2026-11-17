@@ -4,6 +4,7 @@ import Seo from "@/components/Seo";
 import PageHero from '@/components/PageHero';
 import FormularioCotizar from '@/components/FormularioCotizar';
 import { BUSINESS } from '@/config/business';
+import Link from 'next/link';
 
 import React from 'react'
 
@@ -47,6 +48,14 @@ function cotizar() {
                             <h2 className='text-xl font-bold'>Tus datos, solo los necesarios</h2>
                             <p className='mt-2 leading-7'>
                                 Para cotizar no te pedimos CURP, RFC, datos de salud, números de tarjeta ni documentos. Si más adelante la aseguradora necesita información adicional, te lo explicamos en persona.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h2 className='text-xl font-bold'>¿Vas a asegurar un vehículo?</h2>
+                            <p className='mt-2 leading-7'>
+                                Revisa que el número de serie esté bien escrito con nuestro{' '}
+                                <Link href='/herramientas/decodificador-vin' className='font-semibold text-brand-700 underline'>decodificador de VIN</Link>.
                             </p>
                         </section>
 

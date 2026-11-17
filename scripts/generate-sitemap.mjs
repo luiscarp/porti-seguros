@@ -11,7 +11,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 
 // Páginas fijas; agregar aquí cada página nueva.
 // /opiniones entra solo cuando hay testimonios publicados (mientras tanto es noindex)
-const PAGINAS = ['/', '/seguros', '/claudia-pacheco', '/preguntas-frecuentes', '/contacto', ...(TESTIMONIOS.length ? ['/opiniones'] : []), '/cotizar', '/aviso-de-privacidad']
+const PAGINAS = ['/', '/seguros', '/claudia-pacheco', '/preguntas-frecuentes', '/contacto', ...(TESTIMONIOS.length ? ['/opiniones'] : []), '/cotizar', '/herramientas/decodificador-vin', '/aviso-de-privacidad']
 
 // Un ramo por archivo en content/seguros (el nombre del archivo es el slug).
 const RAMOS = readdirSync(join(root, 'content/seguros'))

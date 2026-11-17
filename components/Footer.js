@@ -66,6 +66,7 @@ function Footer() {
                 <div>
                     <h2 className='text-sm font-bold uppercase tracking-wider text-white'>Legal y recursos</h2>
                     <ul className='mt-4 space-y-2 text-sm'>
+                        <li><Link href='/herramientas/decodificador-vin' className='hover:text-white hover:underline'>Decodificador de VIN</Link></li>
                         <li><Link href='/aviso-de-privacidad' className='hover:text-white hover:underline'>Aviso de privacidad</Link></li>
                         <li><Link href='/terminos' className='hover:text-white hover:underline'>Términos y condiciones</Link></li>
                         <li><a href='https://www.gob.mx/cnsf' target='_blank' rel='noopener noreferrer' className='hover:text-white hover:underline'>Comisión Nacional de Seguros y Fianzas (CNSF)</a></li>

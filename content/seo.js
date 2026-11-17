@@ -82,6 +82,10 @@ export const PAGE_META = {
     title: 'Blog de Seguros en Chihuahua | PorTi Seguros',
     description: 'Guías claras sobre seguros de vida, retiro, plataformas y gastos médicos en Chihuahua, con fuentes oficiales, escritas por Claudia Pacheco desde 2007.',
   },
+  '/herramientas/decodificador-vin': {
+    title: 'Decodificador de VIN: revisa el número de serie de tu auto',
+    description: 'Revisa gratis el número de serie (VIN) de tu auto: país, fabricante, año modelo y dígito verificador. Todo se calcula en tu navegador; nada se guarda.',
+  },
   '/404': {
     title: 'Página no encontrada | PorTi Seguros',
     description: 'La página que buscas no existe o cambió de dirección. Conoce nuestros seguros en Chihuahua o escríbenos por WhatsApp y con gusto te ayudamos.',

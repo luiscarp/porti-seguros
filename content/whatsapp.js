@@ -25,6 +25,7 @@ export const MENSAJES_WHATSAPP = {
   '/preguntas-frecuentes': 'Hola, tengo una duda sobre seguros (página Preguntas frecuentes).',
   '/contacto': 'Hola, quiero agendar una asesoría (página Contacto).',
   '/blog': 'Hola, leí su blog y quiero asesoría.',
+  '/herramientas/decodificador-vin': 'Hola, ya revisé mi número de serie y quiero cotizar un seguro (página Decodificador de VIN).',
 }
 
 export const mensajeWhatsapp = (path) => MENSAJES_WHATSAPP[path] ?? MENSAJE_GENERAL
