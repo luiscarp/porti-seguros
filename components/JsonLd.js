@@ -219,3 +219,20 @@ export function grafoBlog(posts, path = '/blog') {
     ],
   }
 }
+
+// Herramienta gratuita del sitio (decodificador de VIN): WebApplication que corre en el navegador.
+export function herramienta(path) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    '@id': `${absoluteUrl(path)}#herramienta`,
+    name: 'Decodificador de VIN',
+    url: absoluteUrl(path),
+    description: 'Revisa el número de serie (VIN) de un vehículo: país, fabricante, año modelo y dígito verificador. El cálculo ocurre en el navegador.',
+    applicationCategory: 'UtilitiesApplication',
+    operatingSystem: 'Cualquiera (navegador web)',
+    isAccessibleForFree: true,
+    inLanguage: 'es-MX',
+    provider: { '@id': AGENCIA_ID },
+  }
+}

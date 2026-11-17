@@ -11,6 +11,9 @@ import IconoRamo from '@/components/IconoRamo'
 import TarjetaEntrada from '@/components/blog/TarjetaEntrada'
 import { JsonLd, grafoRamo, migasDePan } from '@/components/JsonLd'
 
+// Ramos de vehículos que enlazan al decodificador de VIN
+const RAMOS_CON_VIN = ['seguro-de-auto', 'seguro-uber-didi', 'seguro-para-taxi', 'seguro-flotillas']
+
 function Seccion({ seccion }) {
   return (
     <section className='mt-12'>
@@ -98,6 +101,15 @@ export default function RamoPage({ ramo, relacionados, articulos = [] }) {
           {ramo.secciones.filter((seccion) => !seccion.despuesDePasos).map((seccion) => (
             <Seccion key={seccion.titulo} seccion={seccion} />
           ))}
+
+          {RAMOS_CON_VIN.includes(ramo.slug) && (
+            <aside className='mt-12 flex flex-col gap-3 rounded-2xl border border-brand-100 bg-brand-50 p-6 sm:flex-row sm:items-center sm:justify-between'>
+              <p className='leading-7'>
+                <strong>¿Vas a cotizar?</strong> Revisa antes que el número de serie (VIN) de tu vehículo esté bien escrito.
+              </p>
+              <Link href='/herramientas/decodificador-vin' className='shrink-0 font-semibold text-brand-700 hover:underline'>Usar el decodificador de VIN →</Link>
+            </aside>
+          )}
         </div>
 
         <section className='mt-16 bg-slate-50 py-16'>

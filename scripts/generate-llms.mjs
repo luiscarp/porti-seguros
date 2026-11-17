@@ -49,6 +49,7 @@ const lineas = [
   ...(TESTIMONIOS.length ? [enlace('/opiniones', 'Opiniones de clientes')] : []),
   enlace('/contacto', 'Contacto'),
   enlace('/cotizar', 'Cotizar un seguro'),
+  enlace('/herramientas/decodificador-vin', 'Decodificador de VIN (herramienta gratuita)'),
   '',
   // Blog: título, URL y respuesta corta de cada entrada publicada
   ...(posts.length ? ['## Blog', '', ...posts.map((post) => `- [${post.h1}](${url(`/blog/${post.slug}`)}): ${post.respuesta_corta}`), ''] : []),

@@ -21,7 +21,7 @@ const REDIRECCIONES = {
   '/privacidad': '/aviso-de-privacidad',
 }
 const PALABRAS_PROHIBIDAS = ['líderes', 'el más barato', 'garantizado', 'GitHub', 'Your Company', 'Statamic', 'SavvyCal', 'Tuple']
-const NO_RAMOS = ['/', '/seguros', '/claudia-pacheco', '/preguntas-frecuentes', '/contacto', '/opiniones', '/cotizar', '/aviso-de-privacidad', '/terminos']
+const NO_RAMOS = ['/', '/seguros', '/claudia-pacheco', '/preguntas-frecuentes', '/contacto', '/opiniones', '/cotizar', '/aviso-de-privacidad', '/terminos', '/herramientas/decodificador-vin']
 const MIN_PALABRAS_RAMO = 400
 const MIN_PALABRAS_VIDA = 1200
 
