@@ -38,10 +38,10 @@ export default function DecodificadorLote() {
       {filas.length > 0 && (
         <>
           <div className='mt-3 overflow-x-auto rounded-xl border border-slate-200'>
-            <table className='w-full min-w-[760px] text-left text-sm'>
+            <table className='w-full min-w-[880px] text-left text-sm'>
               <thead className='bg-brand-50 text-slate-900'>
                 <tr>
-                  {['#', 'VIN', 'Resultado', 'Fabricante', 'País', 'Año', 'Observación'].map((t) => (
+                  {['#', 'VIN', 'Resultado', 'Fabricante', 'Modelo', 'País', 'Año', 'Observación'].map((t) => (
                     <th key={t} scope='col' className='px-3 py-2'>{t}</th>
                   ))}
                 </tr>
@@ -53,6 +53,7 @@ export default function DecodificadorLote() {
                     <td className='px-3 py-2 font-mono font-semibold'>{f.vin || '—'}</td>
                     <td className='px-3 py-2'><EtiquetaEstado estado={f.estado} /></td>
                     <td className='px-3 py-2'>{f.fabricante}</td>
+                    <td className='px-3 py-2'>{f.modelo}</td>
                     <td className='px-3 py-2'>{f.pais}</td>
                     <td className='px-3 py-2'>{f.anio}</td>
                     <td className='min-w-[280px] px-3 py-2 text-slate-600'>{f.observacion}</td>

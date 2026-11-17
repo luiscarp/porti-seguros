@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import { decodificarVIN } from '@/lib/vin.mjs'
-import { SEGMENTOS, desglose, estadoVIN, resumenTexto, segmentoDePosicion, textoAnio, textoFabricante } from '@/lib/vin-presentacion.mjs'
+import { SEGMENTOS, desglose, detallesModelo, estadoVIN, fuenteModelo, resumenTexto, segmentoDePosicion, textoAnio, textoFabricante, textoModelo } from '@/lib/vin-presentacion.mjs'
 import { EtiquetaEstado, MENSAJE_COPIA_FALLIDA, botonSecundario, campo, copiar } from '@/components/vin/comunes'
 
 // Color de cada segmento en la placa (borde + fondo claro; la leyenda repite el nombre en texto)
@@ -109,11 +109,19 @@ export default function DecodificadorVin() {
           {mensajeCopia && <p className='mt-3 text-sm font-medium text-slate-700' role='status'>{mensajeCopia}</p>}
 
           {r.completo && (
-            <dl className='mt-5 grid gap-4 sm:grid-cols-3'>
-              <Dato nombre='Fabricante' valor={textoFabricante(r)} />
-              <Dato nombre='País' valor={r.pais ?? r.region ?? 'No identificado'} />
-              <Dato nombre='Año modelo' valor={textoAnio(r)} />
-            </dl>
+            <>
+              <dl className='mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4'>
+                <Dato nombre='Fabricante' valor={textoFabricante(r)} />
+                <Dato nombre='Modelo' valor={textoModelo(r) || 'Sin dato en la base'} />
+                <Dato nombre='País' valor={r.pais ?? r.region ?? 'No identificado'} />
+                <Dato nombre='Año modelo' valor={textoAnio(r)} />
+              </dl>
+              {r.modelo && (
+                <p className='mt-3 text-sm text-slate-600'>
+                  {[detallesModelo(r.modelo), fuenteModelo(r)].filter(Boolean).join('. ')}.
+                </p>
+              )}
+            </>
           )}
 
           {(r.errores.length > 0 || r.avisos.length > 0) && (
