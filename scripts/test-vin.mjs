@@ -1,7 +1,7 @@
 // Pruebas de aceptación del decodificador de VIN (sección 6 de sus instrucciones). Uso: npm run test-vin
 import assert from 'node:assert/strict'
-import { decodificarVIN } from '../lib/vin.mjs'
-import { estadoVIN, filasLote, tablaTsv, resumenTexto } from '../lib/vin-presentacion.mjs'
+import { decodificarVIN, VIN_DB } from '../lib/vin.mjs'
+import { estadoVIN, filasLote, tablaTsv, resumenTexto, desglose, textoModelo } from '../lib/vin-presentacion.mjs'
 
 const ANIO = 2026 // año de referencia fijo para que las pruebas no cambien con el calendario
 let fallas = 0
@@ -105,11 +105,36 @@ caso('Varios VIN: separa por línea, coma y punto y coma; TSV con encabezado', (
   assert.deepEqual(filas.map((f) => f.estado.etiqueta), ['Válido', 'Verificador no coincide', 'Revisar captura', 'Serie antigua'])
   const tsv = tablaTsv(filas).split('\n')
   assert.equal(tsv.length, 5)
-  assert.equal(tsv[0].split('\t').length, 7)
+  assert.equal(tsv[0].split('\t').length, 14)
 })
 caso('Resumen de serie antigua incluye marca, año y modelo capturados', () => {
   const texto = resumenTexto(decodificarVIN('F10GLK12345', ANIO), { marca: 'Ford', anio: '1971', modelo: 'F-100' })
   assert.ok(texto.includes('Marca (capturada): Ford') && texto.includes('Año (capturado): 1971') && texto.includes('Modelo (capturado): F-100'))
+})
+
+// Con un patrón importado (mismo formato que deja importar_vpic.py), el modelo aparece con su fuente.
+// Se usa una copia de la base para no depender de lo que tenga importado en este momento.
+const conPatron = {
+  ...VIN_DB,
+  patrones: {
+    ...VIN_DB.patrones,
+    '1HGCM826*3A': { anio_modelo: '2003', marca: 'Honda', modelo: 'Accord', version: 'EX', carroceria: 'Coupé', puertas: '2', motor_litros: '3.0', cilindros: '6', fuente: 'NHTSA vPIC', verificado: 'sí' },
+  },
+}
+caso('Patrón importado → muestra modelo con fuente "NHTSA vPIC" (exacta y aproximada)', () => {
+  const r = decodificarVIN('1HGCM82633A004352', ANIO, conPatron)
+  assert.equal(r.coincidencia, 'exacta')
+  assert.equal(textoModelo(r), 'Accord EX')
+  const vds = desglose(r).find((f) => f.pos === '4–8').lectura
+  assert.ok(vds.includes('Fuente: NHTSA vPIC') && vds.includes('coincidencia exacta'), vds)
+  assert.ok(resumenTexto(r).includes('Modelo: Accord EX'))
+  // Mismo código de modelo con otro año (posición 10 = 4 → 2004): aproximado y con aviso
+  const otro = decodificarVIN('1HGCM82634A004352', ANIO, conPatron)
+  assert.equal(otro.coincidencia, 'aproximada')
+  assert.ok(otro.avisos.some((a) => a.startsWith('Modelo aproximado')))
+})
+caso('La base solo guarda descriptores, nunca VIN completos', () => {
+  for (const d of Object.keys(VIN_DB.patrones)) assert.match(d, /^[A-HJ-NPR-Z0-9]{8}\*[A-HJ-NPR-Z0-9]{2}$/)
 })
 
 console.log(fallas ? `\n${fallas} prueba(s) fallaron` : '\nOK: todas las pruebas pasan')

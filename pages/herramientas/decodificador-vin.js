@@ -9,20 +9,23 @@ import DecodificadorVin from '@/components/vin/DecodificadorVin'
 import DecodificadorLote from '@/components/vin/DecodificadorLote'
 import { JsonLd, herramienta, migasDePan } from '@/components/JsonLd'
 import { SEGMENTOS } from '@/lib/vin-presentacion.mjs'
+import { VIN_DB } from '@/lib/vin.mjs'
 
 const PATH = '/herramientas/decodificador-vin'
 
 const LECTURA = {
   wmi: 'País de fabricación y fabricante. Un 9 en la posición 3 indica un fabricante de bajo volumen.',
-  vds: 'Línea, carrocería y motor. Cada marca lo define a su manera, por eso se muestra sin traducir.',
+  vds: 'Línea, carrocería y motor. Cada marca lo define a su manera; se traduce cuando ese código ya está en la base de modelos.',
   dv: 'Se recalcula con los otros 16 caracteres y se compara para detectar errores de captura.',
   anio: 'Código de año modelo que se repite cada 30 años.',
   planta: 'Clave interna del fabricante para la planta de ensamble.',
   serie: 'Secuencia de producción de la unidad.',
 }
 
-const SI = ['País y fabricante', 'Año modelo', 'Planta y consecutivo', 'Validación del dígito verificador']
-const NO = ['Modelo, versión ni motor exactos', 'Si la unidad existe o su situación legal (eso se consulta en REPUVE)']
+const SI = ['País y fabricante', 'Año modelo', 'Consecutivo y validación del dígito verificador', 'Modelo, versión, motor y planta, cuando ese código ya está en la base, con su fuente']
+const NO = ['Modelo de unidades que aún no están en la base (muchas vendidas solo en México)', 'El formato de las series antiguas, que no se lee por posición', 'Si la unidad existe o su situación legal (eso se consulta en REPUVE)']
+const N_FABRICANTES = Object.keys(VIN_DB.wmi).length
+const N_MODELOS = Object.keys(VIN_DB.patrones).length
 
 export default function DecodificadorVinPagina() {
   return (
@@ -106,6 +109,13 @@ export default function DecodificadorVinPagina() {
                 </ul>
               </div>
             </div>
+            <p className='mt-5 leading-7'>
+              Modelo y versión dependen de la tabla de cada marca (posiciones 4 a 8). La base se llena con datos oficiales de{' '}
+              <a href='https://vpic.nhtsa.dot.gov/decoder/' rel='noopener' className='font-semibold text-brand-700 hover:underline'>vPIC de la NHTSA</a>, que cubre sobre todo unidades del mercado estadounidense; los modelos vendidos solo en México se capturan a mano desde un documento.
+            </p>
+            <p className='mt-3 text-sm text-slate-600'>
+              Base actualizada el {VIN_DB.generado}: {N_FABRICANTES} fabricantes y {N_MODELOS} {N_MODELOS === 1 ? 'modelo registrado' : 'modelos registrados'}.
+            </p>
             <p className='mt-5 leading-7'>
               Un dígito verificador correcto confirma que el número está bien escrito. No confirma que la unidad exista ni su situación legal: eso se consulta en el Registro Público Vehicular (REPUVE).
             </p>
